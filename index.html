@@ -1,895 +1,451 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Local Optimisé -->
-    <title>Sérénité Tombes | Entretien & Fleurissement de Sépultures (Seebach, Wissembourg)</title>
-    <meta name="description" content="Service artisanal d'entretien écologique et fleurissement de tombes à Seebach, Wissembourg, Soultz-sous-Forêts et en Outre-Forêt. Bilan photo Avant/Après sur WhatsApp.">
-    <meta name="keywords" content="entretien tombe Seebach, nettoyage sépulture Wissembourg, fleurissement cimetière Soultz-sous-Forêts, entretien tombe Alsace du Nord, Outre-Forêt">
-    <meta name="robots" content="index, follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Veilleuse | Entretien de tombes à Seebach, Wissembourg et en Outre-Forêt</title>
+<meta name="description" content="Nettoyage, désherbage et fleurissement de tombes dans l’Outre-Forêt. Photos avant/après à chaque passage, prix affichés, devis gratuit sous 48 h. Grabpflege im Elsass.">
+<link rel="canonical" href="https://www.la-veilleuse.fr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Veilleuse | Entretien de tombes en Outre-Forêt">
+<meta property="og:description" content="Une tombe soignée, même quand vous ne pouvez pas être là. Photos après chaque passage.">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#17302A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F0A93A' d='M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap">
+<style>
+/* La Veilleuse : feuille de style partagée (toutes les pages la réutiliseront) */
+:root{--nuit:#17302A;--nuit2:#21423A;--flamme:#F0A93A;--flamme-b:#C98614;--pierre:#F1F3EE;--blanc:#fff;--encre:#1B2420;--doux:#4C5A52;--clair:#CFE0D6;--trait:#D3D9D2;--r:12px}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:84px}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font:400 18px/1.65 Figtree,system-ui,sans-serif;color:var(--encre);background:var(--pierre);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flamme);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--blanc);color:var(--encre);padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15}
+h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px}
+h3{font-size:1.3rem;margin-bottom:8px}
+p+p{margin-top:12px}
+.lead{font-size:1.15rem;max-width:56ch}
+.muted{color:var(--doux)}
+.section{padding:84px 0}
+.section.stone{background:var(--blanc)}
+.section.dark{background:var(--nuit);color:var(--blanc)}
+.section.dark .muted,.dark .lead{color:var(--clair)}
+.head{max-width:62ch;margin-bottom:44px}
 
-    <!-- Données structurées Google (SEO LocalBusiness) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Sérénité Tombes",
-      "description": "Entretien écologique et fleurissement de sépultures en Alsace du Nord (Outre-Forêt) avec envoi de photos Avant/Après.",
-      "areaServed": ["Seebach", "Wissembourg", "Soultz-sous-Forêts", "Riedseltz", "Hunspach", "Hoffen", "Hatten", "Lauterbourg", "Seltz", "Beinheim", "Betschdorf", "Cleebourg"],
-      "priceRange": "75€ - 260€"
-    }
-    </script>
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:10px;font:700 1.05rem/1 Figtree,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s}
+.btn-flamme{background:var(--flamme);color:var(--nuit);border-color:var(--flamme-b)}
+.btn-flamme:hover{background:#FFC25E}
+.btn-ligne{border-color:currentColor;background:transparent}
+.btn-ligne:hover{background:rgba(255,255,255,.1)}
+.on-light .btn-ligne:hover,.btn-ligne.sombre:hover{background:rgba(23,48,42,.07)}
+.btn-bloc{width:100%}
 
-    <!-- Google Fonts - Police très lisible et rassurante -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+/* En-tête */
+.top{background:var(--nuit);color:var(--blanc);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.1)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{flex:none}
+.logo b{display:block;font:400 1.45rem/1.1 "Young Serif",Georgia,serif}
+.logo small{display:block;font-size:.8rem;color:var(--clair);line-height:1.3}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--flamme)}
+.nav .btn{min-height:46px;padding:0 20px;font-size:1rem}
+.nav .btn:hover{color:var(--nuit)}
 
-    <style>
-        /* PALETTE DE COULEURS & VARIABLES */
-        :root {
-            --primary: #1F3D32;       /* Vert Sauge Profond & Contrasté */
-            --primary-dark: #142921;  /* Vert Sombre (Hover) */
-            --accent: #B8860B;        /* Or Doux et Lisible */
-            --accent-light: #F4EFE6;  /* Fond Doré Clair */
-            --bg: #FAF9F5;            /* Blanc Crème / Pierre Reposant */
-            --white: #FFFFFF;
-            --text: #1A1A1A;          /* Noir Doux Ultra-Lisible */
-            --muted: #4A4A4A;         /* Gris Foncé Contrasté */
-            --border: #D5D3C8;
-        }
+/* Attention */
+.hero{background:radial-gradient(60% 90% at 85% 15%,rgba(240,169,58,.22),transparent 62%),var(--nuit);color:var(--blanc);padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .lead{margin:20px 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.micro{margin-top:16px;font-size:.98rem;color:var(--clair)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo figure{position:relative}
+.ph,.duo img,.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r)}
+.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:var(--nuit2);border:2px dashed var(--lichen,#5E7A68);color:var(--clair);font-weight:600}
+.light .ph{background:#E6EBE5;border-color:#8FA697;color:var(--doux)}
+figcaption.tag{position:absolute;left:10px;bottom:10px;background:var(--blanc);color:var(--nuit);font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px}
+figcaption.tag.apres{background:var(--flamme)}
+.hero-note{margin-top:12px;font-size:.95rem;color:var(--clair)}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+/* Réassurance */
+.trust{background:var(--blanc);border-bottom:1px solid var(--trait)}
+.trust ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust li{display:flex;gap:12px;align-items:flex-start;padding:22px 0;font-weight:600;font-size:1rem;line-height:1.4}
+.trust svg{flex:none;margin-top:2px}
 
-        /* Police plus grande (19px) et plus grasse pour un public senior */
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            font-size: 19px;
-            font-weight: 500;
-            line-height: 1.7;
-        }
+/* Intérêt */
+.situations{display:grid;grid-template-columns:repeat(3,1fr)}
+.sit{padding:4px 32px;border-left:2px solid var(--trait)}
+.sit:first-child{padding-left:0;border-left:0}
+.sit svg{margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:8%;right:8%;top:23px;height:2px;background:var(--trait)}
+.step{position:relative}
+.step i{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--nuit);color:var(--flamme);font:400 1.25rem "Young Serif",serif;font-style:normal;margin-bottom:16px;position:relative}
 
-        h1, h2, h3, .logo {
-            font-family: 'Playfair Display', serif;
-        }
+/* Désir */
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px}
+.proof .ph,.proof img{aspect-ratio:4/3}
+.proof figure{position:relative}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center}
+.about .ph,.about img{aspect-ratio:1/1;border-radius:50%;max-width:320px}
+.garantie{margin-top:22px;padding:16px 20px;border-left:5px solid var(--flamme);background:#FBF3E3;font-weight:600;max-width:58ch}
+.prix{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.offre{display:flex;flex-direction:column;padding:34px 28px;border:2px solid var(--trait);border-radius:var(--r);background:var(--blanc)}
+.offre.reco{background:var(--nuit);color:var(--blanc);border-color:var(--nuit);transform:translateY(-14px);padding-top:40px}
+.offre .reco-tag{align-self:flex-start;background:var(--flamme);color:var(--nuit);font-weight:700;font-size:.9rem;padding:3px 14px;border-radius:99px;margin-bottom:12px}
+.montant{font:400 2.8rem/1 "Young Serif",serif;margin:14px 0 4px}
+.montant small{font:600 1rem Figtree,sans-serif}
+.offre ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px;flex:1}
+.offre li{display:flex;gap:10px;line-height:1.45}
+.offre li svg{flex:none;margin-top:3px}
+.offre.reco .muted{color:var(--clair)}
+.unique{margin-top:34px;font-size:1.1rem}
+.petit{font-size:.95rem;margin-top:10px;max-width:70ch}
+.communes{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin-top:20px}
+.communes li{background:var(--blanc);border:1px solid var(--trait);border-radius:99px;padding:6px 16px;font-weight:600;font-size:1rem}
 
-        /* BARRE D'ANNONCE HAUT DE PAGE */
-        .top-bar {
-            background-color: var(--primary-dark);
-            color: var(--white);
-            text-align: center;
-            padding: 10px 15px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-        .top-bar span {
-            color: #FFD97D;
-            font-weight: 700;
-        }
+/* FAQ */
+.faq details{max-width:780px}
+details{border-bottom:1px solid var(--trait)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;font-weight:700;font-size:1.1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--flamme-b)}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 22px;max-width:62ch;color:var(--doux)}
 
-        /* NAVIGATION MULTI-PAGES */
-        nav {
-            background: var(--white);
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
-            border-bottom: 2px solid var(--border);
-        }
+/* Action */
+.action{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.coord{margin-top:28px;display:grid;gap:14px;max-width:380px}
+.tel{font:400 1.9rem/1.2 "Young Serif",serif;text-decoration:none}
+.de{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);color:var(--clair);font-size:1rem}
+form{background:var(--blanc);color:var(--encre);padding:32px;border-radius:var(--r);display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:700;font-size:1rem}
+label span{font-weight:400;color:var(--doux)}
+input,select,textarea{font:inherit;padding:13px 14px;border:2px solid #8E9C94;border-radius:10px;background:var(--blanc);color:var(--encre);min-height:50px;width:100%}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--nuit)}
+.hp{position:absolute;left:-9999px}
+form .muted{color:var(--doux)}
 
-        .logo {
-            font-size: 1.6rem;
-            color: var(--primary);
-            font-weight: 800;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-icon {
-            color: var(--accent);
-            font-size: 1.6rem;
-        }
+/* Pied de page */
+footer{background:#10211C;color:var(--clair);padding:48px 0 100px;font-size:.98rem}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer a{color:var(--blanc)}
+footer .logo b{color:var(--blanc)}
+.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:.9rem}
 
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-            align-items: center;
-        }
+/* Barre mobile */
+.bar{display:none}
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 1.05rem;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary);
-        }
-        .nav-links a.active {
-            border-bottom: 3px solid var(--accent);
-            padding-bottom: 4px;
-        }
-
-        .btn-nav {
-            background: var(--primary);
-            color: var(--white) !important;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: background 0.2s, transform 0.2s !important;
-        }
-        .btn-nav:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-        }
-
-        /* BOUTONS GÉNÉRAUX */
-        .btn-primary {
-            background: var(--primary);
-            color: var(--white);
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: background 0.2s, transform 0.2s;
-            border: 2px solid var(--primary);
-        }
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            border: 2px solid var(--primary);
-            transition: background 0.2s;
-        }
-        .btn-outline:hover {
-            background: rgba(31, 61, 50, 0.08);
-        }
-
-        /* 1. ATTENTION : HERO SECTION */
-        .hero {
-            padding: 75px 8% 65px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 45px;
-            align-items: center;
-        }
-
-        .badge-local {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--primary);
-            border: 1px solid rgba(184, 134, 11, 0.4);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.7rem;
-            color: var(--primary);
-            font-weight: 800;
-            line-height: 1.25;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--muted);
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-
-        .trust-pills {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.95rem;
-            color: var(--muted);
-            border-top: 2px solid var(--border);
-            padding-top: 20px;
-            font-weight: 600;
-        }
-        .trust-pills span strong {
-            color: var(--primary);
-        }
-
-        /* Carte Visuelle Droite (Preuve Photo) */
-        .hero-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(31, 61, 50, 0.08);
-            border-top: 5px solid var(--accent);
-            border: 2px solid var(--border);
-        }
-        .hero-card-badge {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-            font-weight: 800;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .hero-card h3 {
-            color: var(--primary);
-            font-size: 1.45rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-        .compare-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        .compare-item {
-            padding: 18px 12px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-        .compare-before {
-            background: #EFECE6;
-            color: var(--muted);
-        }
-        .compare-after {
-            background: rgba(31, 61, 50, 0.08);
-            color: var(--primary);
-            font-weight: 700;
-            border: 2px solid rgba(31, 61, 50, 0.2);
-        }
-        .whatsapp-note {
-            font-size: 0.95rem;
-            background: var(--bg);
-            padding: 14px 16px;
-            border-radius: 8px;
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            border: 1px solid var(--border);
-        }
-
-        /* SECTIONS GÉNÉRIQUES */
-        section {
-            padding: 70px 8%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-header {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 50px;
-        }
-        .section-header h2 {
-            font-size: 2.3rem;
-            color: var(--primary);
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-        .section-header p {
-            color: var(--muted);
-            font-size: 1.15rem;
-        }
-
-        /* 2. INTÉRÊT : PARCOURS EN 3 ÉTAPES */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .step-card {
-            background: var(--white);
-            padding: 35px 28px;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            border-bottom: 4px solid var(--accent);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-        }
-        .step-num {
-            width: 46px;
-            height: 46px;
-            background: var(--accent-light);
-            color: var(--primary);
-            font-weight: 800;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 18px;
-            font-size: 1.2rem;
-            border: 2px solid var(--accent);
-        }
-        .step-card h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-        .step-card p {
-            color: var(--muted);
-            font-size: 1.05rem;
-        }
-
-        /* 3. CARTE DE ZONE D'INTERVENTION OUTRE-FORÊT */
-        .map-section {
-            background: var(--white);
-            border: 2px solid var(--border);
-            border-radius: 14px;
-            padding: 45px 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-        }
-        .map-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 35px;
-            align-items: center;
-            margin-top: 30px;
-        }
-        .svg-map-box {
-            background: var(--primary-light);
-            border: 2px solid var(--primary);
-            border-radius: 12px;
-            padding: 15px;
-            text-align: center;
-        }
-        .svg-map-box svg {
-            width: 100%;
-            height: auto;
-            max-height: 430px;
-        }
-        .communes-list-box h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-        .communes-group {
-            margin-bottom: 16px;
-            font-size: 1.02rem;
-        }
-        .communes-group strong {
-            color: var(--primary);
-            display: block;
-            font-size: 1.08rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        /* 4. DÉSIR : VALEUR AJOUTÉE & APERÇU TARIFS */
-        .value-banner {
-            background: var(--white);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 70px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
-        .value-item h4 {
-            color: var(--primary);
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .value-item h4 span {
-            color: var(--accent);
-        }
-        .value-item p {
-            font-size: 1.02rem;
-            color: var(--muted);
-        }
-
-        /* Grille d'aperçu des tarifs */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
-            align-items: stretch;
-        }
-        .price-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .price-card.featured {
-            border: 3px solid var(--primary);
-            background: var(--primary-light);
-            position: relative;
-            box-shadow: 0 10px 30px rgba(31, 61, 50, 0.08);
-        }
-        .pop-tag {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--white);
-            padding: 6px 16px;
-            font-size: 0.8rem;
-            border-radius: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .price-card h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 800;
-        }
-        .price {
-            font-size: 2.6rem;
-            font-weight: 800;
-            color: var(--text);
-            margin: 18px 0;
-        }
-        .price span {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--muted);
-        }
-        .features {
-            list-style: none;
-            margin: 15px 0 30px;
-        }
-        .features li {
-            margin-bottom: 12px;
-            font-size: 1.05rem;
-            color: var(--muted);
-            font-weight: 600;
-        }
-        .features li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: 800;
-            margin-right: 10px;
-            font-size: 1.1rem;
-        }
-
-        /* 5. ACTION : BANDEAU DE CONVERSION */
-        .cta-box {
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 14px;
-            padding: 60px 40px;
-            text-align: center;
-        }
-        .cta-box h2 {
-            color: var(--white);
-            font-size: 2.3rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-        .cta-box p {
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto 35px;
-            font-size: 1.15rem;
-        }
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-        .btn-white {
-            background: var(--white);
-            color: var(--primary);
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: transform 0.2s;
-            border: 2px solid var(--white);
-        }
-        .btn-white:hover {
-            transform: translateY(-2px);
-        }
-        .btn-gold {
-            background: #FFD97D;
-            color: #1A1A1A;
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: transform 0.2s;
-        }
-        .btn-gold:hover {
-            transform: translateY(-2px);
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--white);
-            border-top: 2px solid var(--border);
-            padding: 50px 8% 30px;
-            margin-top: 70px;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto 35px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-        }
-        .footer-col h4 {
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-            font-weight: 800;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col ul li {
-            margin-bottom: 8px;
-        }
-        .footer-col a {
-            color: var(--muted);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .footer-col a:hover {
-            color: var(--primary);
-        }
-        .footer-bottom {
-            text-align: center;
-            border-top: 2px solid var(--border);
-            padding-top: 25px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* RESPONSIVE MOBILE */
-        @media (max-width: 850px) {
-            .hero, .map-grid {
-                grid-template-columns: 1fr;
-                padding: 50px 6%;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .nav-links {
-                display: none; /* Menu simplifié sur mobile */
-            }
-        }
-    </style>
+@media(max-width:900px){
+ .section{padding:60px 0}
+ .nav a:not(.btn){display:none}
+ .hero .wrap,.about,.action{grid-template-columns:1fr;gap:36px}
+ .trust ul{grid-template-columns:1fr 1fr}
+ .situations{grid-template-columns:1fr;gap:28px}
+ .sit,.sit:first-child{padding:0 0 28px;border-left:0;border-bottom:2px solid var(--trait)}
+ .sit:last-child{border-bottom:0}
+ .steps{grid-template-columns:1fr}
+ .steps::before{display:none}
+ .prix{grid-template-columns:1fr}
+ .offre.reco{transform:none}
+ footer .wrap{grid-template-columns:1fr}
+ .about .ph,.about img{max-width:220px}
+ .bar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--nuit);border-top:1px solid rgba(255,255,255,.15)}
+ .bar .btn{min-height:50px;padding:0 8px;font-size:.98rem}
+}
+@media(max-width:520px){
+ body{font-size:17px}
+ .logo small{display:none}
+ .trust ul{grid-template-columns:1fr;gap:0}
+ .trust li{padding:14px 0}
+ .duo{gap:8px}
+ form{padding:22px}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"La Veilleuse","description":"Entretien, nettoyage et fleurissement de tombes en Outre-Forêt (Alsace du Nord), avec photos avant/après.","url":"https://www.la-veilleuse.fr/","telephone":"+33 6 00 00 00 00","address":{"@type":"PostalAddress","addressLocality":"Seebach","postalCode":"67160","addressCountry":"FR"},"areaServed":["Seebach","Riedseltz","Cleebourg","Hunspach","Soultz-sous-Forêts","Hoffen","Hatten","Surbourg","Schleithal","Lauterbourg","Wissembourg","Haguenau"],"knowsLanguage":["fr","de"],"priceRange":"80 € - 420 €"}
+</script>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-    <!-- Barre d'information locale -->
-    <div class="top-bar">
-        Basé à <span>Seebach</span> — Déplacement gratuit dans toute l'Outre-Forêt — <span>Wir sprechen auch Deutsch</span>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="flamme" viewBox="0 0 24 24"><path fill="#F0A93A" d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z"/><path fill="#FFE2A6" d="M12 11c.5 1.5 2 2.5 2 4.2a2 2 0 0 1-4 0c0-1.7 1.5-2.7 2-4.2z"/></symbol>
+<symbol id="ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="coeur" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
 
-    <!-- Navigation Multi-Pages -->
-    <nav>
-        <a href="index.html" class="logo">
-            <span class="logo-icon">✦</span> Sérénité Tombes
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="services.html">Nos Prestations</a></li>
-            <li><a href="tarifs.html">Tarifs & Formules</a></li>
-            <li><a href="contact.html" class="btn-nav">Demander un passage</a></li>
-        </ul>
-    </nav>
+<!-- EN-TÊTE -->
+<header class="top">
+<div class="wrap">
+<a class="logo" href="#haut" aria-label="La Veilleuse, accueil">
+<svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg>
+<span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span>
+</a>
+<nav class="nav" aria-label="Navigation principale">
+<a href="#fonctionnement">Comment ça marche</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#questions">Questions</a>
+<a class="btn btn-flamme" href="tel:+33600000000">Appeler</a>
+</nav>
+</div>
+</header>
 
-    <!-- 1. ATTENTION : HERO SECTION -->
-    <header class="hero">
-        <div>
-            <div class="badge-local">📍 Entreprise locale basée à Seebach</div>
-            <h1>Nous prenons soin des tombes de vos proches avec respect.</h1>
-            <p>Se déplacer au cimetière ou se baisser devient difficile ? Vous habitez loin ? Nous nettoyons et fleurissons vos sépultures à la main, et vous envoyons une photo après chaque passage.</p>
-            <div class="hero-btns">
-                <a href="tarifs.html" class="btn-primary">Découvrir nos tarifs simples</a>
-                <a href="contact.html" class="btn-outline">📞 Obtenir un devis gratuit</a>
-            </div>
-            <div class="trust-pills">
-                <span><strong>✓ 100% Écologique</strong> (Savon noir, sans acide)</span>
-                <span><strong>✓ Preuve Photo</strong> après chaque passage</span>
-                <span><strong>✓ Déplacement inclus</strong></span>
-            </div>
-        </div>
+<main id="contenu">
 
-        <!-- Encart visuel de réassurance -->
-        <div class="hero-card">
-            <span class="hero-card-badge">Notre Engagement Qualité</span>
-            <h3>Le Certificat de Passage Photo</h3>
-            <p style="font-size: 0.98rem; color: var(--muted); font-weight: 600;">Pour votre tranquillité d'esprit, nous prenons systématiquement la sépulture en photo avant et après notre intervention.</p>
-            <div class="compare-box">
-                <div class="compare-item compare-before">
-                    <strong>Avant passage</strong><br>
-                    Mousse, feuilles, herbes et traces du temps
-                </div>
-                <div class="compare-item compare-after">
-                    <strong>Après notre soin</strong><br>
-                    Pierre saine, joints brossés et fleurs fraîches
-                </div>
-            </div>
-            <div class="whatsapp-note">
-                <span>📲</span>
-                <span>Bilan envoyé directement sur votre téléphone (WhatsApp / SMS) ou par e-mail dès la fin du nettoyage.</span>
-            </div>
-        </div>
-    </header>
+<!-- 1. ATTENTION -->
+<section class="hero" id="haut">
+<div class="wrap">
+<div>
+<h1>Une tombe soignée, même quand vous ne pouvez pas être là.</h1>
+<p class="lead">Je nettoie, désherbe et fleuris la sépulture de vos proches dans l’Outre-Forêt, puis je vous envoie les photos.</p>
+<div class="actions">
+<a class="btn btn-flamme" href="#devis">Demander un devis gratuit</a>
+<a class="btn btn-ligne" href="tel:+33600000000">06 00 00 00 00</a>
+</div>
+<p class="micro">Réponse sous 48 h, sans engagement. Auch auf Deutsch.</p>
+</div>
+<div>
+<div class="duo">
+<!-- REMPLACER par : <img src="img/avant.jpg" alt="Tombe couverte de mousse avant le passage" width="600" height="800"> -->
+<figure><div class="ph" role="img" aria-label="Photo avant le passage">Photo avant</div><figcaption class="tag">Avant</figcaption></figure>
+<!-- REMPLACER par : <img src="img/apres.jpg" alt="La même tombe propre et fleurie après le passage" width="600" height="800"> -->
+<figure><div class="ph" role="img" aria-label="Photo après le passage">Photo après</div><figcaption class="tag apres">Après</figcaption></figure>
+</div>
+<p class="hero-note">Même tombe, même angle, photographiée avant et après le passage.</p>
+</div>
+</div>
+</section>
 
-    <!-- 2. INTÉRÊT : COMMENT ÇA MARCHE -->
-    <section id="fonctionnement">
-        <div class="section-header">
-            <h2>Un fonctionnement simple, en 3 étapes</h2>
-            <p>Tout est pensé pour être simple et sans tracas pour vous, dans le respect des cimetières communaux.</p>
-        </div>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-num">1</div>
-                <h3>Vous nous appelez</h3>
-                <p>Indiquez-nous le village du cimetière et le nom de la famille. Nous allons repérer la concession gratuitement avec la mairie.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-num">2</div>
-                <h3>Nous nettoyons la tombe</h3>
-                <p>Brossage doux à l'eau et au savon noir (aucun produit corrosif ni haute pression), désherbage complet et pose de plantes de saison.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-num">3</div>
-                <h3>Vous recevez la photo</h3>
-                <p>Dès que la tombe est propre, nous vous envoyons les photos Avant / Après. Vous réglez une fois le travail terminé.</p>
-            </div>
-        </div>
-    </section>
+<section class="trust" aria-label="Nos engagements">
+<div class="wrap">
+<ul>
+<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après à chaque passage</li>
+<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Eau et savon noir, jamais de produit agressif</li>
+<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Prix affichés et devis écrit gratuit</li>
+<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Basé à Seebach, au plus près des cimetières</li>
+</ul>
+</div>
+</section>
 
-    <!-- 3. CARTE DE LA ZONE D'INTERVENTION (OUTRE-FORÊT) -->
-    <section id="zone">
-        <div class="map-section">
-            <div class="section-header" style="margin-bottom: 20px;">
-                <h2>Notre carte d'intervention autour de Seebach</h2>
-                <p>Nous nous déplaçons <strong>sans aucun frais supplémentaire</strong> dans toute la zone de l'Outre-Forêt :</p>
-            </div>
+<!-- 2. INTÉRÊT -->
+<section class="section">
+<div class="wrap">
+<div class="head">
+<h2>Vous vous reconnaissez ?</h2>
+<p class="lead muted">Entretenir une tombe est une obligation, et surtout une marque d’attachement. Mais le temps manque, ou les forces.</p>
+</div>
+<div class="situations">
+<div class="sit">
+<svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#pin"/></svg>
+<h3>Vous habitez loin</h3>
+<p class="muted">Vous pensez à cette tombe, mais le trajet est long. Je m’y rends à votre place, et vous voyez le résultat sur votre téléphone.</p>
+</div>
+<div class="sit">
+<svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#horloge"/></svg>
+<h3>Vos journées sont déjà pleines</h3>
+<p class="muted">Entre le travail, la route vers l’Allemagne et la famille, il manque toujours un week-end. Un passage planifié règle le sujet.</p>
+</div>
+<div class="sit">
+<svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#coeur"/></svg>
+<h3>Se baisser ou marcher devient pénible</h3>
+<p class="muted">Vous tenez à ce que la tombe reste belle, sans fatigue pour vous. Et toute la famille est rassurée.</p>
+</div>
+</div>
+</div>
+</section>
 
-            <div class="map-grid">
-                <!-- Carte visuelle SVG claire de la zone -->
-                <div class="svg-map-box">
-                    <svg viewBox="0 0 600 430" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Fond de la zone couverte -->
-                        <polygon points="90,120 210,45 430,50 540,95 510,220 460,340 280,380 140,360 70,240" 
-                                 fill="#D4E6DC" stroke="#1F3D32" stroke-width="3" stroke-dasharray="6,4"/>
-                        
-                        <!-- Lignes de liaison depuis Seebach -->
-                        <g stroke="#1F3D32" stroke-width="1.5" opacity="0.35">
-                            <line x1="275" y1="150" x2="210" y2="55"/>
-                            <line x1="275" y1="150" x2="95" y2="125"/>
-                            <line x1="275" y1="150" x2="430" y2="60"/>
-                            <line x1="275" y1="150" x2="530" y2="100"/>
-                            <line x1="275" y1="150" x2="500" y2="215"/>
-                            <line x1="275" y1="150" x2="455" y2="330"/>
-                            <line x1="275" y1="150" x2="280" y2="370"/>
-                            <line x1="275" y1="150" x2="150" y2="350"/>
-                            <line x1="275" y1="150" x2="165" y2="235"/>
-                        </g>
+<section class="section stone" id="fonctionnement">
+<div class="wrap">
+<div class="head">
+<h2>Trois étapes, aucun déplacement pour vous</h2>
+</div>
+<div class="steps">
+<div class="step"><i>1</i><h3>Vous me dites où</h3><p class="muted">La commune du cimetière et le nom de la famille. Si besoin, je vous aide à retrouver l’emplacement.</p></div>
+<div class="step"><i>2</i><h3>Je m’occupe de la tombe</h3><p class="muted">Nettoyage à la main, désherbage, fleurs de saison. Comptez 1 h 30 à 2 h sur place.</p></div>
+<div class="step"><i>3</i><h3>Vous recevez les photos</h3><p class="muted">Avant et après, par WhatsApp ou e-mail. Pour un passage unique, vous payez après les avoir vues.</p></div>
+</div>
+</div>
+</section>
 
-                        <!-- Points des communes périphériques -->
-                        <g fill="#1F3D32" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700">
-                            <!-- Nord -->
-                            <circle cx="210" cy="55" r="6"/><text x="210" y="35" text-anchor="middle">Wissembourg</text>
-                            <circle cx="95" cy="125" r="6"/><text x="95" y="105" text-anchor="middle">Cleebourg</text>
-                            <circle cx="430" cy="60" r="6"/><text x="430" y="40" text-anchor="middle">Scheibenhardt</text>
-                            <circle cx="530" cy="100" r="6"/><text x="520" y="80" text-anchor="middle">Lauterbourg</text>
+<!-- 3. DÉSIR -->
+<section class="section light">
+<div class="wrap">
+<div class="head">
+<h2>Voyez la différence</h2>
+<p class="lead muted">La mousse, les herbes et les feuilles disparaissent. La pierre retrouve sa couleur, sans être abîmée.</p>
+</div>
+<div class="proof">
+<!-- REMPLACER par une vraie photo : <img src="img/avant-2.jpg" alt="..."> -->
+<figure><div class="ph" role="img" aria-label="Photo avant">Photo avant</div><figcaption class="tag">Avant</figcaption></figure>
+<figure><div class="ph" role="img" aria-label="Photo après">Photo après</div><figcaption class="tag apres">Après</figcaption></figure>
+</div>
+</div>
+</section>
 
-                            <!-- Est (Rhin) -->
-                            <circle cx="515" cy="165" r="5"/><text x="510" y="150" text-anchor="end">Mothern</text>
-                            <circle cx="500" cy="225" r="6"/><text x="485" y="230" text-anchor="end">Seltz</text>
-                            <circle cx="455" cy="330" r="6"/><text x="455" y="355" text-anchor="middle">Beinheim</text>
+<section class="section stone light">
+<div class="wrap about">
+<!-- REMPLACER par votre portrait : <img src="img/portrait.jpg" alt="[Prénom], fondateur de La Veilleuse"> -->
+<div class="ph" role="img" aria-label="Portrait de la personne qui intervient">Votre photo</div>
+<div>
+<h2>Qui s’occupe de la tombe ?</h2>
+<p class="lead">Je m’appelle [Prénom], je vis à Seebach. Je m’occupe moi-même de chaque tombe, avec le soin que j’aimerais pour les miens. Vous avez mon numéro direct, pas un standard.</p>
+<p class="muted">Une veilleuse, c’est la petite flamme qu’on garde allumée pour ceux qu’on aime. C’est ce que je fais pour leur tombe : y veiller à votre place.</p>
+<p class="garantie">Le résultat ne vous convient pas ? Je repasse, sans frais.</p>
+</div>
+</div>
+</section>
 
-                            <!-- Sud & Ouest -->
-                            <circle cx="280" cy="370" r="6"/><text x="280" y="395" text-anchor="middle">Hatten</text>
-                            <circle cx="210" cy="310" r="6"/><text x="210" y="332" text-anchor="middle">Betschdorf</text>
-                            <circle cx="145" cy="350" r="6"/><text x="135" y="375" text-anchor="middle">Surbourg</text>
-                            <circle cx="165" cy="235" r="6"/><text x="155" y="220" text-anchor="end">Soultz-sous-Forêts</text>
+<!-- Avis clients : retirer l’attribut hidden dès que vous avez un vrai avis, avec l’accord de la personne -->
+<section class="section" hidden>
+<div class="wrap">
+<h2>Ce que disent les familles</h2>
+<blockquote class="lead">« [Avis réel d’un client] » <cite>[Prénom, commune]</cite></blockquote>
+</div>
+</section>
 
-                            <!-- Villages proches -->
-                            <circle cx="255" cy="100" r="4" fill="#4A4A4A"/><text x="265" y="104" font-size="12" fill="#333">Riedseltz</text>
-                            <circle cx="205" cy="155" r="4" fill="#4A4A4A"/><text x="195" y="160" font-size="12" text-anchor="end" fill="#333">Hunspach</text>
-                            <circle cx="255" cy="215" r="4" fill="#4A4A4A"/><text x="265" y="220" font-size="12" fill="#333">Hoffen</text>
-                        </g>
+<section class="section" id="tarifs">
+<div class="wrap">
+<div class="head">
+<h2>Des prix affichés, sans surprise</h2>
+<p class="lead muted">Choisissez le rythme qui vous convient. Aucune reconduction automatique : à la fin de l’année, c’est vous qui décidez.</p>
+</div>
+<div class="prix">
+<article class="offre">
+<h3>Essentiel</h3>
+<p class="muted">2 passages par an : Toussaint et printemps</p>
+<p class="montant">150&nbsp;€ <small>/ an</small></p>
+<ul>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Nettoyage complet à chaque passage</li>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Désherbage des abords</li>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après</li>
+</ul>
+<a class="btn btn-ligne sombre btn-bloc" href="#devis" data-formule="Essentiel (150 € / an)">Choisir Essentiel</a>
+</article>
+<article class="offre reco">
+<span class="reco-tag">Recommandée</span>
+<h3>Sérénité</h3>
+<p class="muted">3 passages par an, dont 2 avec fleurs de saison</p>
+<p class="montant">290&nbsp;€ <small>/ an</small></p>
+<ul>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Nettoyage complet à chaque passage</li>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Fleurs de saison au printemps et à la Toussaint</li>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Désherbage et photos à chaque passage</li>
+</ul>
+<a class="btn btn-flamme btn-bloc" href="#devis" data-formule="Sérénité (290 € / an)">Choisir Sérénité</a>
+</article>
+<article class="offre">
+<h3>Sérénité+</h3>
+<p class="muted">4 passages par an, tombe toujours fleurie</p>
+<p class="montant">420&nbsp;€ <small>/ an</small></p>
+<ul>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Fleurs de saison à chaque passage</li>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Contrôle après les intempéries</li>
+<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos à chaque passage</li>
+</ul>
+<a class="btn btn-ligne sombre btn-bloc" href="#devis" data-formule="Sérénité+ (420 € / an)">Choisir Sérénité+</a>
+</article>
+</div>
+<p class="unique"><b>Une seule fois ?</b> Nettoyage à 80&nbsp;€, nettoyage avec fleurs à 120&nbsp;€.</p>
+<p class="petit muted">Déplacement inclus jusqu’à 15 km de Seebach, 10&nbsp;€ au-delà. Grande tombe ou caveau : +&nbsp;40&nbsp;%. Prix nets, TVA non applicable (article 293&nbsp;B du CGI).</p>
 
-                        <!-- CENTRE : SEEBACH -->
-                        <circle cx="275" cy="150" r="14" fill="#B8860B" stroke="#FFFFFF" stroke-width="3"/>
-                        <text x="275" y="182" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="800" fill="#1F3D32">★ SEEBACH</text>
-                    </svg>
-                    <p style="font-size: 0.95rem; color: var(--primary); font-weight: 700; margin-top: 10px;">Départ direct de Seebach : Zéro frais de déplacement</p>
-                </div>
+<h3 style="margin-top:56px">Où je me déplace</h3>
+<ul class="communes">
+<li>Seebach</li><li>Riedseltz</li><li>Cleebourg</li><li>Hunspach</li><li>Soultz-sous-Forêts</li><li>Hoffen</li><li>Hatten</li><li>Surbourg</li><li>Schleithal</li><li>Lauterbourg</li><li>Wissembourg</li><li>Haguenau</li>
+</ul>
+<p class="petit muted">Votre commune n’est pas dans la liste ? Demandez-moi, je regarde.</p>
+</div>
+</section>
 
-                <!-- Liste écrite bien lisible -->
-                <div class="communes-list-box">
-                    <h3>Communes desservies :</h3>
-                    
-                    <div class="communes-group">
-                        <strong>📍 Autour de Seebach :</strong>
-                        Seebach, Hunspach, Riedseltz, Ingolsheim, Schleithal, Siegen.
-                    </div>
+<section class="section stone" id="questions">
+<div class="wrap faq">
+<h2>Questions fréquentes</h2>
+<details><summary>Comment retrouvez-vous la tombe ?</summary><p>Indiquez-moi le cimetière et le nom du défunt. La plupart des cimetières ont un plan. Si un doute subsiste, je vous appelle pour confirmer avec vous avant d’intervenir.</p></details>
+<details><summary>Allez-vous abîmer la pierre ?</summary><p>Non. Je travaille à l’eau et au savon noir, avec des brosses douces. Jamais de haute pression ni d’acide, surtout sur le marbre.</p></details>
+<details><summary>Comment se passe le paiement ?</summary><p>Passage unique : vous payez après avoir vu les photos, par virement ou chèque. Abonnement : paiement à la commande, avec remboursement des passages non réalisés si vous arrêtez.</p></details>
+<details><summary>Et si le résultat ne me convient pas ?</summary><p>Écrivez-moi : je repasse sans frais, jusqu’à ce que vous soyez satisfait.</p></details>
+<details><summary>Intervenez-vous en hiver ?</summary><p>Oui, quand le sol n’est pas gelé. Si la météo l’empêche, je décale le passage et je vous préviens.</p></details>
+</div>
+</section>
 
-                    <div class="communes-group">
-                        <strong>📍 Vers Wissembourg & Frontière :</strong>
-                        Wissembourg, Cleebourg, Steinseltz, Scheibenhardt, Lauterbourg.
-                    </div>
+<!-- 4. ACTION -->
+<section class="section dark" id="devis">
+<div class="wrap action">
+<div>
+<h2>Demandez votre devis</h2>
+<p class="lead">Dites-moi où se trouve la tombe, je vous réponds sous 48 h avec un devis écrit. C’est gratuit et sans engagement.</p>
+<p class="lead" style="margin-top:12px">Pour garder le même soin sur chaque tombe, j’accepte un nombre limité de nouvelles tombes chaque mois.</p>
+<div class="coord">
+<a class="tel" href="tel:+33600000000">06 00 00 00 00</a>
+<a class="btn btn-ligne" href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20l%E2%80%99entretien%20d%E2%80%99une%20tombe.">Écrire sur WhatsApp</a>
+</div>
+<p class="de"><b>Familie in Deutschland?</b> Ich spreche Deutsch. Sie erhalten die Fotos nach jedem Besuch per WhatsApp oder E-Mail.</p>
+</div>
+<!-- Remplacer VOTRE_ID par l’identifiant de votre formulaire Formspree (gratuit) -->
+<form action="https://formspree.io/f/VOTRE_ID" method="POST">
+<input type="hidden" name="_subject" value="Nouvelle demande de devis : La Veilleuse">
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label>Votre nom<input type="text" name="nom" autocomplete="name" required></label>
+<label>Téléphone ou e-mail<input type="text" name="contact" autocomplete="tel" required></label>
+<label>Commune du cimetière<input type="text" name="commune" required></label>
+<label>Formule
+<select name="formule" id="formule">
+<option>Je ne sais pas encore</option>
+<option>Passage unique</option>
+<option>Essentiel (150 € / an)</option>
+<option>Sérénité (290 € / an)</option>
+<option>Sérénité+ (420 € / an)</option>
+</select></label>
+<label>Un détail à ajouter ? <span>(facultatif)</span><textarea name="message"></textarea></label>
+<button class="btn btn-flamme btn-bloc" type="submit">Envoyer ma demande</button>
+<p class="petit muted" style="margin:0">Vos informations servent uniquement à vous répondre.</p>
+</form>
+</div>
+</section>
+</main>
 
-                    <div class="communes-group">
-                        <strong>📍 Vers Soultz, Betschdorf & Hatten :</strong>
-                        Soultz-sous-Forêts, Hoffen, Hatten, Betschdorf, Surbourg.
-                    </div>
+<footer>
+<div class="wrap">
+<div>
+<a class="logo" href="#haut"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
+</div>
+<div>
+<p><a href="tel:+33600000000">06 00 00 00 00</a><br><a href="mailto:contact@la-veilleuse.fr">contact@la-veilleuse.fr</a><br>Seebach (Bas-Rhin)</p>
+</div>
+<div>
+<p><a href="#tarifs">Tarifs</a><br><a href="#questions">Questions fréquentes</a><br><a href="mentions-legales.html">Mentions légales</a></p>
+</div>
+<p class="legal">La Veilleuse, micro-entreprise, SIRET [à compléter]. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
+</div>
+</footer>
 
-                    <div class="communes-group">
-                        <strong>📍 Vers Seltz & Beinheim :</strong>
-                        Seltz, Mothern, Beinheim et environs.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Barre d’actions mobile -->
+<div class="bar" role="navigation" aria-label="Contacter La Veilleuse">
+<a class="btn btn-flamme" href="tel:+33600000000">Appeler</a>
+<a class="btn btn-ligne" style="color:#fff" href="https://wa.me/33600000000">WhatsApp</a>
+<a class="btn btn-ligne" style="color:#fff" href="#devis">Devis</a>
+</div>
 
-    <!-- 4. DÉSIR : VALEUR AJOUTÉE & APERÇU TARIFS -->
-    <section>
-        <div class="value-banner">
-            <div class="value-item">
-                <h4><span>✦</span> Respect du monument</h4>
-                <p>Usage exclusif de brosses douces et de savon noir naturel pour préserver le granit, le marbre et les dorures.</p>
-            </div>
-            <div class="value-item">
-                <h4><span>✦</span> Horticulteurs locaux</h4>
-                <p>Nos plantes de saison (chrysanthèmes, bruyères, pensées) sont sélectionnées auprès de producteurs locaux pour leur tenue.</p>
-            </div>
-            <div class="value-item">
-                <h4><span>✦</span> Service Franco-Allemand</h4>
-                <p>Idéal pour les travailleurs frontaliers et les familles résidant en Allemagne souhaitant un suivi fiable à distance.</p>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2>Aperçu de nos formules</h2>
-            <p>Des tarifs transparents et sans surprise, déplacement compris dans toute l'Outre-Forêt.</p>
-        </div>
-
-        <div class="pricing-grid">
-            <div class="price-card">
-                <div>
-                    <h3>Passage Ponctuel</h3>
-                    <div class="price">75 € <span>/ passage</span></div>
-                    <ul class="features">
-                        <li>Idéal avant la Toussaint ou Rameaux</li>
-                        <li>Nettoyage complet au savon noir</li>
-                        <li>Désherbage manuel du contour</li>
-                        <li>Certificat photo Avant / Après</li>
-                    </ul>
-                </div>
-                <a href="tarifs.html" class="btn-outline" style="text-align:center;">Détails & Options</a>
-            </div>
-
-            <div class="price-card featured">
-                <div class="pop-tag">La plus demandée</div>
-                <div>
-                    <h3>Formule Sérénité</h3>
-                    <div class="price">140 € <span>/ an (2 passages)</span></div>
-                    <ul class="features">
-                        <li>2 passages clés (Printemps & Toussaint)</li>
-                        <li>Nettoyage écologique & désherbage</li>
-                        <li>1 plante de Toussaint incluse</li>
-                        <li>Certificat photo à chaque visite</li>
-                    </ul>
-                </div>
-                <a href="tarifs.html" class="btn-primary" style="text-align:center;">Choisir cette formule</a>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <h3>Formule 4 Saisons</h3>
-                    <div class="price">260 € <span>/ an (4 passages)</span></div>
-                    <ul class="features">
-                        <li>1 passage à chaque saison (trimestriel)</li>
-                        <li>Concession impeccable toute l'année</li>
-                        <li>Entretien des plantes et arrosage</li>
-                        <li>Certificat photo 4 fois par an</li>
-                    </ul>
-                </div>
-                <a href="tarifs.html" class="btn-outline" style="text-align:center;">Détails & Options</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. ACTION : APPEL À L'ACTION FINAL -->
-    <section>
-        <div class="cta-box">
-            <h2>Confiez-nous l'entretien d'une sépulture</h2>
-            <p>Que ce soit pour un nettoyage ponctuel avant la Toussaint ou pour un suivi annuel, contactez-nous pour une prise en charge rapide et bienveillante.</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn-gold">Demander un devis en ligne</a>
-                <a href="tel:0600000000" class="btn-white">📞 Appeler le 06 XX XX XX XX</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PIED DE PAGE AVEC LIENS MULTI-PAGES -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Sérénité Tombes</h4>
-                <p>Service professionnel d'entretien, de nettoyage écologique et de fleurissement de tombes en Alsace du Nord.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="services.html">Nos Prestations</a></li>
-                    <li><a href="tarifs.html">Tarifs & Formules</a></li>
-                    <li><a href="contact.html">Contact & Devis</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Communes desservies</h4>
-                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Seltz, Beinheim et environs.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Sérénité Tombes – Tous droits réservés (Code APE 9603Z).
-        </div>
-    </footer>
-
+<script>
+// Préselectionne la formule choisie dans le formulaire
+document.querySelectorAll('[data-formule]').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('formule').value=a.dataset.formule;});
+});
+</script>
 </body>
 </html>
