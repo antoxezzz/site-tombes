@@ -1,0 +1,6 @@
+Déposez ici vos vraies photos : elles remplaceront automatiquement les illustrations.
+Noms attendus (JPG, de préférence 1200 px de large, tombe dans l'axe) :
+avant.jpg, apres.jpg        (accueil, format portrait 3:4, MÊME angle)
+nettoyage.jpg, desherbage.jpg, fleurs.jpg, gravure.jpg, gravier.jpg, photos.jpg   (page Services, format 4:3)
+portrait.jpg                (page À propos, carré, visage au centre)
+Ne photographiez que VOS interventions et jamais d'autres tombes reconnaissables sans accord de la famille.

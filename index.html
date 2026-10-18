@@ -6,10 +6,7 @@
 <title>La Veilleuse | Entretien de tombes à Seebach et en Outre-Forêt</title>
 <meta name="description" content="Nettoyage, désherbage et fleurissement de tombes dans l’Outre-Forêt. Photos avant/après à chaque passage, prix affichés, devis gratuit sous 48 h. Grabpflege im Elsass.">
 <link rel="canonical" href="https://www.la-veilleuse.fr/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="La Veilleuse | Entretien de tombes en Outre-Forêt">
-<meta property="og:description" content="Une tombe soignée, même quand vous ne pouvez pas être là. Photos après chaque passage.">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La Veilleuse | Entretien de tombes à Seebach et en Outre-Forêt"><meta property="og:description" content="Nettoyage, désherbage et fleurissement de tombes dans l’Outre-Forêt. Photos avant/après à chaque passage, prix affichés, devis gratuit sous 48 h. Grabpflege im Elsass."><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#17302A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F0A93A' d='M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,14 +201,83 @@ footer .logo b{color:var(--blanc)}
 .paiement{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .paiement div{padding:26px;border-left:5px solid var(--flamme);background:#FBF3E3}
 @media(max-width:900px){.inclus,.paiement{grid-template-columns:1fr}}
-</style>
+
+/* Photos / illustrations : une vraie photo (photos/xxx.jpg) recouvre l’illustration */
+.shot{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:#DADDD4;aspect-ratio:4/3}
+.shot.v{aspect-ratio:3/4}.shot.sq{aspect-ratio:1/1}.shot.rond{aspect-ratio:1/1;border-radius:50%;max-width:320px}
+.shot>svg,.shot>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+.shot figcaption{position:absolute;left:10px;bottom:10px;background:var(--blanc);color:var(--nuit);font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px;z-index:2}
+.shot figcaption.apres{background:var(--flamme)}
+.todo{background:#FFF1C9;border-radius:4px;padding:0 4px}
+/* Services */
+.presta{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:34px 0}
+.presta:nth-child(even)>div:first-child{order:2}
+.presta ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.presta li{display:flex;gap:10px;line-height:1.5}
+.presta li svg{flex:none;margin-top:3px;color:#2F6B4F}
+.num{font:400 .95rem "Young Serif",serif;color:var(--flamme-b);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
+.etape{padding:24px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait)}
+.etape i{display:flex;width:42px;height:42px;border-radius:50%;background:var(--nuit);color:var(--flamme);align-items:center;justify-content:center;font:400 1.1rem "Young Serif",serif;font-style:normal;margin-bottom:12px}
+.saisons{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.saison{padding:24px;border-radius:var(--r);background:var(--nuit);color:var(--blanc)}
+.saison:nth-child(2){background:#2F6B4F}.saison:nth-child(3){background:#8A4B14}.saison:nth-child(4){background:#3C5668}
+.saison h3{color:var(--flamme)}.saison p{color:var(--blanc);font-size:1rem}
+.saison .mois{display:block;font-size:.9rem;color:var(--clair);margin-bottom:8px;font-weight:600}
+.non{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;list-style:none;padding:0;max-width:860px}
+.non li{display:flex;gap:10px;line-height:1.5}.non svg{flex:none;margin-top:3px;color:#A33}
+/* À propos */
+.valeurs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.valeur{padding:28px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait)}
+/* Contact */
+.contact-grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.cartes{display:grid;gap:14px;margin-top:26px}
+.carte{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait);text-decoration:none}
+.carte svg{flex:none;margin-top:3px;color:var(--flamme-b)}
+.carte b{display:block}
+.carte:hover{border-color:var(--nuit)}
+.retour{display:none;padding:22px;border-radius:var(--r);background:#E3F1E8;border-left:5px solid #2F6B4F;font-weight:600}
+.retour.on{display:block}
+fieldset{border:0;padding:0;display:grid;gap:18px}
+.ligne2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:.95rem}
+.check input{width:24px;min-height:24px;margin-top:2px;flex:none}
+/* Lexique */
+.outils{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:28px}
+.outils input[type=search]{max-width:420px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 18px;border-radius:99px;border:2px solid var(--nuit);background:var(--blanc);font:700 .98rem Figtree,sans-serif;cursor:pointer;color:var(--nuit)}
+.chip[aria-pressed="true"]{background:var(--nuit);color:var(--blanc)}
+.mots{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mot{padding:24px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait);display:flex;flex-direction:column;gap:6px}
+.mot[hidden]{display:none}
+.mot .cat{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--flamme-b)}
+.mot h3{margin:0;font-size:1.45rem}
+.mot .de{margin:4px 0 0;padding:0;border:0;color:var(--doux);font-size:.98rem}
+.mot .astuce{margin-top:8px;padding:10px 14px;border-radius:8px;background:#FBF3E3;font-size:.98rem}
+.mot button{align-self:flex-start;margin-top:10px;min-height:44px;padding:0 16px;border-radius:8px;border:2px solid var(--trait);background:transparent;font:600 .95rem Figtree,sans-serif;cursor:pointer}
+.mot.su{border-color:#2F6B4F}.mot.su button{background:#E3F1E8;border-color:#2F6B4F}
+.score{font-weight:700}
+.quiz{max-width:760px}
+.q{padding:22px 0;border-bottom:1px solid var(--trait)}
+.q p{font-weight:700}
+.rep{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.rep button{min-height:46px;padding:0 18px;border-radius:10px;border:2px solid var(--nuit);background:var(--blanc);font:600 1rem Figtree,sans-serif;cursor:pointer}
+.rep button.bon{background:#D5ECDD;border-color:#2F6B4F}.rep button.mauvais{background:#F6D9D9;border-color:#A33}
+.expl{margin-top:10px;color:var(--doux);display:none}.expl.on{display:block}
+/* Légal */
+.legal-page h2{font-size:1.5rem;margin:40px 0 10px}
+.legal-page{max-width:780px}
+.legal-page ul{padding-left:22px;margin-top:8px}
+@media(max-width:900px){.presta,.contact-grille{grid-template-columns:1fr;gap:28px}.presta:nth-child(even)>div:first-child{order:0}.etapes,.saisons,.valeurs,.non,.mots,.ligne2{grid-template-columns:1fr}.shot.rond{max-width:220px}}
+@media(min-width:901px) and (max-width:1100px){.etapes,.saisons{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.top .wrap{flex-wrap:wrap;min-height:0;padding:10px 0 6px;row-gap:6px}.nav{width:100%;overflow-x:auto;gap:20px;order:3;padding-bottom:6px}.nav a:not(.btn){display:block;white-space:nowrap;font-size:1rem}.nav .btn{display:none}}</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"La Veilleuse","description":"Entretien, nettoyage et fleurissement de tombes en Outre-Forêt (Alsace du Nord), avec photos avant/après.","url":"https://www.la-veilleuse.fr/","telephone":"+33 6 00 00 00 00","address":{"@type":"PostalAddress","addressLocality":"Seebach","postalCode":"67160","addressCountry":"FR"},"areaServed":["Seebach","Riedseltz","Cleebourg","Hunspach","Soultz-sous-Forêts","Hoffen","Hatten","Surbourg","Schleithal","Lauterbourg","Wissembourg","Haguenau"],"knowsLanguage":["fr","de"],"priceRange":"80 € - 420 €"}
 </script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <symbol id="flamme" viewBox="0 0 24 24"><path fill="#F0A93A" d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z"/><path fill="#FFE2A6" d="M12 11c.5 1.5 2 2.5 2 4.2a2 2 0 0 1-4 0c0-1.7 1.5-2.7 2-4.2z"/></symbol>
 <symbol id="ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -219,7 +285,6 @@ footer .logo b{color:var(--blanc)}
 <symbol id="horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 <symbol id="coeur" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
 </svg>
-
 <header class="top">
 <div class="wrap">
 <a class="logo" href="index.html" aria-label="La Veilleuse, accueil">
@@ -227,15 +292,14 @@ footer .logo b{color:var(--blanc)}
 <span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span>
 </a>
 <nav class="nav" aria-label="Navigation principale">
-<a href="services.html">Services</a>
-<a href="tarifs.html">Tarifs</a>
-<a href="a-propos.html">À propos</a>
+<a href="services.html">Services</a><a href="tarifs.html">Tarifs</a><a href="a-propos.html">À propos</a><a href="lexique.html">Lexique</a>
 <a class="btn btn-flamme" href="contact.html">Demander un devis</a>
 </nav>
 </div>
 </header>
 
 <main id="contenu">
+
 
 <section class="hero" id="haut">
 <div class="wrap">
@@ -249,12 +313,7 @@ footer .logo b{color:var(--blanc)}
 <p class="micro">Réponse sous 48 h, sans engagement. Auch auf Deutsch.</p>
 </div>
 <div>
-<div class="duo">
-<!-- REMPLACER par : <img src="img/avant.jpg" alt="Tombe couverte de mousse avant le passage" width="600" height="800"> -->
-<figure><div class="ph" role="img" aria-label="Photo avant le passage">Photo avant</div><figcaption class="tag">Avant</figcaption></figure>
-<!-- REMPLACER par : <img src="img/apres.jpg" alt="La même tombe propre et fleurie après le passage" width="600" height="800"> -->
-<figure><div class="ph" role="img" aria-label="Photo après le passage">Photo après</div><figcaption class="tag apres">Après</figcaption></figure>
-</div>
+<div class="duo"><figure class="shot v"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : tombe couverte de mousse et de mauvaises herbes" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#E8EEE4"/><rect y="0" width="400" height="175" fill="#2E4A3E"/><circle cx="60" cy="120" r="55" fill="#355644"/><circle cx="350" cy="100" r="60" fill="#355644"/><rect y="175" width="400" height="225" fill="#6E8359"/><path d="M70 400 L110 320 H290 L330 400z" fill="#8D8A7C"/><circle cx="110" cy="335" r="3" fill="#77746A"/><circle cx="157" cy="364" r="3" fill="#77746A"/><circle cx="204" cy="393" r="3" fill="#77746A"/><circle cx="251" cy="362" r="3" fill="#77746A"/><circle cx="298" cy="391" r="3" fill="#77746A"/><circle cx="155" cy="360" r="3" fill="#77746A"/><circle cx="202" cy="389" r="3" fill="#77746A"/><circle cx="249" cy="358" r="3" fill="#77746A"/><circle cx="296" cy="387" r="3" fill="#77746A"/><circle cx="153" cy="356" r="3" fill="#77746A"/><circle cx="200" cy="385" r="3" fill="#77746A"/><circle cx="247" cy="354" r="3" fill="#77746A"/><circle cx="294" cy="383" r="3" fill="#77746A"/><circle cx="151" cy="352" r="3" fill="#77746A"/><rect x="105" y="296" width="190" height="34" rx="4" fill="#8E9388"/><rect x="105" y="296" width="190" height="8" rx="4" fill="#7B8076"/><path d="M150 296 V128 a50 50 0 0 1 100 0 V296z" fill="#8E9388"/><path d="M158 296 V132 a42 42 0 0 1 20 -36" fill="none" stroke="#7B8076" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#6A6F65">FAMILLE</text><rect x="170" y="184" width="60" height="4" rx="2" fill="#6A6F65"/><rect x="180" y="196" width="40" height="4" rx="2" fill="#6A6F65"/><circle cx="165" cy="150" r="14" fill="#5F7F3F" opacity=".55"/><circle cx="168" cy="148" r="8" fill="#7A9A4B" opacity=".6"/><circle cx="215" cy="135" r="10" fill="#5F7F3F" opacity=".55"/><circle cx="218" cy="133" r="6" fill="#7A9A4B" opacity=".6"/><circle cx="180" cy="205" r="16" fill="#5F7F3F" opacity=".55"/><circle cx="183" cy="203" r="9" fill="#7A9A4B" opacity=".6"/><circle cx="232" cy="190" r="12" fill="#5F7F3F" opacity=".55"/><circle cx="235" cy="188" r="7" fill="#7A9A4B" opacity=".6"/><circle cx="160" cy="238" r="9" fill="#5F7F3F" opacity=".55"/><circle cx="163" cy="236" r="5" fill="#7A9A4B" opacity=".6"/><circle cx="205" cy="240" r="11" fill="#5F7F3F" opacity=".55"/><circle cx="208" cy="238" r="6" fill="#7A9A4B" opacity=".6"/><circle cx="140" cy="300" r="12" fill="#5F7F3F" opacity=".55"/><circle cx="143" cy="298" r="7" fill="#7A9A4B" opacity=".6"/><circle cx="260" cy="300" r="15" fill="#5F7F3F" opacity=".55"/><circle cx="263" cy="298" r="8" fill="#7A9A4B" opacity=".6"/><circle cx="190" cy="315" r="10" fill="#5F7F3F" opacity=".55"/><circle cx="193" cy="313" r="6" fill="#7A9A4B" opacity=".6"/><path d="M175 130 q-6 50 2 110 M222 150 q6 40 -2 90" stroke="#5E6358" stroke-width="7" opacity=".35" fill="none" stroke-linecap="round"/><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M110 345 q-8 -30 -14 -42"/><path d="M110 345 q2 -34 4 -48"/><path d="M110 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M150 345 q-8 -30 -14 -42"/><path d="M150 345 q2 -34 4 -48"/><path d="M150 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M260 345 q-8 -30 -14 -42"/><path d="M260 345 q2 -34 4 -48"/><path d="M260 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M290 345 q-8 -30 -14 -42"/><path d="M290 345 q2 -34 4 -48"/><path d="M290 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M200 345 q-8 -30 -14 -42"/><path d="M200 345 q2 -34 4 -48"/><path d="M200 345 q10 -26 18 -38"/></g></svg><img src="photos/avant.jpg" alt="Tombe couverte de mousse avant le passage" loading="lazy" onerror="this.remove()"><figcaption>Avant</figcaption></figure><figure class="shot v"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : la même tombe propre, fleurie, avec une bougie" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#E8EEE4"/><rect y="0" width="400" height="175" fill="#2E4A3E"/><circle cx="60" cy="120" r="55" fill="#355644"/><circle cx="350" cy="100" r="60" fill="#355644"/><rect y="175" width="400" height="225" fill="#8FAE74"/><path d="M70 400 L110 320 H290 L330 400z" fill="#DCD0B5"/><circle cx="110" cy="335" r="3" fill="#C4B795"/><circle cx="157" cy="364" r="3" fill="#C4B795"/><circle cx="204" cy="393" r="3" fill="#C4B795"/><circle cx="251" cy="362" r="3" fill="#C4B795"/><circle cx="298" cy="391" r="3" fill="#C4B795"/><circle cx="155" cy="360" r="3" fill="#C4B795"/><circle cx="202" cy="389" r="3" fill="#C4B795"/><circle cx="249" cy="358" r="3" fill="#C4B795"/><circle cx="296" cy="387" r="3" fill="#C4B795"/><circle cx="153" cy="356" r="3" fill="#C4B795"/><circle cx="200" cy="385" r="3" fill="#C4B795"/><circle cx="247" cy="354" r="3" fill="#C4B795"/><circle cx="294" cy="383" r="3" fill="#C4B795"/><circle cx="151" cy="352" r="3" fill="#C4B795"/><rect x="105" y="296" width="190" height="34" rx="4" fill="#DADDD4"/><rect x="105" y="296" width="190" height="8" rx="4" fill="#F0F2EC"/><path d="M150 296 V128 a50 50 0 0 1 100 0 V296z" fill="#DADDD4"/><path d="M158 296 V132 a42 42 0 0 1 20 -36" fill="none" stroke="#F0F2EC" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#E0A93C">FAMILLE</text><rect x="170" y="184" width="60" height="4" rx="2" fill="#E0A93C"/><rect x="180" y="196" width="40" height="4" rx="2" fill="#E0A93C"/><ellipse cx="120" cy="304" rx="26" ry="14" fill="#3C6B3B"/><circle cx="106" cy="290" r="11" fill="#F0A93A"/><circle cx="120" cy="282" r="11" fill="#F0A93A"/><circle cx="134" cy="290" r="11" fill="#F0A93A"/><circle cx="110" cy="302" r="11" fill="#F0A93A"/><circle cx="130" cy="302" r="11" fill="#F0A93A"/><circle cx="120" cy="294" r="11" fill="#F0A93A"/><circle cx="120" cy="292" r="7" fill="#C46A12"/><path d="M98 314 h44 l-6 26 h-32z" fill="#B5683A"/><ellipse cx="285" cy="309" rx="26" ry="14" fill="#3C6B3B"/><circle cx="271" cy="295" r="11" fill="#B05A9B"/><circle cx="285" cy="287" r="11" fill="#B05A9B"/><circle cx="299" cy="295" r="11" fill="#B05A9B"/><circle cx="275" cy="307" r="11" fill="#B05A9B"/><circle cx="295" cy="307" r="11" fill="#B05A9B"/><circle cx="285" cy="299" r="11" fill="#B05A9B"/><circle cx="285" cy="297" r="7" fill="#7F2F6C"/><path d="M263 319 h44 l-6 26 h-32z" fill="#B5683A"/><rect x="183" y="242" width="34" height="44" rx="5" fill="#2B3B35"/><rect x="188" y="247" width="24" height="34" rx="3" fill="#FBE7B3" opacity=".9"/><path d="M191 268 c3 -8 9 -12 9 -22 c6 6 12 14 8 24 a9 9 0 0 1 -17 -2z" fill="#F0A93A"/><path d="M196 266 c2 -4 5 -6 5 -11 c3 3 6 7 4 12 a5 5 0 0 1 -9 -1z" fill="#FFE2A6"/><rect x="192" y="232" width="16" height="10" rx="3" fill="#2B3B35"/></svg><img src="photos/apres.jpg" alt="La même tombe propre et fleurie après le passage" loading="lazy" onerror="this.remove()"><figcaption class="apres">Après</figcaption></figure></div>
 <p class="hero-note">Même tombe, même angle, photographiée avant et après le passage.</p>
 </div>
 </div>
@@ -309,7 +368,8 @@ footer .logo b{color:var(--blanc)}
 <a class="tuile" href="services.html"><h3>Ce que je fais</h3><p>Nettoyage, désherbage, fleurissement : le détail de chaque prestation et de chaque passage.</p><span class="voir">Voir les services</span></a>
 <a class="tuile" href="tarifs.html"><h3>Combien ça coûte</h3><p>Nettoyage dès 80&nbsp;€, abonnements dès 150&nbsp;€ par an. Les prix sont affichés.</p><span class="voir">Voir les tarifs</span></a>
 <a class="tuile" href="a-propos.html"><h3>Qui s’occupe de la tombe</h3><p>Mon visage, ma méthode, la zone couverte, et ma garantie : je repasse sans frais.</p><span class="voir">Me connaître</span></a>
-<a class="tuile devis" href="contact.html"><h3>Demander un devis</h3><p>Dites-moi où se trouve la tombe. Je vous réponds sous 48&nbsp;h, gratuitement et sans engagement.</p><span class="voir">Écrire à La Veilleuse</span></a>
+<a class="tuile" href="lexique.html"><h3>Comprendre les mots</h3><p>Concession, caveau, chrysanthème, Toussaint : un petit lexique pour tout comprendre, en français et en allemand.</p><span class="voir">Ouvrir le lexique</span></a>
+<a class="tuile devis" style="grid-column:1/-1" href="contact.html"><h3>Demander un devis</h3><p>Dites-moi où se trouve la tombe. Je vous réponds sous 48&nbsp;h, gratuitement et sans engagement.</p><span class="voir">Écrire à La Veilleuse</span></a>
 </div>
 </div>
 </section>
@@ -326,20 +386,22 @@ footer .logo b{color:var(--blanc)}
 </div>
 </div>
 </section>
+
 </main>
 
 <footer>
 <div class="wrap">
 <div>
 <a class="logo" href="index.html"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
+<p style="margin-top:14px">La petite flamme qu’on garde allumée.</p>
 </div>
 <div>
 <p><a href="tel:+33600000000">06 00 00 00 00</a><br><a href="mailto:contact@la-veilleuse.fr">contact@la-veilleuse.fr</a><br>Seebach (Bas-Rhin)</p>
 </div>
 <div>
-<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
+<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="lexique.html">Lexique</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
 </div>
-<p class="legal">La Veilleuse, micro-entreprise, SIRET [à compléter]. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
+<p class="legal">La Veilleuse, micro-entreprise, SIRET <span class="todo" style="color:#17302A">[à compléter]</span>. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
 </div>
 </footer>
 
@@ -348,5 +410,6 @@ footer .logo b{color:var(--blanc)}
 <a class="btn btn-ligne" style="color:#fff" href="https://wa.me/33600000000">WhatsApp</a>
 <a class="btn btn-ligne" style="color:#fff" href="contact.html">Devis</a>
 </div>
+
 </body>
 </html>

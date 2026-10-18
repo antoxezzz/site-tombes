@@ -6,6 +6,7 @@
 <title>Tarifs | La Veilleuse, entretien de tombes dès 80 € en Outre-Forêt</title>
 <meta name="description" content="Tarifs de La Veilleuse : nettoyage de tombe dès 80 €, abonnements annuels de 150 à 420 €, déplacement inclus jusqu’à 15 km de Seebach. Devis gratuit sous 48 h.">
 <link rel="canonical" href="https://www.la-veilleuse.fr/tarifs.html">
+<meta property="og:title" content="Tarifs | La Veilleuse, entretien de tombes dès 80 € en Outre-Forêt"><meta property="og:description" content="Tarifs de La Veilleuse : nettoyage de tombe dès 80 €, abonnements annuels de 150 à 420 €, déplacement inclus jusqu’à 15 km de Seebach. Devis gratuit sous 48 h."><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#17302A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F0A93A' d='M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,11 +201,81 @@ footer .logo b{color:var(--blanc)}
 .paiement{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .paiement div{padding:26px;border-left:5px solid var(--flamme);background:#FBF3E3}
 @media(max-width:900px){.inclus,.paiement{grid-template-columns:1fr}}
-</style>
+
+/* Photos / illustrations : une vraie photo (photos/xxx.jpg) recouvre l’illustration */
+.shot{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:#DADDD4;aspect-ratio:4/3}
+.shot.v{aspect-ratio:3/4}.shot.sq{aspect-ratio:1/1}.shot.rond{aspect-ratio:1/1;border-radius:50%;max-width:320px}
+.shot>svg,.shot>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+.shot figcaption{position:absolute;left:10px;bottom:10px;background:var(--blanc);color:var(--nuit);font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px;z-index:2}
+.shot figcaption.apres{background:var(--flamme)}
+.todo{background:#FFF1C9;border-radius:4px;padding:0 4px}
+/* Services */
+.presta{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:34px 0}
+.presta:nth-child(even)>div:first-child{order:2}
+.presta ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.presta li{display:flex;gap:10px;line-height:1.5}
+.presta li svg{flex:none;margin-top:3px;color:#2F6B4F}
+.num{font:400 .95rem "Young Serif",serif;color:var(--flamme-b);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
+.etape{padding:24px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait)}
+.etape i{display:flex;width:42px;height:42px;border-radius:50%;background:var(--nuit);color:var(--flamme);align-items:center;justify-content:center;font:400 1.1rem "Young Serif",serif;font-style:normal;margin-bottom:12px}
+.saisons{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.saison{padding:24px;border-radius:var(--r);background:var(--nuit);color:var(--blanc)}
+.saison:nth-child(2){background:#2F6B4F}.saison:nth-child(3){background:#8A4B14}.saison:nth-child(4){background:#3C5668}
+.saison h3{color:var(--flamme)}.saison p{color:var(--blanc);font-size:1rem}
+.saison .mois{display:block;font-size:.9rem;color:var(--clair);margin-bottom:8px;font-weight:600}
+.non{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;list-style:none;padding:0;max-width:860px}
+.non li{display:flex;gap:10px;line-height:1.5}.non svg{flex:none;margin-top:3px;color:#A33}
+/* À propos */
+.valeurs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.valeur{padding:28px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait)}
+/* Contact */
+.contact-grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.cartes{display:grid;gap:14px;margin-top:26px}
+.carte{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait);text-decoration:none}
+.carte svg{flex:none;margin-top:3px;color:var(--flamme-b)}
+.carte b{display:block}
+.carte:hover{border-color:var(--nuit)}
+.retour{display:none;padding:22px;border-radius:var(--r);background:#E3F1E8;border-left:5px solid #2F6B4F;font-weight:600}
+.retour.on{display:block}
+fieldset{border:0;padding:0;display:grid;gap:18px}
+.ligne2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:.95rem}
+.check input{width:24px;min-height:24px;margin-top:2px;flex:none}
+/* Lexique */
+.outils{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:28px}
+.outils input[type=search]{max-width:420px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 18px;border-radius:99px;border:2px solid var(--nuit);background:var(--blanc);font:700 .98rem Figtree,sans-serif;cursor:pointer;color:var(--nuit)}
+.chip[aria-pressed="true"]{background:var(--nuit);color:var(--blanc)}
+.mots{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mot{padding:24px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait);display:flex;flex-direction:column;gap:6px}
+.mot[hidden]{display:none}
+.mot .cat{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--flamme-b)}
+.mot h3{margin:0;font-size:1.45rem}
+.mot .de{margin:4px 0 0;padding:0;border:0;color:var(--doux);font-size:.98rem}
+.mot .astuce{margin-top:8px;padding:10px 14px;border-radius:8px;background:#FBF3E3;font-size:.98rem}
+.mot button{align-self:flex-start;margin-top:10px;min-height:44px;padding:0 16px;border-radius:8px;border:2px solid var(--trait);background:transparent;font:600 .95rem Figtree,sans-serif;cursor:pointer}
+.mot.su{border-color:#2F6B4F}.mot.su button{background:#E3F1E8;border-color:#2F6B4F}
+.score{font-weight:700}
+.quiz{max-width:760px}
+.q{padding:22px 0;border-bottom:1px solid var(--trait)}
+.q p{font-weight:700}
+.rep{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.rep button{min-height:46px;padding:0 18px;border-radius:10px;border:2px solid var(--nuit);background:var(--blanc);font:600 1rem Figtree,sans-serif;cursor:pointer}
+.rep button.bon{background:#D5ECDD;border-color:#2F6B4F}.rep button.mauvais{background:#F6D9D9;border-color:#A33}
+.expl{margin-top:10px;color:var(--doux);display:none}.expl.on{display:block}
+/* Légal */
+.legal-page h2{font-size:1.5rem;margin:40px 0 10px}
+.legal-page{max-width:780px}
+.legal-page ul{padding-left:22px;margin-top:8px}
+@media(max-width:900px){.presta,.contact-grille{grid-template-columns:1fr;gap:28px}.presta:nth-child(even)>div:first-child{order:0}.etapes,.saisons,.valeurs,.non,.mots,.ligne2{grid-template-columns:1fr}.shot.rond{max-width:220px}}
+@media(min-width:901px) and (max-width:1100px){.etapes,.saisons{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.top .wrap{flex-wrap:wrap;min-height:0;padding:10px 0 6px;row-gap:6px}.nav{width:100%;overflow-x:auto;gap:20px;order:3;padding-bottom:6px}.nav a:not(.btn){display:block;white-space:nowrap;font-size:1rem}.nav .btn{display:none}}</style>
+
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <symbol id="flamme" viewBox="0 0 24 24"><path fill="#F0A93A" d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z"/><path fill="#FFE2A6" d="M12 11c.5 1.5 2 2.5 2 4.2a2 2 0 0 1-4 0c0-1.7 1.5-2.7 2-4.2z"/></symbol>
 <symbol id="ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -212,7 +283,6 @@ footer .logo b{color:var(--blanc)}
 <symbol id="horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 <symbol id="coeur" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
 </svg>
-
 <header class="top">
 <div class="wrap">
 <a class="logo" href="index.html" aria-label="La Veilleuse, accueil">
@@ -220,15 +290,14 @@ footer .logo b{color:var(--blanc)}
 <span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span>
 </a>
 <nav class="nav" aria-label="Navigation principale">
-<a href="services.html">Services</a>
-<a href="tarifs.html" aria-current="page">Tarifs</a>
-<a href="a-propos.html">À propos</a>
+<a href="services.html">Services</a><a href="tarifs.html" aria-current="page">Tarifs</a><a href="a-propos.html">À propos</a><a href="lexique.html">Lexique</a>
 <a class="btn btn-flamme" href="contact.html">Demander un devis</a>
 </nav>
 </div>
 </header>
 
 <main id="contenu">
+
 
 <section class="page-hero">
 <div class="wrap">
@@ -328,20 +397,22 @@ footer .logo b{color:var(--blanc)}
 </div>
 </div>
 </section>
+
 </main>
 
 <footer>
 <div class="wrap">
 <div>
 <a class="logo" href="index.html"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
+<p style="margin-top:14px">La petite flamme qu’on garde allumée.</p>
 </div>
 <div>
 <p><a href="tel:+33600000000">06 00 00 00 00</a><br><a href="mailto:contact@la-veilleuse.fr">contact@la-veilleuse.fr</a><br>Seebach (Bas-Rhin)</p>
 </div>
 <div>
-<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
+<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="lexique.html">Lexique</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
 </div>
-<p class="legal">La Veilleuse, micro-entreprise, SIRET [à compléter]. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
+<p class="legal">La Veilleuse, micro-entreprise, SIRET <span class="todo" style="color:#17302A">[à compléter]</span>. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
 </div>
 </footer>
 
@@ -350,5 +421,6 @@ footer .logo b{color:var(--blanc)}
 <a class="btn btn-ligne" style="color:#fff" href="https://wa.me/33600000000">WhatsApp</a>
 <a class="btn btn-ligne" style="color:#fff" href="contact.html">Devis</a>
 </div>
+
 </body>
 </html>

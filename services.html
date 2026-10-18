@@ -1,625 +1,337 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Local Optimisé -->
-    <title>Nos Prestations | Sérénité Tombes (Nettoyage & Fleurissement en Alsace)</title>
-    <meta name="description" content="Découvrez nos services d'entretien écologique de sépultures, fleurissement de saison, recharge de gravier et redorage de lettres à Seebach, Wissembourg et Outre-Forêt.">
-    <meta name="robots" content="index, follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | La Veilleuse, nettoyage, désherbage et fleurs pour tombes en Outre-Forêt</title>
+<meta name="description" content="Nettoyage de la pierre, désherbage, fleurs de saison, lettres gravées repeintes, gravier neuf et photos avant/après. Entretien de tombes à Seebach et en Outre-Forêt.">
+<link rel="canonical" href="https://www.la-veilleuse.fr/services.html">
+<meta property="og:title" content="Services | La Veilleuse, nettoyage, désherbage et fleurs pour tombes en Outre-Forêt"><meta property="og:description" content="Nettoyage de la pierre, désherbage, fleurs de saison, lettres gravées repeintes, gravier neuf et photos avant/après. Entretien de tombes à Seebach et en Outre-Forêt."><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#17302A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F0A93A' d='M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap">
+<style>
+/* La Veilleuse : feuille de style partagée (toutes les pages la réutiliseront) */
+:root{--nuit:#17302A;--nuit2:#21423A;--flamme:#F0A93A;--flamme-b:#C98614;--pierre:#F1F3EE;--blanc:#fff;--encre:#1B2420;--doux:#4C5A52;--clair:#CFE0D6;--trait:#D3D9D2;--r:12px}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:84px}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font:400 18px/1.65 Figtree,system-ui,sans-serif;color:var(--encre);background:var(--pierre);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flamme);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--blanc);color:var(--encre);padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15}
+h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px}
+h3{font-size:1.3rem;margin-bottom:8px}
+p+p{margin-top:12px}
+.lead{font-size:1.15rem;max-width:56ch}
+.muted{color:var(--doux)}
+.section{padding:84px 0}
+.section.stone{background:var(--blanc)}
+.section.dark{background:var(--nuit);color:var(--blanc)}
+.section.dark .muted,.dark .lead{color:var(--clair)}
+.head{max-width:62ch;margin-bottom:44px}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:10px;font:700 1.05rem/1 Figtree,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s}
+.btn-flamme{background:var(--flamme);color:var(--nuit);border-color:var(--flamme-b)}
+.btn-flamme:hover{background:#FFC25E}
+.btn-ligne{border-color:currentColor;background:transparent}
+.btn-ligne:hover{background:rgba(255,255,255,.1)}
+.on-light .btn-ligne:hover,.btn-ligne.sombre:hover{background:rgba(23,48,42,.07)}
+.btn-bloc{width:100%}
 
-    <style>
-        /* PALETTE DE COULEURS & VARIABLES */
-        :root {
-            --primary: #2C4A3E;       /* Vert Sauge Profond */
-            --primary-dark: #1E352B;  /* Vert Sombre (Hover) */
-            --accent: #C5A059;        /* Or Doux */
-            --accent-light: #F4EFE6;  /* Fond Doré Clair */
-            --bg: #F7F6F2;            /* Blanc Crème / Pierre */
-            --white: #FFFFFF;
-            --text: #2B2B2B;          /* Gris Anthracite */
-            --muted: #5F6360;         /* Gris Doux */
-            --border: #E2E0D8;
-        }
+/* En-tête */
+.top{background:var(--nuit);color:var(--blanc);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.1)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{flex:none}
+.logo b{display:block;font:400 1.45rem/1.1 "Young Serif",Georgia,serif}
+.logo small{display:block;font-size:.8rem;color:var(--clair);line-height:1.3}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--flamme)}
+.nav .btn{min-height:46px;padding:0 20px;font-size:1rem}
+.nav .btn:hover{color:var(--nuit)}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+/* Attention */
+.hero{background:radial-gradient(60% 90% at 85% 15%,rgba(240,169,58,.22),transparent 62%),var(--nuit);color:var(--blanc);padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .lead{margin:20px 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.micro{margin-top:16px;font-size:.98rem;color:var(--clair)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo figure{position:relative}
+.ph,.duo img,.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r)}
+.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:var(--nuit2);border:2px dashed var(--lichen,#5E7A68);color:var(--clair);font-weight:600}
+.light .ph{background:#E6EBE5;border-color:#8FA697;color:var(--doux)}
+figcaption.tag{position:absolute;left:10px;bottom:10px;background:var(--blanc);color:var(--nuit);font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px}
+figcaption.tag.apres{background:var(--flamme)}
+.hero-note{margin-top:12px;font-size:.95rem;color:var(--clair)}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.65;
-        }
+/* Réassurance */
+.trust{background:var(--blanc);border-bottom:1px solid var(--trait)}
+.trust ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust li{display:flex;gap:12px;align-items:flex-start;padding:22px 0;font-weight:600;font-size:1rem;line-height:1.4}
+.trust svg{flex:none;margin-top:2px}
 
-        h1, h2, h3, .logo {
-            font-family: 'Playfair Display', serif;
-        }
+/* Intérêt */
+.situations{display:grid;grid-template-columns:repeat(3,1fr)}
+.sit{padding:4px 32px;border-left:2px solid var(--trait)}
+.sit:first-child{padding-left:0;border-left:0}
+.sit svg{margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:8%;right:8%;top:23px;height:2px;background:var(--trait)}
+.step{position:relative}
+.step i{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--nuit);color:var(--flamme);font:400 1.25rem "Young Serif",serif;font-style:normal;margin-bottom:16px;position:relative}
 
-        /* BARRE D'ANNONCE HAUT DE PAGE */
-        .top-bar {
-            background-color: var(--primary-dark);
-            color: var(--white);
-            text-align: center;
-            padding: 8px 15px;
-            font-size: 0.85rem;
-            letter-spacing: 0.3px;
-        }
-        .top-bar span {
-            color: var(--accent);
-            font-weight: 600;
-        }
+/* Désir */
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px}
+.proof .ph,.proof img{aspect-ratio:4/3}
+.proof figure{position:relative}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center}
+.about .ph,.about img{aspect-ratio:1/1;border-radius:50%;max-width:320px}
+.garantie{margin-top:22px;padding:16px 20px;border-left:5px solid var(--flamme);background:#FBF3E3;font-weight:600;max-width:58ch}
+.prix{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.offre{display:flex;flex-direction:column;padding:34px 28px;border:2px solid var(--trait);border-radius:var(--r);background:var(--blanc)}
+.offre.reco{background:var(--nuit);color:var(--blanc);border-color:var(--nuit);transform:translateY(-14px);padding-top:40px}
+.offre .reco-tag{align-self:flex-start;background:var(--flamme);color:var(--nuit);font-weight:700;font-size:.9rem;padding:3px 14px;border-radius:99px;margin-bottom:12px}
+.montant{font:400 2.8rem/1 "Young Serif",serif;margin:14px 0 4px}
+.montant small{font:600 1rem Figtree,sans-serif}
+.offre ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:10px;flex:1;align-content:start}
+.offre li{display:flex;gap:10px;line-height:1.45}
+.offre li svg{flex:none;margin-top:3px}
+.offre.reco .muted{color:var(--clair)}
+.unique{margin-top:34px;font-size:1.1rem}
+.petit{font-size:.95rem;margin-top:10px;max-width:70ch}
+.communes{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin-top:20px}
+.communes li{background:var(--blanc);border:1px solid var(--trait);border-radius:99px;padding:6px 16px;font-weight:600;font-size:1rem}
 
-        /* NAVIGATION MULTI-PAGES */
-        nav {
-            background: var(--white);
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
-        }
+/* FAQ */
+.faq details{max-width:780px}
+details{border-bottom:1px solid var(--trait)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;font-weight:700;font-size:1.1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--flamme-b)}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 22px;max-width:62ch;color:var(--doux)}
 
-        .logo {
-            font-size: 1.45rem;
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-icon {
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
+/* Action */
+.action{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.coord{margin-top:28px;display:grid;gap:14px;max-width:380px}
+.tel{font:400 1.9rem/1.2 "Young Serif",serif;text-decoration:none}
+.de{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);color:var(--clair);font-size:1rem}
+form{background:var(--blanc);color:var(--encre);padding:32px;border-radius:var(--r);display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:700;font-size:1rem}
+label span{font-weight:400;color:var(--doux)}
+input,select,textarea{font:inherit;padding:13px 14px;border:2px solid #8E9C94;border-radius:10px;background:var(--blanc);color:var(--encre);min-height:50px;width:100%}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--nuit)}
+.hp{position:absolute;left:-9999px}
+form .muted{color:var(--doux)}
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            align-items: center;
-        }
+/* Pied de page */
+footer{background:#10211C;color:var(--clair);padding:48px 0 100px;font-size:.98rem}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer a{color:var(--blanc)}
+footer .logo b{color:var(--blanc)}
+.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:.9rem}
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+/* Barre mobile */
+.bar{display:none}
 
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary);
-        }
-        .nav-links a.active {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 4px;
-        }
+@media(max-width:900px){
+ .section{padding:60px 0}
+ .nav a:not(.btn){display:none}
+ .hero .wrap,.about,.action{grid-template-columns:1fr;gap:36px}
+ .trust ul{grid-template-columns:1fr 1fr}
+ .situations{grid-template-columns:1fr;gap:28px}
+ .sit,.sit:first-child{padding:0 0 28px;border-left:0;border-bottom:2px solid var(--trait)}
+ .sit:last-child{border-bottom:0}
+ .steps{grid-template-columns:1fr}
+ .steps::before{display:none}
+ .prix{grid-template-columns:1fr}
+ .offre.reco{transform:none}
+ footer .wrap{grid-template-columns:1fr}
+ .about .ph,.about img{max-width:220px}
+ .bar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--nuit);border-top:1px solid rgba(255,255,255,.15)}
+ .bar .btn{min-height:50px;padding:0 8px;font-size:.98rem}
+}
+@media(max-width:520px){
+ body{font-size:17px}
+ .logo small{display:none}
+ .trust ul{grid-template-columns:1fr;gap:0}
+ .trust li{padding:14px 0}
+ .duo{gap:8px}
+ form{padding:22px}
+}
 
-        .btn-nav {
-            background: var(--primary);
-            color: var(--white) !important;
-            padding: 10px 22px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.2s, transform 0.2s !important;
-        }
-        .btn-nav:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-        }
+/* Tuiles d’orientation (accueil) */
+.tuiles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tuile{display:flex;flex-direction:column;gap:8px;padding:30px;min-height:200px;border:2px solid var(--trait);border-radius:var(--r);background:var(--blanc);text-decoration:none}
+.tuile:hover{border-color:var(--nuit)}
+.tuile h3{margin:0;font-size:1.5rem}
+.tuile p{color:var(--doux)}
+.tuile .voir{margin-top:auto;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.tuile.devis{background:var(--flamme);border-color:var(--flamme-b);color:var(--nuit)}
+.tuile.devis p{color:var(--nuit)}
+.tuile.devis:hover{background:#FFC25E}
+.contact-bande{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.contact-bande .coord{margin-top:0}
+@media(max-width:900px){.tuiles{grid-template-columns:1fr}.tuile{min-height:0}}
 
-        /* EN-TÊTE DE PAGE */
-        .page-header {
-            background: var(--white);
-            padding: 70px 8% 60px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-        .badge-sub {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--primary);
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            border: 1px solid rgba(197, 160, 89, 0.4);
-        }
-        .page-header h1 {
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .page-header p {
-            color: var(--muted);
-            max-width: 680px;
-            margin: 0 auto;
-            font-size: 1.08rem;
-        }
+/* Page tarifs */
+.nav a[aria-current="page"]{color:var(--flamme)}
+.page-hero{background:var(--nuit);color:var(--blanc);padding:56px 0 64px}
+.page-hero .lead{color:var(--clair);margin-top:14px}
+.ideal{font-size:.98rem;margin:0 0 18px}
+.liste-prix{list-style:none;padding:0;max-width:760px}
+.liste-prix li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--trait);font-weight:600}
+.liste-prix small{display:block;font-weight:400;color:var(--doux);font-size:.98rem}
+.liste-prix b{white-space:nowrap;font:400 1.3rem "Young Serif",Georgia,serif}
+.inclus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 36px;list-style:none;padding:0}
+.inclus li{display:flex;gap:10px;line-height:1.5}
+.inclus svg{flex:none;margin-top:3px;color:#2F6B4F}
+.paiement{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.paiement div{padding:26px;border-left:5px solid var(--flamme);background:#FBF3E3}
+@media(max-width:900px){.inclus,.paiement{grid-template-columns:1fr}}
 
-        /* SECTIONS GÉNÉRIQUES */
-        section {
-            padding: 70px 8%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-        .section-header h2 {
-            font-size: 2.1rem;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-        .section-header p {
-            color: var(--muted);
-        }
+/* Photos / illustrations : une vraie photo (photos/xxx.jpg) recouvre l’illustration */
+.shot{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:#DADDD4;aspect-ratio:4/3}
+.shot.v{aspect-ratio:3/4}.shot.sq{aspect-ratio:1/1}.shot.rond{aspect-ratio:1/1;border-radius:50%;max-width:320px}
+.shot>svg,.shot>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+.shot figcaption{position:absolute;left:10px;bottom:10px;background:var(--blanc);color:var(--nuit);font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px;z-index:2}
+.shot figcaption.apres{background:var(--flamme)}
+.todo{background:#FFF1C9;border-radius:4px;padding:0 4px}
+/* Services */
+.presta{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:34px 0}
+.presta:nth-child(even)>div:first-child{order:2}
+.presta ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.presta li{display:flex;gap:10px;line-height:1.5}
+.presta li svg{flex:none;margin-top:3px;color:#2F6B4F}
+.num{font:400 .95rem "Young Serif",serif;color:var(--flamme-b);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
+.etape{padding:24px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait)}
+.etape i{display:flex;width:42px;height:42px;border-radius:50%;background:var(--nuit);color:var(--flamme);align-items:center;justify-content:center;font:400 1.1rem "Young Serif",serif;font-style:normal;margin-bottom:12px}
+.saisons{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.saison{padding:24px;border-radius:var(--r);background:var(--nuit);color:var(--blanc)}
+.saison:nth-child(2){background:#2F6B4F}.saison:nth-child(3){background:#8A4B14}.saison:nth-child(4){background:#3C5668}
+.saison h3{color:var(--flamme)}.saison p{color:var(--blanc);font-size:1rem}
+.saison .mois{display:block;font-size:.9rem;color:var(--clair);margin-bottom:8px;font-weight:600}
+.non{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;list-style:none;padding:0;max-width:860px}
+.non li{display:flex;gap:10px;line-height:1.5}.non svg{flex:none;margin-top:3px;color:#A33}
+/* À propos */
+.valeurs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.valeur{padding:28px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait)}
+/* Contact */
+.contact-grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.cartes{display:grid;gap:14px;margin-top:26px}
+.carte{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait);text-decoration:none}
+.carte svg{flex:none;margin-top:3px;color:var(--flamme-b)}
+.carte b{display:block}
+.carte:hover{border-color:var(--nuit)}
+.retour{display:none;padding:22px;border-radius:var(--r);background:#E3F1E8;border-left:5px solid #2F6B4F;font-weight:600}
+.retour.on{display:block}
+fieldset{border:0;padding:0;display:grid;gap:18px}
+.ligne2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:.95rem}
+.check input{width:24px;min-height:24px;margin-top:2px;flex:none}
+/* Lexique */
+.outils{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:28px}
+.outils input[type=search]{max-width:420px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 18px;border-radius:99px;border:2px solid var(--nuit);background:var(--blanc);font:700 .98rem Figtree,sans-serif;cursor:pointer;color:var(--nuit)}
+.chip[aria-pressed="true"]{background:var(--nuit);color:var(--blanc)}
+.mots{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mot{padding:24px;border-radius:var(--r);background:var(--blanc);border:2px solid var(--trait);display:flex;flex-direction:column;gap:6px}
+.mot[hidden]{display:none}
+.mot .cat{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--flamme-b)}
+.mot h3{margin:0;font-size:1.45rem}
+.mot .de{margin:4px 0 0;padding:0;border:0;color:var(--doux);font-size:.98rem}
+.mot .astuce{margin-top:8px;padding:10px 14px;border-radius:8px;background:#FBF3E3;font-size:.98rem}
+.mot button{align-self:flex-start;margin-top:10px;min-height:44px;padding:0 16px;border-radius:8px;border:2px solid var(--trait);background:transparent;font:600 .95rem Figtree,sans-serif;cursor:pointer}
+.mot.su{border-color:#2F6B4F}.mot.su button{background:#E3F1E8;border-color:#2F6B4F}
+.score{font-weight:700}
+.quiz{max-width:760px}
+.q{padding:22px 0;border-bottom:1px solid var(--trait)}
+.q p{font-weight:700}
+.rep{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.rep button{min-height:46px;padding:0 18px;border-radius:10px;border:2px solid var(--nuit);background:var(--blanc);font:600 1rem Figtree,sans-serif;cursor:pointer}
+.rep button.bon{background:#D5ECDD;border-color:#2F6B4F}.rep button.mauvais{background:#F6D9D9;border-color:#A33}
+.expl{margin-top:10px;color:var(--doux);display:none}.expl.on{display:block}
+/* Légal */
+.legal-page h2{font-size:1.5rem;margin:40px 0 10px}
+.legal-page{max-width:780px}
+.legal-page ul{padding-left:22px;margin-top:8px}
+@media(max-width:900px){.presta,.contact-grille{grid-template-columns:1fr;gap:28px}.presta:nth-child(even)>div:first-child{order:0}.etapes,.saisons,.valeurs,.non,.mots,.ligne2{grid-template-columns:1fr}.shot.rond{max-width:220px}}
+@media(min-width:901px) and (max-width:1100px){.etapes,.saisons{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.top .wrap{flex-wrap:wrap;min-height:0;padding:10px 0 6px;row-gap:6px}.nav{width:100%;overflow-x:auto;gap:20px;order:3;padding-bottom:6px}.nav a:not(.btn){display:block;white-space:nowrap;font-size:1rem}.nav .btn{display:none}}</style>
 
-        /* GRILLE DES PRESTATIONS DÉTAILLÉES */
-        .services-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .service-box {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 35px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .service-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(44, 74, 62, 0.07);
-        }
-
-        .service-tag {
-            display: inline-block;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .service-box h3 {
-            color: var(--primary);
-            font-size: 1.45rem;
-            margin-bottom: 12px;
-        }
-
-        .service-box p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .check-list {
-            list-style: none;
-            border-top: 1px solid var(--border);
-            padding-top: 18px;
-        }
-        .check-list li {
-            font-size: 0.9rem;
-            color: var(--text);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .check-list li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        /* PROTOCOLE EN 4 ÉTAPES */
-        .protocol-container {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-left: 5px solid var(--primary);
-            border-radius: 12px;
-            padding: 45px 40px;
-        }
-        .protocol-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        .p-step h4 {
-            color: var(--primary);
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .p-step h4 span {
-            background: var(--accent-light);
-            color: var(--primary);
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-        }
-        .p-step p {
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-
-        /* CALENDRIER DES SAISONS */
-        .seasons-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-        .season-card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 10px;
-            border-top: 3px solid var(--accent);
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-        }
-        .season-card h4 {
-            color: var(--primary);
-            margin-bottom: 6px;
-            font-size: 1.1rem;
-        }
-        .season-period {
-            font-size: 0.8rem;
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            display: block;
-        }
-        .season-card p {
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-
-        /* ENCART LIMITE D'INTERVENTION (CADRE LÉGAL) */
-        .legal-notice {
-            background: var(--accent-light);
-            border: 1px solid rgba(197, 160, 89, 0.4);
-            border-radius: 10px;
-            padding: 25px 30px;
-            margin-top: 50px;
-            font-size: 0.92rem;
-            color: var(--text);
-        }
-        .legal-notice strong {
-            color: var(--primary);
-        }
-
-        /* BANDEAU ACTION FINAL */
-        .cta-box {
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 12px;
-            padding: 50px 35px;
-            text-align: center;
-        }
-        .cta-box h2 {
-            color: var(--white);
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-        .cta-box p {
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 600px;
-            margin: 0 auto 28px;
-        }
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .btn-gold {
-            background: var(--accent);
-            color: var(--white);
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s;
-        }
-        .btn-gold:hover { transform: translateY(-2px); }
-        .btn-white {
-            background: var(--white);
-            color: var(--primary);
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s;
-        }
-        .btn-white:hover { transform: translateY(-2px); }
-
-        /* FOOTER */
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 50px 8% 30px;
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto 35px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-        }
-        .footer-col h4 { color: var(--primary); margin-bottom: 12px; font-size: 1rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 8px; }
-        .footer-col a { color: var(--muted); text-decoration: none; }
-        .footer-col a:hover { color: var(--primary); }
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid var(--border);
-            padding-top: 25px;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 850px) {
-            .nav-links { display: none; }
-            .page-header h1 { font-size: 2rem; }
-            .protocol-container { padding: 30px 20px; }
-        }
-    </style>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="flamme" viewBox="0 0 24 24"><path fill="#F0A93A" d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z"/><path fill="#FFE2A6" d="M12 11c.5 1.5 2 2.5 2 4.2a2 2 0 0 1-4 0c0-1.7 1.5-2.7 2-4.2z"/></symbol>
+<symbol id="ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="coeur" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+<header class="top">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="La Veilleuse, accueil">
+<svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg>
+<span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span>
+</a>
+<nav class="nav" aria-label="Navigation principale">
+<a href="services.html" aria-current="page">Services</a><a href="tarifs.html">Tarifs</a><a href="a-propos.html">À propos</a><a href="lexique.html">Lexique</a>
+<a class="btn btn-flamme" href="contact.html">Demander un devis</a>
+</nav>
+</div>
+</header>
 
-    <!-- Barre d'information locale -->
-    <div class="top-bar">
-        Intervention dans toute l'Outre-Forêt : <span>Seebach · Wissembourg · Soultz-sous-Forêts · Riedseltz · Hunspach</span> — <em>Wir sprechen Deutsch</em>
-    </div>
+<main id="contenu">
+<section class="page-hero"><div class="wrap"><h1>Ce que je fais pour la tombe de vos proches</h1><p class="lead">Six prestations, un seul objectif : que la tombe soit propre, soignée et fleurie, et que vous le voyiez par vous-même.</p></div></section>
+<section class="section"><div class="wrap"><article class="presta"><div><figure class="shot "><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : nettoyage de la pierre à la brosse douce et au savon noir" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cl"><rect x="200" y="0" width="200" height="400"/></clipPath></defs><rect width="400" height="400" fill="#E8EEE4"/><rect y="0" width="400" height="175" fill="#2E4A3E"/><circle cx="60" cy="120" r="55" fill="#355644"/><circle cx="350" cy="100" r="60" fill="#355644"/><rect y="175" width="400" height="225" fill="#6E8359"/><path d="M70 400 L110 320 H290 L330 400z" fill="#8D8A7C"/><circle cx="110" cy="335" r="3" fill="#77746A"/><circle cx="157" cy="364" r="3" fill="#77746A"/><circle cx="204" cy="393" r="3" fill="#77746A"/><circle cx="251" cy="362" r="3" fill="#77746A"/><circle cx="298" cy="391" r="3" fill="#77746A"/><circle cx="155" cy="360" r="3" fill="#77746A"/><circle cx="202" cy="389" r="3" fill="#77746A"/><circle cx="249" cy="358" r="3" fill="#77746A"/><circle cx="296" cy="387" r="3" fill="#77746A"/><circle cx="153" cy="356" r="3" fill="#77746A"/><circle cx="200" cy="385" r="3" fill="#77746A"/><circle cx="247" cy="354" r="3" fill="#77746A"/><circle cx="294" cy="383" r="3" fill="#77746A"/><circle cx="151" cy="352" r="3" fill="#77746A"/><rect x="105" y="296" width="190" height="34" rx="4" fill="#8E9388"/><rect x="105" y="296" width="190" height="8" rx="4" fill="#7B8076"/><path d="M150 296 V128 a50 50 0 0 1 100 0 V296z" fill="#8E9388"/><path d="M158 296 V132 a42 42 0 0 1 20 -36" fill="none" stroke="#7B8076" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#6A6F65">FAMILLE</text><rect x="170" y="184" width="60" height="4" rx="2" fill="#6A6F65"/><rect x="180" y="196" width="40" height="4" rx="2" fill="#6A6F65"/><circle cx="165" cy="150" r="14" fill="#5F7F3F" opacity=".55"/><circle cx="168" cy="148" r="8" fill="#7A9A4B" opacity=".6"/><circle cx="215" cy="135" r="10" fill="#5F7F3F" opacity=".55"/><circle cx="218" cy="133" r="6" fill="#7A9A4B" opacity=".6"/><circle cx="180" cy="205" r="16" fill="#5F7F3F" opacity=".55"/><circle cx="183" cy="203" r="9" fill="#7A9A4B" opacity=".6"/><circle cx="232" cy="190" r="12" fill="#5F7F3F" opacity=".55"/><circle cx="235" cy="188" r="7" fill="#7A9A4B" opacity=".6"/><circle cx="160" cy="238" r="9" fill="#5F7F3F" opacity=".55"/><circle cx="163" cy="236" r="5" fill="#7A9A4B" opacity=".6"/><circle cx="205" cy="240" r="11" fill="#5F7F3F" opacity=".55"/><circle cx="208" cy="238" r="6" fill="#7A9A4B" opacity=".6"/><circle cx="140" cy="300" r="12" fill="#5F7F3F" opacity=".55"/><circle cx="143" cy="298" r="7" fill="#7A9A4B" opacity=".6"/><circle cx="260" cy="300" r="15" fill="#5F7F3F" opacity=".55"/><circle cx="263" cy="298" r="8" fill="#7A9A4B" opacity=".6"/><circle cx="190" cy="315" r="10" fill="#5F7F3F" opacity=".55"/><circle cx="193" cy="313" r="6" fill="#7A9A4B" opacity=".6"/><path d="M175 130 q-6 50 2 110 M222 150 q6 40 -2 90" stroke="#5E6358" stroke-width="7" opacity=".35" fill="none" stroke-linecap="round"/><g clip-path="url(#cl)"><rect width="400" height="400" fill="#E8EEE4"/><rect y="0" width="400" height="175" fill="#2E4A3E"/><circle cx="60" cy="120" r="55" fill="#355644"/><circle cx="350" cy="100" r="60" fill="#355644"/><rect y="175" width="400" height="225" fill="#8FAE74"/><path d="M70 400 L110 320 H290 L330 400z" fill="#DCD0B5"/><circle cx="110" cy="335" r="3" fill="#C4B795"/><circle cx="157" cy="364" r="3" fill="#C4B795"/><circle cx="204" cy="393" r="3" fill="#C4B795"/><circle cx="251" cy="362" r="3" fill="#C4B795"/><circle cx="298" cy="391" r="3" fill="#C4B795"/><circle cx="155" cy="360" r="3" fill="#C4B795"/><circle cx="202" cy="389" r="3" fill="#C4B795"/><circle cx="249" cy="358" r="3" fill="#C4B795"/><circle cx="296" cy="387" r="3" fill="#C4B795"/><circle cx="153" cy="356" r="3" fill="#C4B795"/><circle cx="200" cy="385" r="3" fill="#C4B795"/><circle cx="247" cy="354" r="3" fill="#C4B795"/><circle cx="294" cy="383" r="3" fill="#C4B795"/><circle cx="151" cy="352" r="3" fill="#C4B795"/><rect x="105" y="296" width="190" height="34" rx="4" fill="#DADDD4"/><rect x="105" y="296" width="190" height="8" rx="4" fill="#F0F2EC"/><path d="M150 296 V128 a50 50 0 0 1 100 0 V296z" fill="#DADDD4"/><path d="M158 296 V132 a42 42 0 0 1 20 -36" fill="none" stroke="#F0F2EC" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#9AA095">FAMILLE</text><rect x="170" y="184" width="60" height="4" rx="2" fill="#9AA095"/><rect x="180" y="196" width="40" height="4" rx="2" fill="#9AA095"/></g><line x1="200" y1="0" x2="200" y2="400" stroke="#fff" stroke-width="3" stroke-dasharray="6 6"/><g transform="rotate(-20 200 220)"><rect x="150" y="205" width="90" height="26" rx="8" fill="#B5683A"/><g stroke="#E8D3B0" stroke-width="3"><line x1="156" y1="231" x2="156" y2="244"/><line x1="164" y1="231" x2="164" y2="244"/><line x1="172" y1="231" x2="172" y2="244"/><line x1="180" y1="231" x2="180" y2="244"/><line x1="188" y1="231" x2="188" y2="244"/><line x1="196" y1="231" x2="196" y2="244"/><line x1="204" y1="231" x2="204" y2="244"/><line x1="212" y1="231" x2="212" y2="244"/><line x1="220" y1="231" x2="220" y2="244"/><line x1="228" y1="231" x2="228" y2="244"/><line x1="236" y1="231" x2="236" y2="244"/></g></g><circle cx="175" cy="190" r="9" fill="#fff" stroke="#BFD6E3" opacity=".85"/><circle cx="150" cy="170" r="6" fill="#fff" stroke="#BFD6E3" opacity=".85"/><circle cx="210" cy="165" r="7" fill="#fff" stroke="#BFD6E3" opacity=".85"/><circle cx="240" cy="190" r="5" fill="#fff" stroke="#BFD6E3" opacity=".85"/><circle cx="225" cy="150" r="4" fill="#fff" stroke="#BFD6E3" opacity=".85"/></svg><img src="photos/nettoyage.jpg" alt="Illustration du nettoyage de la pierre à la brosse" loading="lazy" onerror="this.remove()"></figure></div><div><p class="num">Prestation 1</p><h3 style="font-size:1.7rem">Nettoyage de la pierre</h3><p class="muted">La mousse, les lichens et les dépôts verts s’installent vite dans notre climat humide. Je les enlève à la main, sans jamais abîmer la pierre.</p><ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Eau, savon noir et brosses douces : pas d’acide, pas de javel</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Stèle, dalle, entourage et jardinière</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Rinçage soigné, séchage au chiffon microfibre</li></ul></div></article><article class="presta"><div><figure class="shot "><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : désherbage des abords et du gravier" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#E8EEE4"/><rect y="0" width="400" height="175" fill="#2E4A3E"/><circle cx="60" cy="120" r="55" fill="#355644"/><circle cx="350" cy="100" r="60" fill="#355644"/><rect y="175" width="400" height="225" fill="#8FAE74"/><path d="M70 400 L110 320 H290 L330 400z" fill="#DCD0B5"/><circle cx="110" cy="335" r="3" fill="#C4B795"/><circle cx="157" cy="364" r="3" fill="#C4B795"/><circle cx="204" cy="393" r="3" fill="#C4B795"/><circle cx="251" cy="362" r="3" fill="#C4B795"/><circle cx="298" cy="391" r="3" fill="#C4B795"/><circle cx="155" cy="360" r="3" fill="#C4B795"/><circle cx="202" cy="389" r="3" fill="#C4B795"/><circle cx="249" cy="358" r="3" fill="#C4B795"/><circle cx="296" cy="387" r="3" fill="#C4B795"/><circle cx="153" cy="356" r="3" fill="#C4B795"/><circle cx="200" cy="385" r="3" fill="#C4B795"/><circle cx="247" cy="354" r="3" fill="#C4B795"/><circle cx="294" cy="383" r="3" fill="#C4B795"/><circle cx="151" cy="352" r="3" fill="#C4B795"/><rect x="105" y="296" width="190" height="34" rx="4" fill="#DADDD4"/><rect x="105" y="296" width="190" height="8" rx="4" fill="#F0F2EC"/><path d="M150 296 V128 a50 50 0 0 1 100 0 V296z" fill="#DADDD4"/><path d="M158 296 V132 a42 42 0 0 1 20 -36" fill="none" stroke="#F0F2EC" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#9AA095">FAMILLE</text><rect x="170" y="184" width="60" height="4" rx="2" fill="#9AA095"/><rect x="180" y="196" width="40" height="4" rx="2" fill="#9AA095"/><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M120 345 q-8 -30 -14 -42"/><path d="M120 345 q2 -34 4 -48"/><path d="M120 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M160 345 q-8 -30 -14 -42"/><path d="M160 345 q2 -34 4 -48"/><path d="M160 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M240 345 q-8 -30 -14 -42"/><path d="M240 345 q2 -34 4 -48"/><path d="M240 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M280 345 q-8 -30 -14 -42"/><path d="M280 345 q2 -34 4 -48"/><path d="M280 345 q10 -26 18 -38"/></g><g stroke="#4D7A33" stroke-width="3" stroke-linecap="round" fill="none"><path d="M200 345 q-8 -30 -14 -42"/><path d="M200 345 q2 -34 4 -48"/><path d="M200 345 q10 -26 18 -38"/></g><g transform="translate(150 190)"><path d="M0 70 q30 -50 80 -40 l20 14 -14 22 -30 -8 -30 30z" fill="#E6B98F"/><path d="M95 40 q10 -30 40 -40" stroke="#4D7A33" stroke-width="4" fill="none"/></g></svg><img src="photos/desherbage.jpg" alt="Illustration du désherbage du gravier" loading="lazy" onerror="this.remove()"></figure></div><div><p class="num">Prestation 2</p><h3 style="font-size:1.7rem">Désherbage des abords</h3><p class="muted">Les herbes qui poussent dans le gravier et autour de la dalle donnent vite une impression d’abandon. Je les retire à la racine, pas seulement en surface.</p><ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Gravier, joints et bordures désherbés à la main</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Taille nette des bordures</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Feuilles mortes et débris évacués</li></ul></div></article><article class="presta"><div><figure class="shot "><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : jardinières de chrysanthèmes aux couleurs de saison" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#2E4A3E"/><rect y="250" width="400" height="150" fill="#DADDD4"/><ellipse cx="110" cy="244" rx="26" ry="14" fill="#3C6B3B"/><circle cx="96" cy="230" r="11" fill="#F0A93A"/><circle cx="110" cy="222" r="11" fill="#F0A93A"/><circle cx="124" cy="230" r="11" fill="#F0A93A"/><circle cx="100" cy="242" r="11" fill="#F0A93A"/><circle cx="120" cy="242" r="11" fill="#F0A93A"/><circle cx="110" cy="234" r="11" fill="#F0A93A"/><circle cx="110" cy="232" r="7" fill="#C46A12"/><path d="M88 254 h44 l-6 26 h-32z" fill="#B5683A"/><ellipse cx="200" cy="219" rx="26" ry="14" fill="#3C6B3B"/><circle cx="186" cy="205" r="11" fill="#B05A9B"/><circle cx="200" cy="197" r="11" fill="#B05A9B"/><circle cx="214" cy="205" r="11" fill="#B05A9B"/><circle cx="190" cy="217" r="11" fill="#B05A9B"/><circle cx="210" cy="217" r="11" fill="#B05A9B"/><circle cx="200" cy="209" r="11" fill="#B05A9B"/><circle cx="200" cy="207" r="7" fill="#7F2F6C"/><path d="M178 229 h44 l-6 26 h-32z" fill="#B5683A"/><ellipse cx="290" cy="244" rx="26" ry="14" fill="#3C6B3B"/><circle cx="276" cy="230" r="11" fill="#F7F7F2"/><circle cx="290" cy="222" r="11" fill="#F7F7F2"/><circle cx="304" cy="230" r="11" fill="#F7F7F2"/><circle cx="280" cy="242" r="11" fill="#F7F7F2"/><circle cx="300" cy="242" r="11" fill="#F7F7F2"/><circle cx="290" cy="234" r="11" fill="#F7F7F2"/><circle cx="290" cy="232" r="7" fill="#E3D39A"/><path d="M268 254 h44 l-6 26 h-32z" fill="#B5683A"/><ellipse cx="155" cy="324" rx="26" ry="14" fill="#3C6B3B"/><circle cx="141" cy="310" r="11" fill="#D7561D"/><circle cx="155" cy="302" r="11" fill="#D7561D"/><circle cx="169" cy="310" r="11" fill="#D7561D"/><circle cx="145" cy="322" r="11" fill="#D7561D"/><circle cx="165" cy="322" r="11" fill="#D7561D"/><circle cx="155" cy="314" r="11" fill="#D7561D"/><circle cx="155" cy="312" r="7" fill="#8E2F0A"/><path d="M133 334 h44 l-6 26 h-32z" fill="#B5683A"/><ellipse cx="250" cy="329" rx="26" ry="14" fill="#3C6B3B"/><circle cx="236" cy="315" r="11" fill="#F0A93A"/><circle cx="250" cy="307" r="11" fill="#F0A93A"/><circle cx="264" cy="315" r="11" fill="#F0A93A"/><circle cx="240" cy="327" r="11" fill="#F0A93A"/><circle cx="260" cy="327" r="11" fill="#F0A93A"/><circle cx="250" cy="319" r="11" fill="#F0A93A"/><circle cx="250" cy="317" r="7" fill="#C46A12"/><path d="M228 339 h44 l-6 26 h-32z" fill="#B5683A"/></svg><img src="photos/fleurs.jpg" alt="Illustration de jardinières de fleurs de saison" loading="lazy" onerror="this.remove()"></figure></div><div><p class="num">Prestation 3</p><h3 style="font-size:1.7rem">Fleurs de saison</h3><p class="muted">Des fleurs adaptées à la période, qui tiennent dans le temps : pensées au printemps, chrysanthèmes à la Toussaint, bruyères et hellébores l’hiver.</p><ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Plantes en pleine terre ou en jardinière</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Choix des couleurs selon vos souhaits</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Arrosage soigné lors du passage</li></ul></div></article><article class="presta"><div><figure class="shot "><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : lettres gravées repeintes en or" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#E8EEE4"/><rect y="0" width="400" height="175" fill="#2E4A3E"/><circle cx="60" cy="120" r="55" fill="#355644"/><circle cx="350" cy="100" r="60" fill="#355644"/><rect y="175" width="400" height="225" fill="#8FAE74"/><path d="M70 400 L110 320 H290 L330 400z" fill="#DCD0B5"/><circle cx="110" cy="335" r="3" fill="#C4B795"/><circle cx="157" cy="364" r="3" fill="#C4B795"/><circle cx="204" cy="393" r="3" fill="#C4B795"/><circle cx="251" cy="362" r="3" fill="#C4B795"/><circle cx="298" cy="391" r="3" fill="#C4B795"/><circle cx="155" cy="360" r="3" fill="#C4B795"/><circle cx="202" cy="389" r="3" fill="#C4B795"/><circle cx="249" cy="358" r="3" fill="#C4B795"/><circle cx="296" cy="387" r="3" fill="#C4B795"/><circle cx="153" cy="356" r="3" fill="#C4B795"/><circle cx="200" cy="385" r="3" fill="#C4B795"/><circle cx="247" cy="354" r="3" fill="#C4B795"/><circle cx="294" cy="383" r="3" fill="#C4B795"/><circle cx="151" cy="352" r="3" fill="#C4B795"/><rect x="105" y="296" width="190" height="34" rx="4" fill="#DADDD4"/><rect x="105" y="296" width="190" height="8" rx="4" fill="#F0F2EC"/><path d="M150 296 V128 a50 50 0 0 1 100 0 V296z" fill="#DADDD4"/><path d="M158 296 V132 a42 42 0 0 1 20 -36" fill="none" stroke="#F0F2EC" stroke-width="6" stroke-linecap="round" opacity=".8"/><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#E0A93C">FAMILLE</text><rect x="170" y="184" width="60" height="4" rx="2" fill="#E0A93C"/><rect x="180" y="196" width="40" height="4" rx="2" fill="#E0A93C"/><rect x="120" y="140" width="160" height="90" rx="6" fill="#2B3B35" opacity="0"/><g transform="translate(200 210) scale(1.35) translate(-200 -170)"><text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#E0A93C">FAMILLE</text></g><g stroke="#C98614" stroke-width="3" stroke-linecap="round" opacity=".7"><line x1="302" y1="115" x2="340" y2="95"/><line x1="308" y1="132" x2="352" y2="126"/><line x1="300" y1="100" x2="326" y2="68"/></g></svg><img src="photos/gravure.jpg" alt="Illustration de lettres gravées repeintes en or" loading="lazy" onerror="this.remove()"></figure></div><div><p class="num">Prestation 4</p><h3 style="font-size:1.7rem">Lettres gravées repeintes</h3><p class="muted">Quand les inscriptions ne se lisent plus, la tombe paraît vieillie. Je repeins uniquement les lettres, avec une peinture adaptée à la pierre et à l’extérieur.</p><ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Or, argent ou noir, selon la tombe d’origine</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Nettoyage préalable des gravures</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Résultat net et durable, sans débordement</li></ul></div></article><article class="presta"><div><figure class="shot "><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : gravier neuf autour de la dalle" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#C9BE9F"/><circle cx="0" cy="0" r="4" fill="#E2D8BC"/><circle cx="37" cy="53" r="5" fill="#B9AD8C"/><circle cx="74" cy="106" r="6" fill="#D3C8A9"/><circle cx="111" cy="159" r="7" fill="#A99D7E"/><circle cx="148" cy="212" r="4" fill="#E2D8BC"/><circle cx="185" cy="265" r="5" fill="#B9AD8C"/><circle cx="222" cy="318" r="6" fill="#D3C8A9"/><circle cx="259" cy="371" r="7" fill="#A99D7E"/><circle cx="296" cy="24" r="4" fill="#E2D8BC"/><circle cx="333" cy="77" r="5" fill="#B9AD8C"/><circle cx="370" cy="130" r="6" fill="#D3C8A9"/><circle cx="7" cy="183" r="7" fill="#A99D7E"/><circle cx="44" cy="236" r="4" fill="#E2D8BC"/><circle cx="81" cy="289" r="5" fill="#B9AD8C"/><circle cx="118" cy="342" r="6" fill="#D3C8A9"/><circle cx="155" cy="395" r="7" fill="#A99D7E"/><circle cx="192" cy="48" r="4" fill="#E2D8BC"/><circle cx="229" cy="101" r="5" fill="#B9AD8C"/><circle cx="266" cy="154" r="6" fill="#D3C8A9"/><circle cx="303" cy="207" r="7" fill="#A99D7E"/><circle cx="340" cy="260" r="4" fill="#E2D8BC"/><circle cx="377" cy="313" r="5" fill="#B9AD8C"/><circle cx="14" cy="366" r="6" fill="#D3C8A9"/><circle cx="51" cy="19" r="7" fill="#A99D7E"/><circle cx="88" cy="72" r="4" fill="#E2D8BC"/><circle cx="125" cy="125" r="5" fill="#B9AD8C"/><circle cx="162" cy="178" r="6" fill="#D3C8A9"/><circle cx="199" cy="231" r="7" fill="#A99D7E"/><circle cx="236" cy="284" r="4" fill="#E2D8BC"/><circle cx="273" cy="337" r="5" fill="#B9AD8C"/><circle cx="310" cy="390" r="6" fill="#D3C8A9"/><circle cx="347" cy="43" r="7" fill="#A99D7E"/><circle cx="384" cy="96" r="4" fill="#E2D8BC"/><circle cx="21" cy="149" r="5" fill="#B9AD8C"/><circle cx="58" cy="202" r="6" fill="#D3C8A9"/><circle cx="95" cy="255" r="7" fill="#A99D7E"/><circle cx="132" cy="308" r="4" fill="#E2D8BC"/><circle cx="169" cy="361" r="5" fill="#B9AD8C"/><circle cx="206" cy="14" r="6" fill="#D3C8A9"/><circle cx="243" cy="67" r="7" fill="#A99D7E"/><circle cx="280" cy="120" r="4" fill="#E2D8BC"/><circle cx="317" cy="173" r="5" fill="#B9AD8C"/><circle cx="354" cy="226" r="6" fill="#D3C8A9"/><circle cx="391" cy="279" r="7" fill="#A99D7E"/><circle cx="28" cy="332" r="4" fill="#E2D8BC"/><circle cx="65" cy="385" r="5" fill="#B9AD8C"/><circle cx="102" cy="38" r="6" fill="#D3C8A9"/><circle cx="139" cy="91" r="7" fill="#A99D7E"/><circle cx="176" cy="144" r="4" fill="#E2D8BC"/><circle cx="213" cy="197" r="5" fill="#B9AD8C"/><circle cx="250" cy="250" r="6" fill="#D3C8A9"/><circle cx="287" cy="303" r="7" fill="#A99D7E"/><circle cx="324" cy="356" r="4" fill="#E2D8BC"/><circle cx="361" cy="9" r="5" fill="#B9AD8C"/><circle cx="398" cy="62" r="6" fill="#D3C8A9"/><circle cx="35" cy="115" r="7" fill="#A99D7E"/><circle cx="72" cy="168" r="4" fill="#E2D8BC"/><circle cx="109" cy="221" r="5" fill="#B9AD8C"/><circle cx="146" cy="274" r="6" fill="#D3C8A9"/><circle cx="183" cy="327" r="7" fill="#A99D7E"/><circle cx="220" cy="380" r="4" fill="#E2D8BC"/><circle cx="257" cy="33" r="5" fill="#B9AD8C"/><circle cx="294" cy="86" r="6" fill="#D3C8A9"/><circle cx="331" cy="139" r="7" fill="#A99D7E"/><circle cx="368" cy="192" r="4" fill="#E2D8BC"/><circle cx="5" cy="245" r="5" fill="#B9AD8C"/><circle cx="42" cy="298" r="6" fill="#D3C8A9"/><circle cx="79" cy="351" r="7" fill="#A99D7E"/><circle cx="116" cy="4" r="4" fill="#E2D8BC"/><circle cx="153" cy="57" r="5" fill="#B9AD8C"/><circle cx="190" cy="110" r="6" fill="#D3C8A9"/><circle cx="227" cy="163" r="7" fill="#A99D7E"/><circle cx="264" cy="216" r="4" fill="#E2D8BC"/><circle cx="301" cy="269" r="5" fill="#B9AD8C"/><circle cx="338" cy="322" r="6" fill="#D3C8A9"/><circle cx="375" cy="375" r="7" fill="#A99D7E"/><circle cx="12" cy="28" r="4" fill="#E2D8BC"/><circle cx="49" cy="81" r="5" fill="#B9AD8C"/><circle cx="86" cy="134" r="6" fill="#D3C8A9"/><circle cx="123" cy="187" r="7" fill="#A99D7E"/><circle cx="160" cy="240" r="4" fill="#E2D8BC"/><circle cx="197" cy="293" r="5" fill="#B9AD8C"/><circle cx="234" cy="346" r="6" fill="#D3C8A9"/><circle cx="271" cy="399" r="7" fill="#A99D7E"/><circle cx="308" cy="52" r="4" fill="#E2D8BC"/><circle cx="345" cy="105" r="5" fill="#B9AD8C"/><circle cx="382" cy="158" r="6" fill="#D3C8A9"/><circle cx="19" cy="211" r="7" fill="#A99D7E"/><circle cx="56" cy="264" r="4" fill="#E2D8BC"/><circle cx="93" cy="317" r="5" fill="#B9AD8C"/><circle cx="130" cy="370" r="6" fill="#D3C8A9"/><circle cx="167" cy="23" r="7" fill="#A99D7E"/><circle cx="204" cy="76" r="4" fill="#E2D8BC"/><circle cx="241" cy="129" r="5" fill="#B9AD8C"/><circle cx="278" cy="182" r="6" fill="#D3C8A9"/><circle cx="315" cy="235" r="7" fill="#A99D7E"/><circle cx="352" cy="288" r="4" fill="#E2D8BC"/><circle cx="389" cy="341" r="5" fill="#B9AD8C"/><circle cx="26" cy="394" r="6" fill="#D3C8A9"/><circle cx="63" cy="47" r="7" fill="#A99D7E"/><circle cx="100" cy="100" r="4" fill="#E2D8BC"/><circle cx="137" cy="153" r="5" fill="#B9AD8C"/><circle cx="174" cy="206" r="6" fill="#D3C8A9"/><circle cx="211" cy="259" r="7" fill="#A99D7E"/><circle cx="248" cy="312" r="4" fill="#E2D8BC"/><circle cx="285" cy="365" r="5" fill="#B9AD8C"/><circle cx="322" cy="18" r="6" fill="#D3C8A9"/><circle cx="359" cy="71" r="7" fill="#A99D7E"/><circle cx="396" cy="124" r="4" fill="#E2D8BC"/><circle cx="33" cy="177" r="5" fill="#B9AD8C"/><circle cx="70" cy="230" r="6" fill="#D3C8A9"/><circle cx="107" cy="283" r="7" fill="#A99D7E"/><circle cx="144" cy="336" r="4" fill="#E2D8BC"/><circle cx="181" cy="389" r="5" fill="#B9AD8C"/><circle cx="218" cy="42" r="6" fill="#D3C8A9"/><circle cx="255" cy="95" r="7" fill="#A99D7E"/><circle cx="292" cy="148" r="4" fill="#E2D8BC"/><circle cx="329" cy="201" r="5" fill="#B9AD8C"/><circle cx="366" cy="254" r="6" fill="#D3C8A9"/><circle cx="3" cy="307" r="7" fill="#A99D7E"/><circle cx="40" cy="360" r="4" fill="#E2D8BC"/><circle cx="77" cy="13" r="5" fill="#B9AD8C"/><circle cx="114" cy="66" r="6" fill="#D3C8A9"/><circle cx="151" cy="119" r="7" fill="#A99D7E"/><circle cx="188" cy="172" r="4" fill="#E2D8BC"/><circle cx="225" cy="225" r="5" fill="#B9AD8C"/><circle cx="262" cy="278" r="6" fill="#D3C8A9"/><circle cx="299" cy="331" r="7" fill="#A99D7E"/><circle cx="336" cy="384" r="4" fill="#E2D8BC"/><circle cx="373" cy="37" r="5" fill="#B9AD8C"/><circle cx="10" cy="90" r="6" fill="#D3C8A9"/><circle cx="47" cy="143" r="7" fill="#A99D7E"/><circle cx="84" cy="196" r="4" fill="#E2D8BC"/><circle cx="121" cy="249" r="5" fill="#B9AD8C"/><circle cx="158" cy="302" r="6" fill="#D3C8A9"/><circle cx="195" cy="355" r="7" fill="#A99D7E"/><circle cx="232" cy="8" r="4" fill="#E2D8BC"/><circle cx="269" cy="61" r="5" fill="#B9AD8C"/><circle cx="306" cy="114" r="6" fill="#D3C8A9"/><circle cx="343" cy="167" r="7" fill="#A99D7E"/><circle cx="380" cy="220" r="4" fill="#E2D8BC"/><circle cx="17" cy="273" r="5" fill="#B9AD8C"/><circle cx="54" cy="326" r="6" fill="#D3C8A9"/><circle cx="91" cy="379" r="7" fill="#A99D7E"/><circle cx="128" cy="32" r="4" fill="#E2D8BC"/><circle cx="165" cy="85" r="5" fill="#B9AD8C"/><circle cx="202" cy="138" r="6" fill="#D3C8A9"/><circle cx="239" cy="191" r="7" fill="#A99D7E"/><circle cx="276" cy="244" r="4" fill="#E2D8BC"/><circle cx="313" cy="297" r="5" fill="#B9AD8C"/><circle cx="350" cy="350" r="6" fill="#D3C8A9"/><circle cx="387" cy="3" r="7" fill="#A99D7E"/><circle cx="24" cy="56" r="4" fill="#E2D8BC"/><circle cx="61" cy="109" r="5" fill="#B9AD8C"/><circle cx="98" cy="162" r="6" fill="#D3C8A9"/><circle cx="135" cy="215" r="7" fill="#A99D7E"/><circle cx="172" cy="268" r="4" fill="#E2D8BC"/><circle cx="209" cy="321" r="5" fill="#B9AD8C"/><circle cx="246" cy="374" r="6" fill="#D3C8A9"/><circle cx="283" cy="27" r="7" fill="#A99D7E"/><rect x="60" y="130" width="280" height="150" rx="6" fill="#DADDD4"/><rect x="60" y="130" width="280" height="12" fill="#F0F2EC"/></svg><img src="photos/gravier.jpg" alt="Illustration de gravier neuf autour de la dalle" loading="lazy" onerror="this.remove()"></figure></div><div><p class="num">Prestation 5</p><h3 style="font-size:1.7rem">Gravier et remise en état</h3><p class="muted">Un gravier tassé, sali ou envahi change tout l’aspect de la tombe. Je le ratisse, je le complète ou je le remplace.</p><ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Ratissage et nivelage</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Gravier neuf, fourniture comprise (40 à 80 €)</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Évacuation de l’ancien gravier si besoin</li></ul></div></article><article class="presta"><div><figure class="shot "><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : photos avant et après envoyées sur téléphone" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#17302A"/><rect x="120" y="40" width="160" height="320" rx="22" fill="#0E1C18" stroke="#CFE0D6" stroke-width="4"/><rect x="132" y="66" width="136" height="130" rx="8" fill="#8E9388"/><rect x="132" y="204" width="136" height="130" rx="8" fill="#DADDD4"/><path d="M200 340 l0 0" /><text x="140" y="86" font-size="12" fill="#fff" font-family="Arial">AVANT</text><text x="140" y="224" font-size="12" fill="#17302A" font-family="Arial">APRÈS</text><circle cx="250" cy="318" r="14" fill="#F0A93A"/><path d="M243 318 l5 5 9 -10" stroke="#17302A" stroke-width="3" fill="none"/></svg><img src="photos/photos.jpg" alt="Illustration de photos envoyées sur téléphone" loading="lazy" onerror="this.remove()"></figure></div><div><p class="num">Prestation 6</p><h3 style="font-size:1.7rem">Photos et compte rendu</h3><p class="muted">C’est ce qui vous permet de ne pas y aller pour vérifier. Après chaque passage, vous recevez le résultat, même d’un autre pays.</p><ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après, même angle</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Envoi par WhatsApp ou e-mail le jour même</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Signalement de tout problème constaté (stèle fissurée, affaissement…)</li></ul></div></article></div></section>
+<section class="section stone"><div class="wrap"><div class="head"><h2>Un passage, étape par étape</h2><p class="lead muted">Simple, transparent et sans surprise.</p></div><div class="etapes"><div class="etape"><i>1</i><h3>Devis</h3><p class="muted">Vous me donnez la commune, le cimetière et une photo si possible. Devis écrit sous 48&nbsp;h.</p></div><div class="etape"><i>2</i><h3>Accord</h3><p class="muted">Vous validez. Si vous n’êtes pas titulaire de la concession, je demande l’accord du titulaire.</p></div><div class="etape"><i>3</i><h3>Passage</h3><p class="muted">Photo avant, nettoyage, désherbage, fleurs, photo après. Le tout dans le respect du lieu.</p></div><div class="etape"><i>4</i><h3>Compte rendu</h3><p class="muted">Vous recevez les photos le jour même, puis la facture une fois le travail validé.</p></div></div></div></section>
+<section class="section"><div class="wrap"><div class="head"><h2>Les fleurs, saison par saison</h2><p class="lead muted">Je choisis ce qui tient vraiment dans le temps, selon la période. Vous pouvez imposer une couleur ou une fleur.</p></div><div class="saisons">
+<div class="saison"><span class="mois">Mars – avril</span><h3>Le printemps</h3><p>Pensées, primevères, narcisses et jacinthes. La tombe se réveille après l’hiver.</p></div>
+<div class="saison"><span class="mois">Juin – août</span><h3>L’été</h3><p>Dipladénias, bégonias et géraniums, qui supportent la chaleur. Arrosage important.</p></div>
+<div class="saison"><span class="mois">Octobre – 1er novembre</span><h3>La Toussaint</h3><p>Chrysanthèmes, bruyères et cyclamens. C’est la période la plus importante de l’année : réservez dès septembre.</p></div>
+<div class="saison"><span class="mois">Décembre – février</span><h3>L’hiver</h3><p>Hellébores et bruyères d’hiver, résistantes au gel. Contrôle après les tempêtes.</p></div>
+</div><p class="petit muted">Vous ne connaissez pas toutes ces fleurs ? Le <a href="lexique.html">lexique</a> les explique une par une.</p></div></section>
+<section class="section stone"><div class="wrap"><div class="head"><h2>Ce que je ne fais pas</h2><p class="lead muted">Pour que vous sachiez à quoi vous attendre, et vers qui vous tourner pour le reste.</p></div><ul class="non"><li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Travaux de marbrerie : redressement d’un monument, scellement, réparation de fissure</span></li><li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Création ou démolition de caveau, exhumation, travaux de maçonnerie funéraire</span></li><li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Produits agressifs ou jet trop puissant sur la pierre (acide, javel) : je rince toujours à faible pression</span></li><li><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Démarches administratives à la place du titulaire de la concession</span></li></ul><p class="petit muted">Pour ces travaux, adressez-vous à un marbrier ou aux services de la mairie. Si je constate un problème, je vous le signale avec photo.</p></div></section>
+<section class="section"><div class="wrap faq"><h2>Questions sur les services</h2><details><summary>Dois-je être sur place ?</summary><p>Non, jamais. Vous n’avez rien à faire : je m’occupe de tout et vous recevez les photos.</p></details><details><summary>Faut-il une autorisation pour entretenir une tombe ?</summary><p>L’entretien courant (nettoyage, fleurs) est généralement admis. Je demande toujours l’accord de la famille ou du titulaire de la concession, et je respecte le règlement du cimetière.</p></details><details><summary>Avec quoi nettoyez-vous la pierre ?</summary><p>Avec de l’eau, du savon noir et des brosses douces. Ces produits ne rongent pas la pierre, contrairement à l’acide ou à la javel.</p></details><details><summary>Que se passe-t-il s’il pleut ?</summary><p>Je décale le passage de quelques jours, sans frais. Le nettoyage de la pierre se fait sur sol sec ou peu humide.</p></details><details><summary>Pouvez-vous entretenir plusieurs tombes dans le même cimetière ?</summary><p>Oui, et c’est plus avantageux : demandez-moi un devis groupé.</p></details></div></section>
+<section class="section dark"><div class="wrap contact-bande"><div><h2>Une tombe à entretenir ?</h2><p class="lead">Dites-moi où elle se trouve : je vous réponds sous 48&nbsp;h avec un devis écrit, gratuit et sans engagement.</p></div><div class="coord"><a class="btn btn-flamme" href="contact.html">Demander un devis gratuit</a><a class="tel" href="tel:+33600000000">06 00 00 00 00</a></div></div></section>
+</main>
 
-    <!-- Navigation Multi-Pages -->
-    <nav>
-        <a href="index.html" class="logo">
-            <span class="logo-icon">✦</span> Sérénité Tombes
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html" class="active">Nos Prestations</a></li>
-            <li><a href="tarifs.html">Tarifs & Formules</a></li>
-            <li><a href="contact.html" class="btn-nav">Demander un passage</a></li>
-        </ul>
-    </nav>
+<footer>
+<div class="wrap">
+<div>
+<a class="logo" href="index.html"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
+<p style="margin-top:14px">La petite flamme qu’on garde allumée.</p>
+</div>
+<div>
+<p><a href="tel:+33600000000">06 00 00 00 00</a><br><a href="mailto:contact@la-veilleuse.fr">contact@la-veilleuse.fr</a><br>Seebach (Bas-Rhin)</p>
+</div>
+<div>
+<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="lexique.html">Lexique</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
+</div>
+<p class="legal">La Veilleuse, micro-entreprise, SIRET <span class="todo" style="color:#17302A">[à compléter]</span>. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
+</div>
+</footer>
 
-    <!-- EN-TÊTE -->
-    <header class="page-header">
-        <div class="badge-sub">Savoir-faire artisanal & écologique</div>
-        <h1>Nos Prestations d'Entretien et de Fleurissement</h1>
-        <p>Chaque sépulture mérite une attention délicate. Nous intervenons exclusivement à la main avec des produits naturels biodégradables pour préserver durablement la pierre et les ornements.</p>
-    </header>
-
-    <!-- 1. LISTE DES 6 PRESTATIONS CLÉS -->
-    <section>
-        <div class="services-list">
-            
-            <!-- Service 1 -->
-            <div class="service-box">
-                <div>
-                    <span class="service-tag">Cœur de métier</span>
-                    <h3>Nettoyage Écologique du Monument</h3>
-                    <p>Lavage intégral de la pierre tombale (granit, marbre, grès) pour retirer mousses, lichens, traces de pollution et dépôts verts sans jamais altérer le polissage.</p>
-                </div>
-                <ul class="check-list">
-                    <li>Brossage manuel doux au savon noir naturel</li>
-                    <li>Rinçage à l'eau claire (zéro haute pression)</li>
-                    <li>Séchage à la microfibre de la stèle</li>
-                </ul>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="service-box">
-                <div>
-                    <span class="service-tag">Propreté des abords</span>
-                    <h3>Désherbage & Soin des Contours</h3>
-                    <p>Une concession propre passe aussi par son entourage immédiat. Nous assurons la remise au propre complète du tour de tombe et de l'espace inter-tombes.</p>
-                </div>
-                <ul class="check-list">
-                    <li>Arrachage manuel des mauvaises herbes</li>
-                    <li>Ramassage des feuilles mortes et fleurs fanées</li>
-                    <li>Ratisserie et remise à niveau du gravier existant</li>
-                </ul>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-box">
-                <div>
-                    <span class="service-tag">Hommage fleuri</span>
-                    <h3>Fleurissement de Saison</h3>
-                    <p>Nous sélectionnons des plantes résistantes auprès d'horticulteurs locaux d'Alsace du Nord et les installons avec un apport de terreau frais.</p>
-                </div>
-                <ul class="check-list">
-                    <li>Plantes adaptées au gel et à l'exposition</li>
-                    <li>Nettoyage des jardinières et vases existants</li>
-                    <li>Arrosage abondant lors de chaque passage</li>
-                </ul>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="service-box">
-                <div>
-                    <span class="service-tag">Embellissement</span>
-                    <h3>Recharge en Gravier Blanc</h3>
-                    <p>Avec le temps, le gravier entourant ou recouvrant la sépulture s'enfonce et se ternit. Nous réalisons un apport de gravier neuf pour redonner tout son éclat au monument.</p>
-                </div>
-                <ul class="check-list">
-                    <li>Fourniture de gravier blanc ou marbre concassé</li>
-                    <li>Pose d'un voile géotextile anti-herbes si besoin</li>
-                    <li>Égalisation soignée autour de la tombe</li>
-                </ul>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="service-box">
-                <div>
-                    <span class="service-tag">Restauration minutieuse</span>
-                    <h3>Réfection des Lettres & Ornements</h3>
-                    <p>Lorsque les inscriptions gravées (noms, dates) deviennent illisibles, nous ravivons leur teinte au pinceau fin, et nettoyons les plaques funéraires et bronzes.</p>
-                </div>
-                <ul class="check-list">
-                    <li>Dégraissage et dépoussiérage de la gravure</li>
-                    <li>Application de peinture acrylique or, argent ou noir</li>
-                    <li>Dépoussiérage des plaques, céramiques et statues</li>
-                </ul>
-            </div>
-
-            <!-- Service 6 -->
-            <div class="service-box">
-                <div>
-                    <span class="service-tag">Service exclusif</span>
-                    <h3>Certificat Photo & Médaillon Souvenir</h3>
-                    <p>La transparence est au cœur de notre démarche. Nous vous envoyons un bilan visuel complet et proposons également la pose d'un QR Code mémoriel discret.</p>
-                </div>
-                <ul class="check-list">
-                    <li>Photos Avant / Après envoyées sur WhatsApp ou Email</li>
-                    <li>Option Médaillon QR Code (page hommage dédiée)</li>
-                    <li>Compte-rendu sur l'état général de la sépulture</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- Encart légal & Règlement -->
-        <div class="legal-notice">
-            <strong>Note importante sur notre cadre d'intervention :</strong> Afin de garantir la sécurité des monuments et le respect de la réglementation (Code APE 9603Z), nous intervenons exclusivement sur le nettoyage, le désherbage, le fleurissement et le petit entretien esthétique. Nous ne réalisons pas de travaux de marbrerie lourde, de maçonnerie ou de redressement de stèles affaissées (qui relèvent des marbriers funéraires).
-        </div>
-    </section>
-
-    <!-- 2. NOTRE PROTOCOLE EN 4 ÉTAPES -->
-    <section style="padding-top: 10px;">
-        <div class="protocol-container">
-            <h2 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 8px;">Notre protocole sur place lors de chaque visite</h2>
-            <p style="color: var(--muted);">Chaque intervention dure entre 1h15 et 2h00 et suit une méthode rigoureuse :</p>
-            
-            <div class="protocol-steps">
-                <div class="p-step">
-                    <h4><span>1</span> État des lieux</h4>
-                    <p>Localisation de la tombe, vérification de la stabilité des éléments et prise de la <strong>photo "Avant"</strong>.</p>
-                </div>
-                <div class="p-step">
-                    <h4><span>2</span> Nettoyage doux</h4>
-                    <p>Retrait des végétaux fanés, désherbage manuel des abords, puis brossage complet au savon noir et rinçage doux.</p>
-                </div>
-                <div class="p-step">
-                    <h4><span>3</span> Finitions & Fleurs</h4>
-                    <p>Séchage de la stèle, nettoyage des plaques commémoratives, mise en place des fleurs de saison et arrosage.</p>
-                </div>
-                <div class="p-step">
-                    <h4><span>4</span> Envoi du certificat</h4>
-                    <p>Prise de la <strong>photo "Après"</strong> sous un angle lumineux et envoi immédiat sur votre téléphone ou boîte mail.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. LE CALENDRIER DU FLEURISSEMENT EN ALSACE -->
-    <section style="padding-top: 10px;">
-        <div class="section-header">
-            <h2>Le calendrier de fleurissement en Alsace du Nord</h2>
-            <p>Le climat de l'Outre-Forêt connaît des hivers froids et des étés chauds. Nous choisissons des variétés adaptées à chaque période clé de l'année :</p>
-        </div>
-
-        <div class="seasons-grid">
-            <div class="season-card">
-                <span class="season-period">Mars – Avril</span>
-                <h4>Printemps & Rameaux</h4>
-                <p>Grand nettoyage de sortie d'hiver. Pose de <strong>pensées, primevères, narcisses ou jacinthes</strong> qui résistent aux dernières gelées matinales.</p>
-            </div>
-            <div class="season-card">
-                <span class="season-period">Juin – Août</span>
-                <h4>Été</h4>
-                <p>Entretien régulier, désherbage renforcé et arrosage. Pose de <strong>dipladénias, bégonias ou géraniums</strong> supportant très bien le soleil.</p>
-            </div>
-            <div class="season-card">
-                <span class="season-period">Octobre – 1er Novembre</span>
-                <h4>La Toussaint</h4>
-                <p>Passage incontournable avant le 1er novembre. Pose de <strong>chrysanthèmes, bruyères d'automne ou cyclamens</strong> aux couleurs chaleureuses.</p>
-            </div>
-            <div class="season-card">
-                <span class="season-period">Décembre – Février</span>
-                <h4>Hiver</h4>
-                <p>Vérification après les intempéries, retrait des feuilles mortes et dépôt de <strong>hellébores (roses de Noël) ou compositions de sapin</strong>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. BANDEAU D'ACTION -->
-    <section>
-        <div class="cta-box">
-            <h2>Calculez le tarif adapté à votre besoin</h2>
-            <p>Consultez nos formules ponctuelles ou annuelles, et ajoutez les options de votre choix (fleurissement, gravier, dorure).</p>
-            <div class="cta-buttons">
-                <a href="tarifs.html" class="btn-gold">Voir nos Tarifs & Formules</a>
-                <a href="contact.html" class="btn-white">Demander un devis personnalisé</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PIED DE PAGE -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Sérénité Tombes</h4>
-                <p>Service professionnel d'entretien, de nettoyage écologique et de fleurissement de tombes en Alsace du Nord.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="services.html">Nos Prestations</a></li>
-                    <li><a href="tarifs.html">Tarifs & Formules</a></li>
-                    <li><a href="contact.html">Contact & Devis</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Communes desservies</h4>
-                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, Haguenau et environs.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Sérénité Tombes – Tous droits réservés (Code APE 9603Z).
-        </div>
-    </footer>
+<div class="bar" role="navigation" aria-label="Contacter La Veilleuse">
+<a class="btn btn-flamme" href="tel:+33600000000">Appeler</a>
+<a class="btn btn-ligne" style="color:#fff" href="https://wa.me/33600000000">WhatsApp</a>
+<a class="btn btn-ligne" style="color:#fff" href="contact.html">Devis</a>
+</div>
 
 </body>
 </html>
