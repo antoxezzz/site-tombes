@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entretien écologique et fleurissement de tombes à Seebach, Wissembourg, Soultz-sous-Forêts et Outre-Forêt. Bilan photo Avant/Après.">
+    <title>Sérénité Tombes | Entretien de sépultures en Alsace du Nord</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C4A3E;   /* Vert sauge profond */
+            --accent: #C5A059;    /* Or doux */
+            --bg: #F7F6F2;        /* Crème pierre */
+            --white: #FFFFFF;
+            --text: #2B2B2B;
+            --muted: #666666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        h1, h2, h3, .logo { font-family: 'Playfair Display', serif; }
+
+        /* Navigation épurée */
+        nav {
+            background: var(--white); padding: 18px 8%; display: flex; justify-content: space-between;
+            align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+        }
+        .logo { font-size: 1.4rem; color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .logo span { color: var(--accent); font-size: 1.6rem; }
+        .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+        .btn-nav { background: var(--primary); color: var(--white) !important; padding: 10px 20px; border-radius: 6px; font-weight: 600; }
+
+        /* Hero Section */
+        header {
+            padding: 90px 8% 70px; text-align: center; max-width: 900px; margin: 0 auto;
+        }
+        .badge {
+            display: inline-block; background: rgba(44, 74, 62, 0.1); color: var(--primary);
+            padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;
+        }
+        header h1 { font-size: 3rem; color: var(--primary); line-height: 1.2; margin-bottom: 20px; }
+        header p { font-size: 1.15rem; color: var(--muted); margin-bottom: 35px; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--primary); color: var(--white); padding: 14px 28px; border-radius: 6px;
+            text-decoration: none; font-weight: 600; transition: transform 0.2s, background 0.2s;
+        }
+        .btn-primary:hover { background: #20382e; transform: translateY(-2px); }
+        .btn-outline {
+            border: 1px solid var(--primary); color: var(--primary); padding: 14px 28px; border-radius: 6px;
+            text-decoration: none; font-weight: 600; transition: background 0.2s;
+        }
+        .btn-outline:hover { background: rgba(44, 74, 62, 0.05); }
+
+        /* Sections communes */
+        section { padding: 70px 8%; max-width: 1150px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .section-title p { color: var(--muted); }
+
+        /* Fonctionnement en 3 étapes */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .step-card {
+            background: var(--white); padding: 35px 25px; border-radius: 10px; text-align: center;
+            border-bottom: 3px solid var(--accent); box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+        .step-num {
+            width: 40px; height: 40px; background: var(--bg); color: var(--accent); font-weight: 700;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;
+        }
+        .step-card h3 { margin-bottom: 10px; color: var(--primary); font-size: 1.25rem; }
+        .step-card p { font-size: 0.95rem; color: var(--muted); }
+
+        /* Tarifs */
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; align-items: stretch; }
+        .price-card {
+            background: var(--white); padding: 40px 30px; border-radius: 10px; display: flex;
+            flex-direction: column; justify-content: space-between; border: 1px solid #e5e5e5;
+        }
+        .price-card.featured { border: 2px solid var(--accent); position: relative; }
+        .pop-tag {
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--accent); color: var(--white); padding: 4px 12px; font-size: 0.75rem;
+            border-radius: 12px; font-weight: 600; text-transform: uppercase;
+        }
+        .price-card h3 { font-size: 1.4rem; color: var(--primary); }
+        .price { font-size: 2.5rem; font-weight: 700; color: var(--text); margin: 15px 0; }
+        .price span { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
+        .features { list-style: none; margin: 20px 0 30px; }
+        .features li { margin-bottom: 10px; font-size: 0.95rem; color: var(--muted); }
+        .features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
+        .options-box {
+            margin-top: 30px; background: var(--white); padding: 20px 30px; border-radius: 8px;
+            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px; font-size: 0.95rem; border: 1px dashed var(--accent);
+        }
+
+        /* Contact simple */
+        .contact-box {
+            background: var(--primary); color: var(--white); border-radius: 12px; padding: 50px 30px;
+            text-align: center; margin-top: 20px;
+        }
+        .contact-box h2 { color: var(--white); margin-bottom: 15px; }
+        .contact-box p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 30px; }
+        .contact-methods { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .contact-pill {
+            background: var(--white); color: var(--primary); padding: 14px 25px; border-radius: 6px;
+            text-decoration: none; font-weight: 600;
+        }
+
+        footer { text-align: center; padding: 30px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid #e5e5e5; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><span>✦</span> Sérénité Tombes</div>
+        <ul class="nav-links">
+            <li><a href="#fonctionnement">Fonctionnement</a></li>
+            <li><a href="#tarifs">Formules & Tarifs</a></li>
+            <li><a href="#contact" class="btn-nav">Demander un passage</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="badge">Seebach · Wissembourg · Soultz-sous-Forêts · Outre-Forêt</div>
+        <h1>Honorez la mémoire de vos proches, même à distance.</h1>
+        <p>Nettoyage écologique à la main, désherbage soigné et fleurissement de sépultures. Vous recevez un bilan photo Avant / Après sur votre téléphone après chaque passage.</p>
+        <div class="hero-btns">
+            <a href="#tarifs" class="btn-primary">Voir les formules</a>
+            <a href="#contact" class="btn-outline">Obtenir un devis gratuit</a>
+        </div>
+    </header>
+
+    <section id="fonctionnement">
+        <div class="section-title">
+            <h2>Un service simple et transparent</h2>
+            <p>Sans engagement complexe, dans le strict respect des monuments.</p>
+        </div>
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>Repérage</h3>
+                <p>Indiquez-nous la commune et le nom de famille. Nous localisons la sépulture gratuitement au cimetière.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>Soin écologique</h3>
+                <p>Brossage doux au savon noir (sans acide ni haute pression), désherbage complet et arrosage des plantes.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>Certificat Photo</h3>
+                <p>Dès l'intervention terminée, vous recevez les photos Avant / Après par WhatsApp ou par e-mail.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs">
+        <div class="section-title">
+            <h2>Nos Formules d'Entretien</h2>
+            <p>Des tarifs clairs, tout compris (déplacement inclus dans toute l'Outre-Forêt).</p>
+        </div>
+        <div class="pricing">
+            <div class="price-card">
+                <div>
+                    <h3>Passage Ponctuel</h3>
+                    <div class="price">75 € <span>/ passage</span></div>
+                    <ul class="features">
+                        <li>Idéal avant la Toussaint ou Rameaux</li>
+                        <li>Nettoyage complet au savon noir</li>
+                        <li>Désherbage du contour</li>
+                        <li>Bilan photo Avant / Après</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-outline" style="text-align:center;">Choisir cette offre</a>
+            </div>
+
+            <div class="price-card featured">
+                <div class="pop-tag">Le plus choisi</div>
+                <div>
+                    <h3>Formule Sérénité</h3>
+                    <div class="price">140 € <span>/ an (2 passages)</span></div>
+                    <ul class="features">
+                        <li>2 passages clés (Printemps & Toussaint)</li>
+                        <li>Nettoyage écologique & désherbage</li>
+                        <li>Mise en place d'une plante à la Toussaint incluse</li>
+                        <li>Bilan photo à chaque visite</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-primary" style="text-align:center;">Choisir cette offre</a>
+            </div>
+
+            <div class="price-card">
+                <div>
+                    <h3>Formule 4 Saisons</h3>
+                    <div class="price">260 € <span>/ an (4 passages)</span></div>
+                    <ul class="features">
+                        <li>1 passage à chaque changement de saison</li>
+                        <li>Sépulture impeccable toute l'année</li>
+                        <li>Entretien et arrosage régulier</li>
+                        <li>Bilan photo trimestriel</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-outline" style="text-align:center;">Choisir cette offre</a>
+            </div>
+        </div>
+
+        <div class="options-box">
+            <span><strong>Options sur demande :</strong></span>
+            <span>🌿 Fleurissement de saison : <strong>+25 €</strong></span>
+            <span>🪨 Recharge gravier blanc : <strong>+40 €</strong></span>
+            <span>✨ Redorage des lettres : <strong>Sur devis</strong></span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-box">
+            <h2>Confiez-nous votre sépulture</h2>
+            <p>Contactez-nous par téléphone, WhatsApp ou e-mail en précisant la commune (Seebach, Wissembourg, Riedseltz, Hunspach, Soultz-sous-Forêts...). Réponse sous 24h. <br><em>(Wir sprechen auch Deutsch)</em></p>
+            <div class="contact-methods">
+                <a href="tel:0600000000" class="contact-pill">📞 06 XX XX XX XX</a>
+                <a href="mailto:contact@serenite-tombes.fr" class="contact-pill">✉️ contact@serenite-tombes.fr</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sérénité Tombes – Service artisanal d'entretien de sépultures en Alsace du Nord (Code APE 9603Z).</p>
+    </footer>
+
+</body>
+</html>
