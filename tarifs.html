@@ -1,771 +1,354 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Local Optimisé -->
-    <title>Tarifs & Formules | Sérénité Tombes (Simulateur de Devis en Ligne)</title>
-    <meta name="description" content="Consultez nos tarifs transparents pour l'entretien et le fleurissement de tombes à Seebach, Wissembourg et Outre-Forêt. Calculez votre devis en direct.">
-    <meta name="robots" content="index, follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarifs | La Veilleuse, entretien de tombes dès 80 € en Outre-Forêt</title>
+<meta name="description" content="Tarifs de La Veilleuse : nettoyage de tombe dès 80 €, abonnements annuels de 150 à 420 €, déplacement inclus jusqu’à 15 km de Seebach. Devis gratuit sous 48 h.">
+<link rel="canonical" href="https://www.la-veilleuse.fr/tarifs.html">
+<meta name="theme-color" content="#17302A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F0A93A' d='M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap">
+<style>
+/* La Veilleuse : feuille de style partagée (toutes les pages la réutiliseront) */
+:root{--nuit:#17302A;--nuit2:#21423A;--flamme:#F0A93A;--flamme-b:#C98614;--pierre:#F1F3EE;--blanc:#fff;--encre:#1B2420;--doux:#4C5A52;--clair:#CFE0D6;--trait:#D3D9D2;--r:12px}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:84px}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font:400 18px/1.65 Figtree,system-ui,sans-serif;color:var(--encre);background:var(--pierre);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flamme);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--blanc);color:var(--encre);padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15}
+h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px}
+h3{font-size:1.3rem;margin-bottom:8px}
+p+p{margin-top:12px}
+.lead{font-size:1.15rem;max-width:56ch}
+.muted{color:var(--doux)}
+.section{padding:84px 0}
+.section.stone{background:var(--blanc)}
+.section.dark{background:var(--nuit);color:var(--blanc)}
+.section.dark .muted,.dark .lead{color:var(--clair)}
+.head{max-width:62ch;margin-bottom:44px}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:10px;font:700 1.05rem/1 Figtree,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s}
+.btn-flamme{background:var(--flamme);color:var(--nuit);border-color:var(--flamme-b)}
+.btn-flamme:hover{background:#FFC25E}
+.btn-ligne{border-color:currentColor;background:transparent}
+.btn-ligne:hover{background:rgba(255,255,255,.1)}
+.on-light .btn-ligne:hover,.btn-ligne.sombre:hover{background:rgba(23,48,42,.07)}
+.btn-bloc{width:100%}
 
-    <style>
-        /* PALETTE DE COULEURS & VARIABLES */
-        :root {
-            --primary: #2C4A3E;       /* Vert Sauge Profond */
-            --primary-dark: #1E352B;  /* Vert Sombre (Hover) */
-            --accent: #C5A059;        /* Or Doux */
-            --accent-light: #F4EFE6;  /* Fond Doré Clair */
-            --bg: #F7F6F2;            /* Blanc Crème / Pierre */
-            --white: #FFFFFF;
-            --text: #2B2B2B;          /* Gris Anthracite */
-            --muted: #5F6360;         /* Gris Doux */
-            --border: #E2E0D8;
-        }
+/* En-tête */
+.top{background:var(--nuit);color:var(--blanc);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.1)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{flex:none}
+.logo b{display:block;font:400 1.45rem/1.1 "Young Serif",Georgia,serif}
+.logo small{display:block;font-size:.8rem;color:var(--clair);line-height:1.3}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--flamme)}
+.nav .btn{min-height:46px;padding:0 20px;font-size:1rem}
+.nav .btn:hover{color:var(--nuit)}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+/* Attention */
+.hero{background:radial-gradient(60% 90% at 85% 15%,rgba(240,169,58,.22),transparent 62%),var(--nuit);color:var(--blanc);padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .lead{margin:20px 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.micro{margin-top:16px;font-size:.98rem;color:var(--clair)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo figure{position:relative}
+.ph,.duo img,.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r)}
+.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:var(--nuit2);border:2px dashed var(--lichen,#5E7A68);color:var(--clair);font-weight:600}
+.light .ph{background:#E6EBE5;border-color:#8FA697;color:var(--doux)}
+figcaption.tag{position:absolute;left:10px;bottom:10px;background:var(--blanc);color:var(--nuit);font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px}
+figcaption.tag.apres{background:var(--flamme)}
+.hero-note{margin-top:12px;font-size:.95rem;color:var(--clair)}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.65;
-        }
+/* Réassurance */
+.trust{background:var(--blanc);border-bottom:1px solid var(--trait)}
+.trust ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust li{display:flex;gap:12px;align-items:flex-start;padding:22px 0;font-weight:600;font-size:1rem;line-height:1.4}
+.trust svg{flex:none;margin-top:2px}
 
-        h1, h2, h3, .logo {
-            font-family: 'Playfair Display', serif;
-        }
+/* Intérêt */
+.situations{display:grid;grid-template-columns:repeat(3,1fr)}
+.sit{padding:4px 32px;border-left:2px solid var(--trait)}
+.sit:first-child{padding-left:0;border-left:0}
+.sit svg{margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:8%;right:8%;top:23px;height:2px;background:var(--trait)}
+.step{position:relative}
+.step i{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--nuit);color:var(--flamme);font:400 1.25rem "Young Serif",serif;font-style:normal;margin-bottom:16px;position:relative}
 
-        /* BARRE D'ANNONCE HAUT DE PAGE */
-        .top-bar {
-            background-color: var(--primary-dark);
-            color: var(--white);
-            text-align: center;
-            padding: 8px 15px;
-            font-size: 0.85rem;
-            letter-spacing: 0.3px;
-        }
-        .top-bar span {
-            color: var(--accent);
-            font-weight: 600;
-        }
+/* Désir */
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px}
+.proof .ph,.proof img{aspect-ratio:4/3}
+.proof figure{position:relative}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center}
+.about .ph,.about img{aspect-ratio:1/1;border-radius:50%;max-width:320px}
+.garantie{margin-top:22px;padding:16px 20px;border-left:5px solid var(--flamme);background:#FBF3E3;font-weight:600;max-width:58ch}
+.prix{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.offre{display:flex;flex-direction:column;padding:34px 28px;border:2px solid var(--trait);border-radius:var(--r);background:var(--blanc)}
+.offre.reco{background:var(--nuit);color:var(--blanc);border-color:var(--nuit);transform:translateY(-14px);padding-top:40px}
+.offre .reco-tag{align-self:flex-start;background:var(--flamme);color:var(--nuit);font-weight:700;font-size:.9rem;padding:3px 14px;border-radius:99px;margin-bottom:12px}
+.montant{font:400 2.8rem/1 "Young Serif",serif;margin:14px 0 4px}
+.montant small{font:600 1rem Figtree,sans-serif}
+.offre ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:10px;flex:1;align-content:start}
+.offre li{display:flex;gap:10px;line-height:1.45}
+.offre li svg{flex:none;margin-top:3px}
+.offre.reco .muted{color:var(--clair)}
+.unique{margin-top:34px;font-size:1.1rem}
+.petit{font-size:.95rem;margin-top:10px;max-width:70ch}
+.communes{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin-top:20px}
+.communes li{background:var(--blanc);border:1px solid var(--trait);border-radius:99px;padding:6px 16px;font-weight:600;font-size:1rem}
 
-        /* NAVIGATION MULTI-PAGES */
-        nav {
-            background: var(--white);
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
-        }
+/* FAQ */
+.faq details{max-width:780px}
+details{border-bottom:1px solid var(--trait)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;font-weight:700;font-size:1.1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--flamme-b)}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 22px;max-width:62ch;color:var(--doux)}
 
-        .logo {
-            font-size: 1.45rem;
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-icon {
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
+/* Action */
+.action{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.coord{margin-top:28px;display:grid;gap:14px;max-width:380px}
+.tel{font:400 1.9rem/1.2 "Young Serif",serif;text-decoration:none}
+.de{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);color:var(--clair);font-size:1rem}
+form{background:var(--blanc);color:var(--encre);padding:32px;border-radius:var(--r);display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:700;font-size:1rem}
+label span{font-weight:400;color:var(--doux)}
+input,select,textarea{font:inherit;padding:13px 14px;border:2px solid #8E9C94;border-radius:10px;background:var(--blanc);color:var(--encre);min-height:50px;width:100%}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--nuit)}
+.hp{position:absolute;left:-9999px}
+form .muted{color:var(--doux)}
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            align-items: center;
-        }
+/* Pied de page */
+footer{background:#10211C;color:var(--clair);padding:48px 0 100px;font-size:.98rem}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer a{color:var(--blanc)}
+footer .logo b{color:var(--blanc)}
+.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:.9rem}
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+/* Barre mobile */
+.bar{display:none}
 
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary);
-        }
-        .nav-links a.active {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 4px;
-        }
+@media(max-width:900px){
+ .section{padding:60px 0}
+ .nav a:not(.btn){display:none}
+ .hero .wrap,.about,.action{grid-template-columns:1fr;gap:36px}
+ .trust ul{grid-template-columns:1fr 1fr}
+ .situations{grid-template-columns:1fr;gap:28px}
+ .sit,.sit:first-child{padding:0 0 28px;border-left:0;border-bottom:2px solid var(--trait)}
+ .sit:last-child{border-bottom:0}
+ .steps{grid-template-columns:1fr}
+ .steps::before{display:none}
+ .prix{grid-template-columns:1fr}
+ .offre.reco{transform:none}
+ footer .wrap{grid-template-columns:1fr}
+ .about .ph,.about img{max-width:220px}
+ .bar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--nuit);border-top:1px solid rgba(255,255,255,.15)}
+ .bar .btn{min-height:50px;padding:0 8px;font-size:.98rem}
+}
+@media(max-width:520px){
+ body{font-size:17px}
+ .logo small{display:none}
+ .trust ul{grid-template-columns:1fr;gap:0}
+ .trust li{padding:14px 0}
+ .duo{gap:8px}
+ form{padding:22px}
+}
 
-        .btn-nav {
-            background: var(--primary);
-            color: var(--white) !important;
-            padding: 10px 22px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.2s, transform 0.2s !important;
-        }
-        .btn-nav:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-        }
+/* Tuiles d’orientation (accueil) */
+.tuiles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tuile{display:flex;flex-direction:column;gap:8px;padding:30px;min-height:200px;border:2px solid var(--trait);border-radius:var(--r);background:var(--blanc);text-decoration:none}
+.tuile:hover{border-color:var(--nuit)}
+.tuile h3{margin:0;font-size:1.5rem}
+.tuile p{color:var(--doux)}
+.tuile .voir{margin-top:auto;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.tuile.devis{background:var(--flamme);border-color:var(--flamme-b);color:var(--nuit)}
+.tuile.devis p{color:var(--nuit)}
+.tuile.devis:hover{background:#FFC25E}
+.contact-bande{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.contact-bande .coord{margin-top:0}
+@media(max-width:900px){.tuiles{grid-template-columns:1fr}.tuile{min-height:0}}
 
-        /* EN-TÊTE DE PAGE */
-        .page-header {
-            background: var(--white);
-            padding: 70px 8% 60px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-        .badge-sub {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--primary);
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            border: 1px solid rgba(197, 160, 89, 0.4);
-        }
-        .page-header h1 {
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .page-header p {
-            color: var(--muted);
-            max-width: 680px;
-            margin: 0 auto;
-            font-size: 1.08rem;
-        }
-
-        /* SECTIONS GÉNÉRIQUES */
-        section {
-            padding: 70px 8%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-        .section-header h2 {
-            font-size: 2.1rem;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-        .section-header p {
-            color: var(--muted);
-        }
-
-        /* GRILLE DES 3 FORMULES */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
-            align-items: stretch;
-        }
-        .price-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s;
-        }
-        .price-card:hover {
-            transform: translateY(-4px);
-        }
-        .price-card.featured {
-            border: 2px solid var(--accent);
-            position: relative;
-            box-shadow: 0 12px 35px rgba(44, 74, 62, 0.08);
-        }
-        .pop-tag {
-            position: absolute;
-            top: -13px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--white);
-            padding: 4px 16px;
-            font-size: 0.76rem;
-            border-radius: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .price-card h3 {
-            color: var(--primary);
-            font-size: 1.45rem;
-            margin-bottom: 5px;
-        }
-        .price-sub {
-            font-size: 0.88rem;
-            color: var(--muted);
-        }
-        .price {
-            font-size: 2.6rem;
-            font-weight: 700;
-            color: var(--text);
-            margin: 18px 0;
-            padding-bottom: 18px;
-            border-bottom: 1px solid var(--border);
-        }
-        .price span {
-            font-size: 0.95rem;
-            font-weight: 400;
-            color: var(--muted);
-        }
-        .features {
-            list-style: none;
-            margin: 10px 0 30px;
-        }
-        .features li {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: var(--text);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-        .features li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: var(--white);
-            padding: 14px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            display: block;
-            transition: background 0.2s;
-            border: 1px solid var(--primary);
-            cursor: pointer;
-        }
-        .btn-primary:hover { background: var(--primary-dark); }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            padding: 14px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            display: block;
-            border: 1px solid var(--primary);
-            transition: background 0.2s;
-            cursor: pointer;
-        }
-        .btn-outline:hover { background: rgba(44, 74, 62, 0.06); }
-
-        /* SIMULATEUR DE DEVIS EN DIRECT */
-        .calc-wrapper {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 45px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .calc-step-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .calc-step-title span {
-            background: var(--accent-light);
-            color: var(--primary);
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-        }
-
-        .radio-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-        .radio-card {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-            position: relative;
-        }
-        .radio-card.selected {
-            border: 2px solid var(--primary);
-            background: rgba(44, 74, 62, 0.04);
-        }
-        .radio-card input {
-            display: none;
-        }
-        .radio-card strong {
-            display: block;
-            color: var(--primary);
-            font-size: 0.95rem;
-        }
-        .radio-card span {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .option-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 18px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .option-item:hover {
-            background: var(--bg);
-        }
-        .option-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .option-left input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            accent-color: var(--primary);
-            cursor: pointer;
-        }
-        .option-price {
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 0.95rem;
-        }
-
-        /* Boîte Résumé du Devis à droite */
-        .summary-box {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-top: 4px solid var(--accent);
-            border-radius: 10px;
-            padding: 30px 25px;
-            position: sticky;
-            top: 100px;
-        }
-        .summary-box h3 {
-            color: var(--primary);
-            font-size: 1.35rem;
-            margin-bottom: 15px;
-        }
-        .summary-lines {
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            padding: 15px 0;
-            margin-bottom: 20px;
-            font-size: 0.92rem;
-        }
-        .summary-line {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            color: var(--muted);
-        }
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 20px;
-        }
-        .summary-total strong {
-            font-size: 1.1rem;
-            color: var(--text);
-        }
-        .total-amount {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        .summary-note {
-            font-size: 0.8rem;
-            color: var(--muted);
-            text-align: center;
-            margin-top: 12px;
-        }
-
-        /* FAQ SECTION */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 25px;
-        }
-        .faq-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 25px;
-        }
-        .faq-card h4 {
-            color: var(--primary);
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-        }
-        .faq-card p {
-            font-size: 0.92rem;
-            color: var(--muted);
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 50px 8% 30px;
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto 35px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-        }
-        .footer-col h4 { color: var(--primary); margin-bottom: 12px; font-size: 1rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 8px; }
-        .footer-col a { color: var(--muted); text-decoration: none; }
-        .footer-col a:hover { color: var(--primary); }
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid var(--border);
-            padding-top: 25px;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 850px) {
-            .nav-links { display: none; }
-            .calc-wrapper { grid-template-columns: 1fr; padding: 25px 20px; }
-            .faq-grid { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 2rem; }
-        }
-    </style>
+/* Page tarifs */
+.nav a[aria-current="page"]{color:var(--flamme)}
+.page-hero{background:var(--nuit);color:var(--blanc);padding:56px 0 64px}
+.page-hero .lead{color:var(--clair);margin-top:14px}
+.ideal{font-size:.98rem;margin:0 0 18px}
+.liste-prix{list-style:none;padding:0;max-width:760px}
+.liste-prix li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--trait);font-weight:600}
+.liste-prix small{display:block;font-weight:400;color:var(--doux);font-size:.98rem}
+.liste-prix b{white-space:nowrap;font:400 1.3rem "Young Serif",Georgia,serif}
+.inclus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 36px;list-style:none;padding:0}
+.inclus li{display:flex;gap:10px;line-height:1.5}
+.inclus svg{flex:none;margin-top:3px;color:#2F6B4F}
+.paiement{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.paiement div{padding:26px;border-left:5px solid var(--flamme);background:#FBF3E3}
+@media(max-width:900px){.inclus,.paiement{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-    <!-- Barre d'information locale -->
-    <div class="top-bar">
-        Intervention dans toute l'Outre-Forêt : <span>Seebach · Wissembourg · Soultz-sous-Forêts · Riedseltz · Hunspach</span> — <em>Wir sprechen Deutsch</em>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="flamme" viewBox="0 0 24 24"><path fill="#F0A93A" d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-3.7 2.2-5C9.5 9.5 11 6 12 2z"/><path fill="#FFE2A6" d="M12 11c.5 1.5 2 2.5 2 4.2a2 2 0 0 1-4 0c0-1.7 1.5-2.7 2-4.2z"/></symbol>
+<symbol id="ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="coeur" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
 
-    <!-- Navigation Multi-Pages -->
-    <nav>
-        <a href="index.html" class="logo">
-            <span class="logo-icon">✦</span> Sérénité Tombes
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html">Nos Prestations</a></li>
-            <li><a href="tarifs.html" class="active">Tarifs & Formules</a></li>
-            <li><a href="contact.html" class="btn-nav">Demander un passage</a></li>
-        </ul>
-    </nav>
+<header class="top">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="La Veilleuse, accueil">
+<svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg>
+<span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span>
+</a>
+<nav class="nav" aria-label="Navigation principale">
+<a href="services.html">Services</a>
+<a href="tarifs.html" aria-current="page">Tarifs</a>
+<a href="a-propos.html">À propos</a>
+<a class="btn btn-flamme" href="contact.html">Demander un devis</a>
+</nav>
+</div>
+</header>
 
-    <!-- EN-TÊTE -->
-    <header class="page-header">
-        <div class="badge-sub">Tarifs clairs · Déplacement inclus</div>
-        <h1>Nos Formules et Simulateur de Devis</h1>
-        <p>Aucun frais caché : le déplacement dans les cimetières de l'Outre-Forêt et l'envoi du Certificat Photo Avant / Après sont systématiquement inclus dans chaque tarif.</p>
-    </header>
+<main id="contenu">
 
-    <!-- 1. LES 3 FORMULES PRINCIPALES -->
-    <section>
-        <div class="pricing-grid">
-            
-            <!-- Formule 1 -->
-            <div class="price-card">
-                <div>
-                    <h3>Passage Ponctuel</h3>
-                    <span class="price-sub">Intervention unique à la demande</span>
-                    <div class="price">75 € <span>/ passage</span></div>
-                    <ul class="features">
-                        <li>Idéal avant la Toussaint ou Rameaux</li>
-                        <li>Repérage gratuit de la concession</li>
-                        <li>Brossage manuel au savon noir naturel</li>
-                        <li>Désherbage complet du contour</li>
-                        <li>Nettoyage des plaques et ornements</li>
-                        <li>Certificat photo Avant / Après sur WhatsApp ou Email</li>
-                    </ul>
-                </div>
-                <a href="#simulateur" onclick="selectFormula(75, 'Passage Ponctuel (1 visite)')" class="btn-outline">Personnaliser cette offre</a>
-            </div>
+<section class="page-hero">
+<div class="wrap">
+<h1>Des prix affichés, sans surprise</h1>
+<p class="lead">Choisissez le rythme qui vous convient. Aucune reconduction automatique : à la fin de l’année, c’est vous qui décidez.</p>
+</div>
+</section>
 
-            <!-- Formule 2 (Mise en avant) -->
-            <div class="price-card featured">
-                <div class="pop-tag">Le plus choisi</div>
-                <div>
-                    <h3>Formule Sérénité</h3>
-                    <span class="price-sub">Suivi semestriel (Soit 70 € / passage)</span>
-                    <div class="price">140 € <span>/ an</span></div>
-                    <ul class="features">
-                        <li><strong>2 passages clés par an</strong> (Printemps & Toussaint)</li>
-                        <li>Nettoyage écologique intégral à chaque visite</li>
-                        <li>Désherbage et remise au propre des abords</li>
-                        <li><strong>1 plante de saison incluse</strong> pour la Toussaint</li>
-                        <li>Arrosage et soin des fleurs en place</li>
-                        <li>Certificat photo Avant / Après à chaque passage</li>
-                    </ul>
-                </div>
-                <a href="#simulateur" onclick="selectFormula(140, 'Formule Sérénité (2 passages/an)')" class="btn-primary">Choisir cette formule</a>
-            </div>
+<section class="section">
+<div class="wrap">
+<div class="head">
+<h2>Les abonnements annuels</h2>
+<p class="lead muted">Le plus simple pour que la tombe reste soignée toute l’année, sans y penser.</p>
+</div>
+<div class="prix">
+<article class="offre">
+<h3>Essentiel</h3>
+<p class="muted">2 passages par an : Toussaint et printemps</p>
+<p class="montant">150&nbsp;€ <small>/ an</small></p>
+<ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Nettoyage complet à chaque passage</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Désherbage des abords</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après</li></ul>
+<p class="ideal muted">Idéal si vous voulez une tombe propre aux deux moments clés.</p>
+<a class="btn btn-ligne sombre btn-bloc" href="contact.html?formule=essentiel">Choisir Essentiel</a>
+</article><article class="offre reco">
+<span class="reco-tag">Recommandée</span><h3>Sérénité</h3>
+<p class="muted">3 passages par an, dont 2 avec fleurs de saison</p>
+<p class="montant">290&nbsp;€ <small>/ an</small></p>
+<ul><li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Nettoyage complet à chaque passage</li><li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Fleurs de saison au printemps et à la Toussaint</li><li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Désherbage et photos à chaque passage</li></ul>
+<p class="ideal muted">Idéal si vous voulez une tombe toujours soignée, à un prix mesuré.</p>
+<a class="btn btn-flamme btn-bloc" href="contact.html?formule=serenite">Choisir Sérénité</a>
+</article><article class="offre">
+<h3>Sérénité+</h3>
+<p class="muted">4 passages par an, tombe toujours fleurie</p>
+<p class="montant">420&nbsp;€ <small>/ an</small></p>
+<ul><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Fleurs de saison à chaque passage</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Contrôle après les intempéries</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos à chaque passage</li></ul>
+<p class="ideal muted">Idéal si vous habitez loin et ne voulez plus y penser.</p>
+<a class="btn btn-ligne sombre btn-bloc" href="contact.html?formule=serenite-plus">Choisir Sérénité+</a>
+</article>
+</div>
+<p class="petit muted">Tombe standard d’environ 2&nbsp;m². Prix nets, TVA non applicable (article 293&nbsp;B du CGI).</p>
+</div>
+</section>
 
-            <!-- Formule 3 -->
-            <div class="price-card">
-                <div>
-                    <h3>Formule 4 Saisons</h3>
-                    <span class="price-sub">Suivi trimestriel (Soit 65 € / passage)</span>
-                    <div class="price">260 € <span>/ an</span></div>
-                    <ul class="features">
-                        <li><strong>4 passages par an</strong> (Mars, Juin, Septembre, Novembre)</li>
-                        <li>Sépulture propre et entretenue toute l'année</li>
-                        <li>Nettoyage au savon noir et désherbage régulier</li>
-                        <li>Retrait des fleurs fanées et arrosage</li>
-                        <li>Vérification après les intempéries d'hiver</li>
-                        <li>4 Certificats photo Avant / Après par an</li>
-                    </ul>
-                </div>
-                <a href="#simulateur" onclick="selectFormula(260, 'Formule 4 Saisons (4 passages/an)')" class="btn-outline">Personnaliser cette offre</a>
-            </div>
+<section class="section stone">
+<div class="wrap">
+<div class="head">
+<h2>Un seul passage</h2>
+<p class="lead muted">Pour une occasion précise : la Toussaint, une cérémonie, un retour au pays.</p>
+</div>
+<ul class="liste-prix">
+<li><span>Nettoyage<small>Pierre lavée à la main, désherbage des abords, photos avant et après</small></span><b>80&nbsp;€</b></li>
+<li><span>Nettoyage et fleurs de saison<small>Plantes en pleine terre ou en jardinière</small></span><b>120&nbsp;€</b></li>
+<li><span>Pack Toussaint<small>Nettoyage, chrysanthèmes et photos. Réservable de septembre à fin octobre</small></span><b>110&nbsp;€</b></li>
+</ul>
+<h3 style="margin-top:44px">Options et suppléments</h3>
+<ul class="liste-prix">
+<li><span>Grande tombe ou caveau<small>À partir de 4&nbsp;m²</small></span><b>+&nbsp;40&nbsp;%</b></li>
+<li><span>Repeinte des lettres gravées<small>Or, argent ou noir, pour une inscription</small></span><b>40&nbsp;€</b></li>
+<li><span>Gravier neuf<small>Fourniture comprise, selon la surface</small></span><b>40 à 80&nbsp;€</b></li>
+<li><span>Déplacement au-delà de 15&nbsp;km de Seebach</span><b>+&nbsp;10&nbsp;€</b></li>
+</ul>
+</div>
+</section>
 
-        </div>
-    </section>
+<section class="section">
+<div class="wrap">
+<div class="head"><h2>Toujours inclus</h2></div>
+<ul class="inclus"><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après à chaque passage</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Eau et savon noir, brosses douces</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Déplacement jusqu’à 15&nbsp;km de Seebach</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Devis écrit gratuit</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Je repasse sans frais si le résultat ne vous convient pas</li><li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Une facture à chaque paiement</li></ul>
+</div>
+</section>
 
-    <!-- 2. SIMULATEUR DE DEVIS EN DIRECT -->
-    <section id="simulateur" style="padding-top: 10px;">
-        <div class="section-header">
-            <h2>Calculez votre tarif sur-mesure</h2>
-            <p>Sélectionnez une formule et cochez les options souhaitées pour estimer immédiatement votre budget.</p>
-        </div>
+<section class="section stone">
+<div class="wrap">
+<div class="head"><h2>Comment se passe le paiement ?</h2></div>
+<div class="paiement">
+<div><h3>Passage unique</h3><p>Vous payez après avoir vu les photos, par virement ou chèque.</p></div>
+<div><h3>Abonnement</h3><p>Vous payez à la commande, par virement ou chèque. Si vous arrêtez, les passages non réalisés vous sont remboursés.</p></div>
+</div>
+</div>
+</section>
 
-        <div class="calc-wrapper">
-            <!-- Colonne de gauche : Choix -->
-            <div>
-                <div class="calc-step-title"><span>1</span> Choisissez votre formule de base</div>
-                <div class="radio-group">
-                    <label class="radio-card" id="card-75" onclick="selectFormula(75, 'Passage Ponctuel (1 visite)')">
-                        <input type="radio" name="formula" value="75">
-                        <strong>Passage Ponctuel</strong>
-                        <span>75 € (1 visite)</span>
-                    </label>
-                    <label class="radio-card selected" id="card-140" onclick="selectFormula(140, 'Formule Sérénité (2 passages/an)')">
-                        <input type="radio" name="formula" value="140" checked>
-                        <strong>Formule Sérénité</strong>
-                        <span>140 € / an (2 visites)</span>
-                    </label>
-                    <label class="radio-card" id="card-260" onclick="selectFormula(260, 'Formule 4 Saisons (4 passages/an)')">
-                        <input type="radio" name="formula" value="260">
-                        <strong>Formule 4 Saisons</strong>
-                        <span>260 € / an (4 visites)</span>
-                    </label>
-                </div>
+<section class="section">
+<div class="wrap faq">
+<h2>Questions sur les prix</h2>
+<details><summary>Y a-t-il des frais cachés ?</summary><p>Non. Le prix du devis est le prix payé. Les seuls suppléments sont ceux de cette page, et je vous les annonce avant d’intervenir.</p></details><details><summary>Puis-je arrêter mon abonnement ?</summary><p>Oui. Il n’y a aucune reconduction automatique, et les passages non réalisés vous sont remboursés.</p></details><details><summary>Qu’est-ce qu’une grande tombe ?</summary><p>À partir d’environ 4&nbsp;m², ou un caveau. Envoyez-moi une photo : je vous confirme le prix avant de venir.</p></details><details><summary>Pourquoi Sérénité est-elle recommandée ?</summary><p>Elle couvre les deux moments où la tombe se voit le plus, le printemps et la Toussaint, avec des fleurs, sans multiplier les passages.</p></details><details><summary>Et si mon cimetière est loin de Seebach ?</summary><p>Jusqu’à 15&nbsp;km, le déplacement est inclus. Au-delà, comptez 10&nbsp;€ de plus par passage. Demandez-moi si votre commune n’est pas dans ma zone.</p></details>
+</div>
+</section>
 
-                <div class="calc-step-title"><span>2</span> Ajoutez vos options à la carte (facultatif)</div>
-                <div class="options-list">
-                    <label class="option-item">
-                        <div class="option-left">
-                            <input type="checkbox" class="opt-check" data-name="Fleurissement de saison (1 plante locale)" value="25" onchange="updateTotal()">
-                            <span>🌿 <strong>Fleurissement de saison</strong> (Pose d'une plante locale + terreau)</span>
-                        </div>
-                        <span class="option-price">+ 25 €</span>
-                    </label>
+<section class="section dark">
+<div class="wrap contact-bande">
+<div>
+<h2>Un doute sur la formule ?</h2>
+<p class="lead">Dites-moi où se trouve la tombe : je vous conseille et je vous envoie un devis écrit sous 48&nbsp;h.</p>
+</div>
+<div class="coord">
+<a class="btn btn-flamme" href="contact.html">Demander un devis gratuit</a>
+<a class="tel" href="tel:+33600000000">06 00 00 00 00</a>
+</div>
+</div>
+</section>
+</main>
 
-                    <label class="option-item">
-                        <div class="option-left">
-                            <input type="checkbox" class="opt-check" data-name="Duo de plantes de saison" value="45" onchange="updateTotal()">
-                            <span>🌸 <strong>Duo de plantes</strong> (2 compositions florales de saison)</span>
-                        </div>
-                        <span class="option-price">+ 45 €</span>
-                    </label>
+<footer>
+<div class="wrap">
+<div>
+<a class="logo" href="index.html"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
+</div>
+<div>
+<p><a href="tel:+33600000000">06 00 00 00 00</a><br><a href="mailto:contact@la-veilleuse.fr">contact@la-veilleuse.fr</a><br>Seebach (Bas-Rhin)</p>
+</div>
+<div>
+<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
+</div>
+<p class="legal">La Veilleuse, micro-entreprise, SIRET [à compléter]. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
+</div>
+</footer>
 
-                    <label class="option-item">
-                        <div class="option-left">
-                            <input type="checkbox" class="opt-check" data-name="Recharge en gravier blanc" value="40" onchange="updateTotal()">
-                            <span>🪨 <strong>Recharge en gravier blanc</strong> (Apport et égalisation autour de la tombe)</span>
-                        </div>
-                        <span class="option-price">+ 40 €</span>
-                    </label>
-
-                    <label class="option-item">
-                        <div class="option-left">
-                            <input type="checkbox" class="opt-check" data-name="Forfait redorage des lettres" value="45" onchange="updateTotal()">
-                            <span>✨ <strong>Réfection des lettres</strong> (Forfait peinture or/argent/noir d'une inscription)</span>
-                        </div>
-                        <span class="option-price">+ 45 €</span>
-                    </label>
-
-                    <label class="option-item">
-                        <div class="option-left">
-                            <input type="checkbox" class="opt-check" data-name="Médaillon QR Code Souvenir" value="50" onchange="updateTotal()">
-                            <span>📱 <strong>Médaillon QR Code "Mémoire"</strong> (Page hommage en ligne dédiée)</span>
-                        </div>
-                        <span class="option-price">+ 50 €</span>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Colonne de droite : Résumé en direct -->
-            <div class="summary-box">
-                <h3>Votre estimation</h3>
-                <div class="summary-lines" id="summary-details">
-                    <div class="summary-line">
-                        <span>Formule Sérénité (2 passages/an)</span>
-                        <strong>140 €</strong>
-                    </div>
-                </div>
-                <div class="summary-total">
-                    <strong>Total TTC :</strong>
-                    <span class="total-amount" id="total-price">140 €</span>
-                </div>
-                <a href="contact.html" class="btn-primary" id="btn-order">Réserver cette prestation</a>
-                <p class="summary-note">✓ Déplacement et bilan photo inclus<br>✓ Paiement uniquement après réception des photos (ou à la commande)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. FOIRE AUX QUESTIONS (FAQ) -->
-    <section>
-        <div class="section-header">
-            <h2>Questions fréquentes</h2>
-            <p>Tout savoir sur le déroulement et le règlement de nos prestations.</p>
-        </div>
-
-        <div class="faq-grid">
-            <div class="faq-card">
-                <h4>Y a-t-il des frais de déplacement supplémentaires ?</h4>
-                <p>Non, nos tarifs sont tout compris pour l'ensemble des communes de l'Outre-Forêt (Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, etc.).</p>
-            </div>
-            <div class="faq-card">
-                <h4>Comment retrouver la tombe si je n'ai pas l'emplacement exact ?</h4>
-                <p>Il vous suffit de nous donner le nom et le prénom du défunt ainsi que la commune. Nous effectuons gratuitement le repérage en lien avec le secrétariat de la mairie.</p>
-            </div>
-            <div class="faq-card">
-                <h4>Quels sont les moyens de paiement acceptés ?</h4>
-                <p>Vous pouvez régler par virement bancaire (IBAN français), par carte/PayPal ou par chèque après réception de votre facture et du certificat photo Avant / Après.</p>
-            </div>
-            <div class="faq-card">
-                <h4>Les abonnements annuels sont-ils renouvelés automatiquement ?</h4>
-                <p>Non, il n'y a aucun prélèvement automatique ni reconduction cachée. À la fin de votre année, nous vous proposons simplement de renouveler si vous le souhaitez.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PIED DE PAGE -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Sérénité Tombes</h4>
-                <p>Service professionnel d'entretien, de nettoyage écologique et de fleurissement de tombes en Alsace du Nord.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="services.html">Nos Prestations</a></li>
-                    <li><a href="tarifs.html">Tarifs & Formules</a></li>
-                    <li><a href="contact.html">Contact & Devis</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Communes desservies</h4>
-                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, Haguenau et environs.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Sérénité Tombes – Tous droits réservés (Code APE 9603Z).
-        </div>
-    </footer>
-
-    <!-- SCRIPT DU SIMULATEUR -->
-    <script>
-        let currentBasePrice = 140;
-        let currentBaseName = "Formule Sérénité (2 passages/an)";
-
-        function selectFormula(price, name) {
-            currentBasePrice = price;
-            currentBaseName = name;
-
-            // Mise à jour visuelle des cartes radio
-            document.querySelectorAll('.radio-card').forEach(card => card.classList.remove('selected'));
-            const activeCard = document.getElementById('card-' + price);
-            if (activeCard) activeCard.classList.add('selected');
-
-            updateTotal();
-        }
-
-        function updateTotal() {
-            let total = currentBasePrice;
-            let htmlLines = `
-                <div class="summary-line">
-                    <span>${currentBaseName}</span>
-                    <strong>${currentBasePrice} €</strong>
-                </div>
-            `;
-
-            document.querySelectorAll('.opt-check:checked').forEach(chk => {
-                const optPrice = parseInt(chk.value, 10);
-                const optName = chk.getAttribute('data-name');
-                total += optPrice;
-                htmlLines += `
-                    <div class="summary-line">
-                        <span>+ ${optName}</span>
-                        <strong>${optPrice} €</strong>
-                    </div>
-                `;
-            });
-
-            document.getElementById('summary-details').innerHTML = htmlLines;
-            document.getElementById('total-price').textContent = total + ' €';
-        }
-    </script>
-
+<div class="bar" role="navigation" aria-label="Contacter La Veilleuse">
+<a class="btn btn-flamme" href="tel:+33600000000">Appeler</a>
+<a class="btn btn-ligne" style="color:#fff" href="https://wa.me/33600000000">WhatsApp</a>
+<a class="btn btn-ligne" style="color:#fff" href="contact.html">Devis</a>
+</div>
 </body>
 </html>

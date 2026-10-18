@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Veilleuse | Entretien de tombes à Seebach, Wissembourg et en Outre-Forêt</title>
+<title>La Veilleuse | Entretien de tombes à Seebach et en Outre-Forêt</title>
 <meta name="description" content="Nettoyage, désherbage et fleurissement de tombes dans l’Outre-Forêt. Photos avant/après à chaque passage, prix affichés, devis gratuit sous 48 h. Grabpflege im Elsass.">
 <link rel="canonical" href="https://www.la-veilleuse.fr/">
 <meta property="og:type" content="website">
@@ -107,7 +107,7 @@ figcaption.tag.apres{background:var(--flamme)}
 .offre .reco-tag{align-self:flex-start;background:var(--flamme);color:var(--nuit);font-weight:700;font-size:.9rem;padding:3px 14px;border-radius:99px;margin-bottom:12px}
 .montant{font:400 2.8rem/1 "Young Serif",serif;margin:14px 0 4px}
 .montant small{font:600 1rem Figtree,sans-serif}
-.offre ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px;flex:1}
+.offre ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:10px;flex:1;align-content:start}
 .offre li{display:flex;gap:10px;line-height:1.45}
 .offre li svg{flex:none;margin-top:3px}
 .offre.reco .muted{color:var(--clair)}
@@ -174,6 +174,36 @@ footer .logo b{color:var(--blanc)}
  .duo{gap:8px}
  form{padding:22px}
 }
+
+/* Tuiles d’orientation (accueil) */
+.tuiles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tuile{display:flex;flex-direction:column;gap:8px;padding:30px;min-height:200px;border:2px solid var(--trait);border-radius:var(--r);background:var(--blanc);text-decoration:none}
+.tuile:hover{border-color:var(--nuit)}
+.tuile h3{margin:0;font-size:1.5rem}
+.tuile p{color:var(--doux)}
+.tuile .voir{margin-top:auto;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.tuile.devis{background:var(--flamme);border-color:var(--flamme-b);color:var(--nuit)}
+.tuile.devis p{color:var(--nuit)}
+.tuile.devis:hover{background:#FFC25E}
+.contact-bande{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.contact-bande .coord{margin-top:0}
+@media(max-width:900px){.tuiles{grid-template-columns:1fr}.tuile{min-height:0}}
+
+/* Page tarifs */
+.nav a[aria-current="page"]{color:var(--flamme)}
+.page-hero{background:var(--nuit);color:var(--blanc);padding:56px 0 64px}
+.page-hero .lead{color:var(--clair);margin-top:14px}
+.ideal{font-size:.98rem;margin:0 0 18px}
+.liste-prix{list-style:none;padding:0;max-width:760px}
+.liste-prix li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid var(--trait);font-weight:600}
+.liste-prix small{display:block;font-weight:400;color:var(--doux);font-size:.98rem}
+.liste-prix b{white-space:nowrap;font:400 1.3rem "Young Serif",Georgia,serif}
+.inclus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 36px;list-style:none;padding:0}
+.inclus li{display:flex;gap:10px;line-height:1.5}
+.inclus svg{flex:none;margin-top:3px;color:#2F6B4F}
+.paiement{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.paiement div{padding:26px;border-left:5px solid var(--flamme);background:#FBF3E3}
+@media(max-width:900px){.inclus,.paiement{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"La Veilleuse","description":"Entretien, nettoyage et fleurissement de tombes en Outre-Forêt (Alsace du Nord), avec photos avant/après.","url":"https://www.la-veilleuse.fr/","telephone":"+33 6 00 00 00 00","address":{"@type":"PostalAddress","addressLocality":"Seebach","postalCode":"67160","addressCountry":"FR"},"areaServed":["Seebach","Riedseltz","Cleebourg","Hunspach","Soultz-sous-Forêts","Hoffen","Hatten","Surbourg","Schleithal","Lauterbourg","Wissembourg","Haguenau"],"knowsLanguage":["fr","de"],"priceRange":"80 € - 420 €"}
@@ -190,33 +220,31 @@ footer .logo b{color:var(--blanc)}
 <symbol id="coeur" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
 </svg>
 
-<!-- EN-TÊTE -->
 <header class="top">
 <div class="wrap">
-<a class="logo" href="#haut" aria-label="La Veilleuse, accueil">
+<a class="logo" href="index.html" aria-label="La Veilleuse, accueil">
 <svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg>
 <span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span>
 </a>
 <nav class="nav" aria-label="Navigation principale">
-<a href="#fonctionnement">Comment ça marche</a>
-<a href="#tarifs">Tarifs</a>
-<a href="#questions">Questions</a>
-<a class="btn btn-flamme" href="tel:+33600000000">Appeler</a>
+<a href="services.html">Services</a>
+<a href="tarifs.html">Tarifs</a>
+<a href="a-propos.html">À propos</a>
+<a class="btn btn-flamme" href="contact.html">Demander un devis</a>
 </nav>
 </div>
 </header>
 
 <main id="contenu">
 
-<!-- 1. ATTENTION -->
 <section class="hero" id="haut">
 <div class="wrap">
 <div>
 <h1>Une tombe soignée, même quand vous ne pouvez pas être là.</h1>
-<p class="lead">Je nettoie, désherbe et fleuris la sépulture de vos proches dans l’Outre-Forêt, puis je vous envoie les photos.</p>
+<p class="lead">La Veilleuse s’occupe de la tombe de vos proches dans l’Outre-Forêt : nettoyage, désherbage, fleurs de saison, et photos après chaque passage.</p>
 <div class="actions">
-<a class="btn btn-flamme" href="#devis">Demander un devis gratuit</a>
-<a class="btn btn-ligne" href="tel:+33600000000">06 00 00 00 00</a>
+<a class="btn btn-flamme" href="services.html">Voir ce que je fais</a>
+<a class="btn btn-ligne" href="contact.html">Demander un devis</a>
 </div>
 <p class="micro">Réponse sous 48 h, sans engagement. Auch auf Deutsch.</p>
 </div>
@@ -232,39 +260,27 @@ footer .logo b{color:var(--blanc)}
 </div>
 </section>
 
-<section class="trust" aria-label="Nos engagements">
-<div class="wrap">
-<ul>
-<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après à chaque passage</li>
-<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Eau et savon noir, jamais de produit agressif</li>
-<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Prix affichés et devis écrit gratuit</li>
-<li><svg width="24" height="24" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Basé à Seebach, au plus près des cimetières</li>
-</ul>
-</div>
-</section>
-
-<!-- 2. INTÉRÊT -->
-<section class="section">
+<section class="section" id="projet">
 <div class="wrap">
 <div class="head">
-<h2>Vous vous reconnaissez ?</h2>
-<p class="lead muted">Entretenir une tombe est une obligation, et surtout une marque d’attachement. Mais le temps manque, ou les forces.</p>
+<h2>La Veilleuse, c’est quoi ?</h2>
+<p class="lead muted">Une veilleuse, c’est la petite flamme qu’on garde allumée pour ceux qu’on aime. Ici, c’est une personne qui veille sur leur tombe à votre place.</p>
 </div>
 <div class="situations">
 <div class="sit">
-<svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#pin"/></svg>
-<h3>Vous habitez loin</h3>
-<p class="muted">Vous pensez à cette tombe, mais le trajet est long. Je m’y rends à votre place, et vous voyez le résultat sur votre téléphone.</p>
-</div>
-<div class="sit">
-<svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#horloge"/></svg>
-<h3>Vos journées sont déjà pleines</h3>
-<p class="muted">Entre le travail, la route vers l’Allemagne et la famille, il manque toujours un week-end. Un passage planifié règle le sujet.</p>
+<svg width="36" height="36" aria-hidden="true"><use href="#flamme"/></svg>
+<h3>Ce que je fais</h3>
+<p class="muted">Je nettoie la pierre à la main, je désherbe les abords et je plante des fleurs de saison. Rien de lourd : pas de travaux de marbrerie.</p>
 </div>
 <div class="sit">
 <svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#coeur"/></svg>
-<h3>Se baisser ou marcher devient pénible</h3>
-<p class="muted">Vous tenez à ce que la tombe reste belle, sans fatigue pour vous. Et toute la famille est rassurée.</p>
+<h3>Pour qui</h3>
+<p class="muted">Les familles qui habitent loin, qui manquent de temps, ou pour qui se déplacer au cimetière est devenu pénible.</p>
+</div>
+<div class="sit">
+<svg width="36" height="36" aria-hidden="true" style="color:#2F6B4F"><use href="#pin"/></svg>
+<h3>Où</h3>
+<p class="muted">À Seebach et dans tout l’Outre-Forêt, jusqu’à Wissembourg, Lauterbourg et Haguenau.</p>
 </div>
 </div>
 </div>
@@ -273,148 +289,41 @@ footer .logo b{color:var(--blanc)}
 <section class="section stone" id="fonctionnement">
 <div class="wrap">
 <div class="head">
-<h2>Trois étapes, aucun déplacement pour vous</h2>
+<h2>Comment ça marche</h2>
+<p class="lead muted">Trois étapes, et aucun déplacement pour vous.</p>
 </div>
 <div class="steps">
-<div class="step"><i>1</i><h3>Vous me dites où</h3><p class="muted">La commune du cimetière et le nom de la famille. Si besoin, je vous aide à retrouver l’emplacement.</p></div>
-<div class="step"><i>2</i><h3>Je m’occupe de la tombe</h3><p class="muted">Nettoyage à la main, désherbage, fleurs de saison. Comptez 1 h 30 à 2 h sur place.</p></div>
-<div class="step"><i>3</i><h3>Vous recevez les photos</h3><p class="muted">Avant et après, par WhatsApp ou e-mail. Pour un passage unique, vous payez après les avoir vues.</p></div>
+<div class="step"><i>1</i><h3>Vous me dites où</h3><p class="muted">La commune du cimetière et le nom de la famille.</p></div>
+<div class="step"><i>2</i><h3>Je m’occupe de la tombe</h3><p class="muted">Nettoyage à la main, désherbage, fleurs de saison.</p></div>
+<div class="step"><i>3</i><h3>Vous recevez les photos</h3><p class="muted">Avant et après, par WhatsApp ou e-mail.</p></div>
 </div>
 </div>
 </section>
 
-<!-- 3. DÉSIR -->
-<section class="section light">
+<section class="section">
 <div class="wrap">
 <div class="head">
-<h2>Voyez la différence</h2>
-<p class="lead muted">La mousse, les herbes et les feuilles disparaissent. La pierre retrouve sa couleur, sans être abîmée.</p>
+<h2>Où voulez-vous aller ?</h2>
 </div>
-<div class="proof">
-<!-- REMPLACER par une vraie photo : <img src="img/avant-2.jpg" alt="..."> -->
-<figure><div class="ph" role="img" aria-label="Photo avant">Photo avant</div><figcaption class="tag">Avant</figcaption></figure>
-<figure><div class="ph" role="img" aria-label="Photo après">Photo après</div><figcaption class="tag apres">Après</figcaption></figure>
+<div class="tuiles">
+<a class="tuile" href="services.html"><h3>Ce que je fais</h3><p>Nettoyage, désherbage, fleurissement : le détail de chaque prestation et de chaque passage.</p><span class="voir">Voir les services</span></a>
+<a class="tuile" href="tarifs.html"><h3>Combien ça coûte</h3><p>Nettoyage dès 80&nbsp;€, abonnements dès 150&nbsp;€ par an. Les prix sont affichés.</p><span class="voir">Voir les tarifs</span></a>
+<a class="tuile" href="a-propos.html"><h3>Qui s’occupe de la tombe</h3><p>Mon visage, ma méthode, la zone couverte, et ma garantie : je repasse sans frais.</p><span class="voir">Me connaître</span></a>
+<a class="tuile devis" href="contact.html"><h3>Demander un devis</h3><p>Dites-moi où se trouve la tombe. Je vous réponds sous 48&nbsp;h, gratuitement et sans engagement.</p><span class="voir">Écrire à La Veilleuse</span></a>
 </div>
 </div>
 </section>
 
-<section class="section stone light">
-<div class="wrap about">
-<!-- REMPLACER par votre portrait : <img src="img/portrait.jpg" alt="[Prénom], fondateur de La Veilleuse"> -->
-<div class="ph" role="img" aria-label="Portrait de la personne qui intervient">Votre photo</div>
+<section class="section dark">
+<div class="wrap contact-bande">
 <div>
-<h2>Qui s’occupe de la tombe ?</h2>
-<p class="lead">Je m’appelle [Prénom], je vis à Seebach. Je m’occupe moi-même de chaque tombe, avec le soin que j’aimerais pour les miens. Vous avez mon numéro direct, pas un standard.</p>
-<p class="muted">Une veilleuse, c’est la petite flamme qu’on garde allumée pour ceux qu’on aime. C’est ce que je fais pour leur tombe : y veiller à votre place.</p>
-<p class="garantie">Le résultat ne vous convient pas ? Je repasse, sans frais.</p>
+<h2>Une question ?</h2>
+<p class="lead">Appelez-moi ou écrivez-moi : vous aurez une vraie personne, pas un standard.</p>
 </div>
-</div>
-</section>
-
-<!-- Avis clients : retirer l’attribut hidden dès que vous avez un vrai avis, avec l’accord de la personne -->
-<section class="section" hidden>
-<div class="wrap">
-<h2>Ce que disent les familles</h2>
-<blockquote class="lead">« [Avis réel d’un client] » <cite>[Prénom, commune]</cite></blockquote>
-</div>
-</section>
-
-<section class="section" id="tarifs">
-<div class="wrap">
-<div class="head">
-<h2>Des prix affichés, sans surprise</h2>
-<p class="lead muted">Choisissez le rythme qui vous convient. Aucune reconduction automatique : à la fin de l’année, c’est vous qui décidez.</p>
-</div>
-<div class="prix">
-<article class="offre">
-<h3>Essentiel</h3>
-<p class="muted">2 passages par an : Toussaint et printemps</p>
-<p class="montant">150&nbsp;€ <small>/ an</small></p>
-<ul>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Nettoyage complet à chaque passage</li>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Désherbage des abords</li>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos avant et après</li>
-</ul>
-<a class="btn btn-ligne sombre btn-bloc" href="#devis" data-formule="Essentiel (150 € / an)">Choisir Essentiel</a>
-</article>
-<article class="offre reco">
-<span class="reco-tag">Recommandée</span>
-<h3>Sérénité</h3>
-<p class="muted">3 passages par an, dont 2 avec fleurs de saison</p>
-<p class="montant">290&nbsp;€ <small>/ an</small></p>
-<ul>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Nettoyage complet à chaque passage</li>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Fleurs de saison au printemps et à la Toussaint</li>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#F0A93A"><use href="#ok"/></svg>Désherbage et photos à chaque passage</li>
-</ul>
-<a class="btn btn-flamme btn-bloc" href="#devis" data-formule="Sérénité (290 € / an)">Choisir Sérénité</a>
-</article>
-<article class="offre">
-<h3>Sérénité+</h3>
-<p class="muted">4 passages par an, tombe toujours fleurie</p>
-<p class="montant">420&nbsp;€ <small>/ an</small></p>
-<ul>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Fleurs de saison à chaque passage</li>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Contrôle après les intempéries</li>
-<li><svg width="22" height="22" aria-hidden="true" style="color:#2F6B4F"><use href="#ok"/></svg>Photos à chaque passage</li>
-</ul>
-<a class="btn btn-ligne sombre btn-bloc" href="#devis" data-formule="Sérénité+ (420 € / an)">Choisir Sérénité+</a>
-</article>
-</div>
-<p class="unique"><b>Une seule fois ?</b> Nettoyage à 80&nbsp;€, nettoyage avec fleurs à 120&nbsp;€.</p>
-<p class="petit muted">Déplacement inclus jusqu’à 15 km de Seebach, 10&nbsp;€ au-delà. Grande tombe ou caveau : +&nbsp;40&nbsp;%. Prix nets, TVA non applicable (article 293&nbsp;B du CGI).</p>
-
-<h3 style="margin-top:56px">Où je me déplace</h3>
-<ul class="communes">
-<li>Seebach</li><li>Riedseltz</li><li>Cleebourg</li><li>Hunspach</li><li>Soultz-sous-Forêts</li><li>Hoffen</li><li>Hatten</li><li>Surbourg</li><li>Schleithal</li><li>Lauterbourg</li><li>Wissembourg</li><li>Haguenau</li>
-</ul>
-<p class="petit muted">Votre commune n’est pas dans la liste ? Demandez-moi, je regarde.</p>
-</div>
-</section>
-
-<section class="section stone" id="questions">
-<div class="wrap faq">
-<h2>Questions fréquentes</h2>
-<details><summary>Comment retrouvez-vous la tombe ?</summary><p>Indiquez-moi le cimetière et le nom du défunt. La plupart des cimetières ont un plan. Si un doute subsiste, je vous appelle pour confirmer avec vous avant d’intervenir.</p></details>
-<details><summary>Allez-vous abîmer la pierre ?</summary><p>Non. Je travaille à l’eau et au savon noir, avec des brosses douces. Jamais de haute pression ni d’acide, surtout sur le marbre.</p></details>
-<details><summary>Comment se passe le paiement ?</summary><p>Passage unique : vous payez après avoir vu les photos, par virement ou chèque. Abonnement : paiement à la commande, avec remboursement des passages non réalisés si vous arrêtez.</p></details>
-<details><summary>Et si le résultat ne me convient pas ?</summary><p>Écrivez-moi : je repasse sans frais, jusqu’à ce que vous soyez satisfait.</p></details>
-<details><summary>Intervenez-vous en hiver ?</summary><p>Oui, quand le sol n’est pas gelé. Si la météo l’empêche, je décale le passage et je vous préviens.</p></details>
-</div>
-</section>
-
-<!-- 4. ACTION -->
-<section class="section dark" id="devis">
-<div class="wrap action">
-<div>
-<h2>Demandez votre devis</h2>
-<p class="lead">Dites-moi où se trouve la tombe, je vous réponds sous 48 h avec un devis écrit. C’est gratuit et sans engagement.</p>
-<p class="lead" style="margin-top:12px">Pour garder le même soin sur chaque tombe, j’accepte un nombre limité de nouvelles tombes chaque mois.</p>
 <div class="coord">
 <a class="tel" href="tel:+33600000000">06 00 00 00 00</a>
 <a class="btn btn-ligne" href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20l%E2%80%99entretien%20d%E2%80%99une%20tombe.">Écrire sur WhatsApp</a>
 </div>
-<p class="de"><b>Familie in Deutschland?</b> Ich spreche Deutsch. Sie erhalten die Fotos nach jedem Besuch per WhatsApp oder E-Mail.</p>
-</div>
-<!-- Remplacer VOTRE_ID par l’identifiant de votre formulaire Formspree (gratuit) -->
-<form action="https://formspree.io/f/VOTRE_ID" method="POST">
-<input type="hidden" name="_subject" value="Nouvelle demande de devis : La Veilleuse">
-<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-<label>Votre nom<input type="text" name="nom" autocomplete="name" required></label>
-<label>Téléphone ou e-mail<input type="text" name="contact" autocomplete="tel" required></label>
-<label>Commune du cimetière<input type="text" name="commune" required></label>
-<label>Formule
-<select name="formule" id="formule">
-<option>Je ne sais pas encore</option>
-<option>Passage unique</option>
-<option>Essentiel (150 € / an)</option>
-<option>Sérénité (290 € / an)</option>
-<option>Sérénité+ (420 € / an)</option>
-</select></label>
-<label>Un détail à ajouter ? <span>(facultatif)</span><textarea name="message"></textarea></label>
-<button class="btn btn-flamme btn-bloc" type="submit">Envoyer ma demande</button>
-<p class="petit muted" style="margin:0">Vos informations servent uniquement à vous répondre.</p>
-</form>
 </div>
 </section>
 </main>
@@ -422,30 +331,22 @@ footer .logo b{color:var(--blanc)}
 <footer>
 <div class="wrap">
 <div>
-<a class="logo" href="#haut"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
+<a class="logo" href="index.html"><svg width="34" height="34" aria-hidden="true"><use href="#flamme"/></svg><span><b>La Veilleuse</b><small>Entretien de tombes · Grabpflege · Outre-Forêt</small></span></a>
 </div>
 <div>
 <p><a href="tel:+33600000000">06 00 00 00 00</a><br><a href="mailto:contact@la-veilleuse.fr">contact@la-veilleuse.fr</a><br>Seebach (Bas-Rhin)</p>
 </div>
 <div>
-<p><a href="#tarifs">Tarifs</a><br><a href="#questions">Questions fréquentes</a><br><a href="mentions-legales.html">Mentions légales</a></p>
+<p><a href="services.html">Services</a><br><a href="tarifs.html">Tarifs</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p>
 </div>
 <p class="legal">La Veilleuse, micro-entreprise, SIRET [à compléter]. TVA non applicable, article 293&nbsp;B du CGI. © 2026</p>
 </div>
 </footer>
 
-<!-- Barre d’actions mobile -->
 <div class="bar" role="navigation" aria-label="Contacter La Veilleuse">
 <a class="btn btn-flamme" href="tel:+33600000000">Appeler</a>
 <a class="btn btn-ligne" style="color:#fff" href="https://wa.me/33600000000">WhatsApp</a>
-<a class="btn btn-ligne" style="color:#fff" href="#devis">Devis</a>
+<a class="btn btn-ligne" style="color:#fff" href="contact.html">Devis</a>
 </div>
-
-<script>
-// Préselectionne la formule choisie dans le formulaire
-document.querySelectorAll('[data-formule]').forEach(function(a){
-  a.addEventListener('click',function(){document.getElementById('formule').value=a.dataset.formule;});
-});
-</script>
 </body>
 </html>
