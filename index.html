@@ -3,171 +3,644 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entretien écologique et fleurissement de tombes à Seebach, Wissembourg, Soultz-sous-Forêts et Outre-Forêt. Bilan photo Avant/Après.">
-    <title>Sérénité Tombes | Entretien de sépultures en Alsace du Nord</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- SEO Local Optimisé -->
+    <title>Sérénité Tombes | Entretien & Fleurissement de Sépultures (Seebach, Wissembourg)</title>
+    <meta name="description" content="Service artisanal d'entretien écologique et fleurissement de tombes à Seebach, Wissembourg, Soultz-sous-Forêts et en Outre-Forêt. Bilan photo Avant/Après sur WhatsApp.">
+    <meta name="keywords" content="entretien tombe Seebach, nettoyage sépulture Wissembourg, fleurissement cimetière Soultz-sous-Forêts, entretien tombe Alsace du Nord, Outre-Forêt">
+    <meta name="robots" content="index, follow">
+
+    <!-- Données structurées Google (SEO LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sérénité Tombes",
+      "description": "Entretien écologique et fleurissement de sépultures en Alsace du Nord (Outre-Forêt) avec envoi de photos Avant/Après.",
+      "areaServed": ["Seebach", "Wissembourg", "Soultz-sous-Forêts", "Riedseltz", "Hunspach", "Hoffen", "Hatten", "Lauterbourg", "Haguenau"],
+      "priceRange": "65€ - 260€"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
+        /* PALETTE DE COULEURS & VARIABLES */
         :root {
-            --primary: #2C4A3E;   /* Vert sauge profond */
-            --accent: #C5A059;    /* Or doux */
-            --bg: #F7F6F2;        /* Crème pierre */
+            --primary: #2C4A3E;       /* Vert Sauge Profond */
+            --primary-dark: #1E352B;  /* Vert Sombre (Hover) */
+            --accent: #C5A059;        /* Or Doux */
+            --accent-light: #F4EFE6;  /* Fond Doré Clair */
+            --bg: #F7F6F2;            /* Blanc Crème / Pierre */
             --white: #FFFFFF;
-            --text: #2B2B2B;
-            --muted: #666666;
+            --text: #2B2B2B;          /* Gris Anthracite */
+            --muted: #5F6360;         /* Gris Doux */
+            --border: #E2E0D8;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        h1, h2, h3, .logo { font-family: 'Playfair Display', serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-        /* Navigation épurée */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* BARRE D'ANNONCE HAUT DE PAGE */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+        .top-bar span {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* NAVIGATION MULTI-PAGES */
         nav {
-            background: var(--white); padding: 18px 8%; display: flex; justify-content: space-between;
-            align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+            background: var(--white);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
         }
-        .logo { font-size: 1.4rem; color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 8px; }
-        .logo span { color: var(--accent); font-size: 1.6rem; }
-        .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text); font-size: 0.95rem; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--primary); }
-        .btn-nav { background: var(--primary); color: var(--white) !important; padding: 10px 20px; border-radius: 6px; font-weight: 600; }
 
-        /* Hero Section */
-        header {
-            padding: 90px 8% 70px; text-align: center; max-width: 900px; margin: 0 auto;
+        .logo {
+            font-size: 1.45rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .badge {
-            display: inline-block; background: rgba(44, 74, 62, 0.1); color: var(--primary);
-            padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;
+        .logo-icon {
+            color: var(--accent);
+            font-size: 1.5rem;
         }
-        header h1 { font-size: 3rem; color: var(--primary); line-height: 1.2; margin-bottom: 20px; }
-        header p { font-size: 1.15rem; color: var(--muted); margin-bottom: 35px; }
-        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        .nav-links a.active {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 4px;
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s !important;
+        }
+        .btn-nav:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* BOUTONS GÉNÉRAUX */
         .btn-primary {
-            background: var(--primary); color: var(--white); padding: 14px 28px; border-radius: 6px;
-            text-decoration: none; font-weight: 600; transition: transform 0.2s, background 0.2s;
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.2s, transform 0.2s;
+            border: 1px solid var(--primary);
         }
-        .btn-primary:hover { background: #20382e; transform: translateY(-2px); }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
         .btn-outline {
-            border: 1px solid var(--primary); color: var(--primary); padding: 14px 28px; border-radius: 6px;
-            text-decoration: none; font-weight: 600; transition: background 0.2s;
+            background: transparent;
+            color: var(--primary);
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            border: 1px solid var(--primary);
+            transition: background 0.2s;
         }
-        .btn-outline:hover { background: rgba(44, 74, 62, 0.05); }
+        .btn-outline:hover {
+            background: rgba(44, 74, 62, 0.06);
+        }
 
-        /* Sections communes */
-        section { padding: 70px 8%; max-width: 1150px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
-        .section-title p { color: var(--muted); }
+        /* 1. ATTENTION : HERO SECTION */
+        .hero {
+            padding: 85px 8% 75px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 50px;
+            align-items: center;
+        }
 
-        /* Fonctionnement en 3 étapes */
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .badge-local {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--primary);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.9rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .trust-pills {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.88rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        .trust-pills span strong {
+            color: var(--primary);
+        }
+
+        /* Carte Visuelle Droite (Preuve Photo) */
+        .hero-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(44, 74, 62, 0.08);
+            border-top: 4px solid var(--accent);
+        }
+        .hero-card-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .hero-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .compare-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .compare-item {
+            padding: 18px 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.88rem;
+        }
+        .compare-before {
+            background: #EFECE6;
+            color: var(--muted);
+        }
+        .compare-after {
+            background: rgba(44, 74, 62, 0.08);
+            color: var(--primary);
+            font-weight: 600;
+            border: 1px solid rgba(44, 74, 62, 0.2);
+        }
+        .whatsapp-note {
+            font-size: 0.9rem;
+            background: var(--bg);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* SECTIONS GÉNÉRIQUES */
+        section {
+            padding: 75px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* 2. INTÉRÊT : PARCOURS EN 3 ÉTAPES */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
         .step-card {
-            background: var(--white); padding: 35px 25px; border-radius: 10px; text-align: center;
-            border-bottom: 3px solid var(--accent); box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            background: var(--white);
+            padding: 35px 28px;
+            border-radius: 10px;
+            border-bottom: 3px solid var(--accent);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
         }
         .step-num {
-            width: 40px; height: 40px; background: var(--bg); color: var(--accent); font-weight: 700;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;
+            width: 42px;
+            height: 42px;
+            background: var(--accent-light);
+            color: var(--primary);
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
         }
-        .step-card h3 { margin-bottom: 10px; color: var(--primary); font-size: 1.25rem; }
-        .step-card p { font-size: 0.95rem; color: var(--muted); }
+        .step-card h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .step-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
 
-        /* Tarifs */
-        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; align-items: stretch; }
+        /* 3. DÉSIR : VALEUR AJOUTÉE & APERÇU TARIFS */
+        .value-banner {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 70px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+        .value-item h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .value-item h4 span {
+            color: var(--accent);
+        }
+        .value-item p {
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        /* Grille d'aperçu des tarifs */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 25px;
+            align-items: stretch;
+        }
         .price-card {
-            background: var(--white); padding: 40px 30px; border-radius: 10px; display: flex;
-            flex-direction: column; justify-content: space-between; border: 1px solid #e5e5e5;
+            background: var(--white);
+            padding: 38px 30px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .price-card.featured { border: 2px solid var(--accent); position: relative; }
+        .price-card.featured {
+            border: 2px solid var(--accent);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
         .pop-tag {
-            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-            background: var(--accent); color: var(--white); padding: 4px 12px; font-size: 0.75rem;
-            border-radius: 12px; font-weight: 600; text-transform: uppercase;
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--white);
+            padding: 4px 14px;
+            font-size: 0.75rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
-        .price-card h3 { font-size: 1.4rem; color: var(--primary); }
-        .price { font-size: 2.5rem; font-weight: 700; color: var(--text); margin: 15px 0; }
-        .price span { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
-        .features { list-style: none; margin: 20px 0 30px; }
-        .features li { margin-bottom: 10px; font-size: 0.95rem; color: var(--muted); }
-        .features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
-        .options-box {
-            margin-top: 30px; background: var(--white); padding: 20px 30px; border-radius: 8px;
-            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px; font-size: 0.95rem; border: 1px dashed var(--accent);
+        .price-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+        .price {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 15px 0;
+        }
+        .price span {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--muted);
+        }
+        .features {
+            list-style: none;
+            margin: 15px 0 30px;
+        }
+        .features li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+        .features li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 8px;
         }
 
-        /* Contact simple */
-        .contact-box {
-            background: var(--primary); color: var(--white); border-radius: 12px; padding: 50px 30px;
-            text-align: center; margin-top: 20px;
+        /* 4. ACTION : BANDEAU DE CONVERSION */
+        .cta-box {
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 55px 35px;
+            text-align: center;
         }
-        .contact-box h2 { color: var(--white); margin-bottom: 15px; }
-        .contact-box p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 30px; }
-        .contact-methods { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .contact-pill {
-            background: var(--white); color: var(--primary); padding: 14px 25px; border-radius: 6px;
-            text-decoration: none; font-weight: 600;
+        .cta-box h2 {
+            color: var(--white);
+            font-size: 2.1rem;
+            margin-bottom: 15px;
+        }
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 650px;
+            margin: 0 auto 30px;
+            font-size: 1.05rem;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .btn-white:hover {
+            transform: translateY(-2px);
+        }
+        .btn-gold {
+            background: var(--accent);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
         }
 
-        footer { text-align: center; padding: 30px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid #e5e5e5; margin-top: 50px; }
+        /* FOOTER */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 50px 8% 30px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 25px;
+            font-size: 0.85rem;
+        }
 
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
+        /* RESPONSIVE MOBILE */
+        @media (max-width: 850px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 50px 6%;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                display: none; /* Menu simplifié sur mobile */
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Barre d'information locale -->
+    <div class="top-bar">
+        Intervention dans toute l'Outre-Forêt : <span>Seebach · Wissembourg · Soultz-sous-Forêts · Riedseltz · Hunspach</span> — <em>Wir sprechen Deutsch</em>
+    </div>
+
+    <!-- Navigation Multi-Pages -->
     <nav>
-        <div class="logo"><span>✦</span> Sérénité Tombes</div>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span> Sérénité Tombes
+        </a>
         <ul class="nav-links">
-            <li><a href="#fonctionnement">Fonctionnement</a></li>
-            <li><a href="#tarifs">Formules & Tarifs</a></li>
-            <li><a href="#contact" class="btn-nav">Demander un passage</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="services.html">Nos Prestations</a></li>
+            <li><a href="tarifs.html">Tarifs & Formules</a></li>
+            <li><a href="contact.html" class="btn-nav">Demander un passage</a></li>
         </ul>
     </nav>
 
-    <header>
-        <div class="badge">Seebach · Wissembourg · Soultz-sous-Forêts · Outre-Forêt</div>
-        <h1>Honorez la mémoire de vos proches, même à distance.</h1>
-        <p>Nettoyage écologique à la main, désherbage soigné et fleurissement de sépultures. Vous recevez un bilan photo Avant / Après sur votre téléphone après chaque passage.</p>
-        <div class="hero-btns">
-            <a href="#tarifs" class="btn-primary">Voir les formules</a>
-            <a href="#contact" class="btn-outline">Obtenir un devis gratuit</a>
+    <!-- 1. ATTENTION : HERO SECTION -->
+    <header class="hero">
+        <div>
+            <div class="badge-local">Service artisanal de proximité en Alsace du Nord</div>
+            <h1>Honorez la mémoire de vos proches, en toute sérénité.</h1>
+            <p>Vous manquez de temps, habitez loin ou ne pouvez plus vous déplacer ? Nous assurons le nettoyage écologique à la main, le désherbage et le fleurissement de vos sépultures avec un profond respect.</p>
+            <div class="hero-btns">
+                <a href="tarifs.html" class="btn-primary">Découvrir nos formules</a>
+                <a href="contact.html" class="btn-outline">Obtenir un devis gratuit</a>
+            </div>
+            <div class="trust-pills">
+                <span><strong>✓ 100% Écologique</strong> (Savon noir, sans acide)</span>
+                <span><strong>✓ Preuve Photo</strong> après chaque passage</span>
+                <span><strong>✓ Déplacement inclus</strong></span>
+            </div>
+        </div>
+
+        <!-- Encart visuel de réassurance -->
+        <div class="hero-card">
+            <span class="hero-card-badge">Notre Engagement Qualité</span>
+            <h3>Le Certificat de Passage Photo</h3>
+            <p style="font-size: 0.92rem; color: var(--muted);">Pour votre tranquillité d'esprit, nous prenons systématiquement la sépulture en photo avant et après notre intervention.</p>
+            <div class="compare-box">
+                <div class="compare-item compare-before">
+                    <strong>Avant passage</strong><br>
+                    Mousse, feuilles, herbes et traces du temps
+                </div>
+                <div class="compare-item compare-after">
+                    <strong>Après notre soin</strong><br>
+                    Pierre saine, joints brossés et fleurs fraîches
+                </div>
+            </div>
+            <div class="whatsapp-note">
+                <span>📲</span>
+                <span>Bilan envoyé directement sur votre téléphone (WhatsApp / SMS) ou par e-mail dès la fin du nettoyage.</span>
+            </div>
         </div>
     </header>
 
+    <!-- 2. INTÉRÊT : COMMENT ÇA MARCHE -->
     <section id="fonctionnement">
-        <div class="section-title">
-            <h2>Un service simple et transparent</h2>
-            <p>Sans engagement complexe, dans le strict respect des monuments.</p>
+        <div class="section-header">
+            <h2>Un fonctionnement simple, en 3 étapes</h2>
+            <p>Nous nous occupons de tout sur place, dans le strict respect du règlement des cimetières communaux.</p>
         </div>
-        <div class="steps">
+        <div class="steps-grid">
             <div class="step-card">
                 <div class="step-num">1</div>
-                <h3>Repérage</h3>
-                <p>Indiquez-nous la commune et le nom de famille. Nous localisons la sépulture gratuitement au cimetière.</p>
+                <h3>Repérage gratuit</h3>
+                <p>Indiquez-nous la commune (Seebach, Wissembourg, Soultz...) et le nom de la famille. Nous localisons la concession avec la mairie si nécessaire.</p>
             </div>
             <div class="step-card">
                 <div class="step-num">2</div>
-                <h3>Soin écologique</h3>
-                <p>Brossage doux au savon noir (sans acide ni haute pression), désherbage complet et arrosage des plantes.</p>
+                <h3>Soin manuel & fleurissement</h3>
+                <p>Brossage doux à l'eau et au savon noir (aucun produit corrosif ni haute pression qui abîme la pierre), désherbage complet et pose de plantes locales.</p>
             </div>
             <div class="step-card">
                 <div class="step-num">3</div>
-                <h3>Certificat Photo</h3>
-                <p>Dès l'intervention terminée, vous recevez les photos Avant / Après par WhatsApp ou par e-mail.</p>
+                <h3>Envoi du bilan photo</h3>
+                <p>Vous recevez les photos Avant / Après le jour même sur votre téléphone ou par e-mail, accompagnées de votre facture.</p>
             </div>
         </div>
     </section>
 
-    <section id="tarifs">
-        <div class="section-title">
-            <h2>Nos Formules d'Entretien</h2>
-            <p>Des tarifs clairs, tout compris (déplacement inclus dans toute l'Outre-Forêt).</p>
+    <!-- 3. DÉSIR : POURQUOI NOUS CHOISIR & APERÇU DES FORMULES -->
+    <section>
+        <div class="value-banner">
+            <div class="value-item">
+                <h4><span>✦</span> Respect du monument</h4>
+                <p>Usage exclusif de brosses douces et de savon noir naturel pour préserver le granit, le marbre et les dorures.</p>
+            </div>
+            <div class="value-item">
+                <h4><span>✦</span> Horticulteurs locaux</h4>
+                <p>Nos plantes de saison (chrysanthèmes, bruyères, pensées) sont sélectionnées auprès de producteurs locaux pour leur tenue.</p>
+            </div>
+            <div class="value-item">
+                <h4><span>✦</span> Service Franco-Allemand</h4>
+                <p>Idéal pour les travailleurs frontaliers et les familles résidant en Allemagne souhaitant un suivi fiable à distance.</p>
+            </div>
         </div>
-        <div class="pricing">
+
+        <div class="section-header">
+            <h2>Aperçu de nos formules</h2>
+            <p>Des tarifs transparents et sans surprise, déplacement compris dans toute l'Outre-Forêt.</p>
+        </div>
+
+        <div class="pricing-grid">
             <div class="price-card">
                 <div>
                     <h3>Passage Ponctuel</h3>
@@ -175,11 +648,11 @@
                     <ul class="features">
                         <li>Idéal avant la Toussaint ou Rameaux</li>
                         <li>Nettoyage complet au savon noir</li>
-                        <li>Désherbage du contour</li>
-                        <li>Bilan photo Avant / Après</li>
+                        <li>Désherbage manuel du contour</li>
+                        <li>Certificat photo Avant / Après</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-outline" style="text-align:center;">Choisir cette offre</a>
+                <a href="tarifs.html" class="btn-outline" style="text-align:center;">Détails & Options</a>
             </div>
 
             <div class="price-card featured">
@@ -190,11 +663,11 @@
                     <ul class="features">
                         <li>2 passages clés (Printemps & Toussaint)</li>
                         <li>Nettoyage écologique & désherbage</li>
-                        <li>Mise en place d'une plante à la Toussaint incluse</li>
-                        <li>Bilan photo à chaque visite</li>
+                        <li>1 plante de Toussaint incluse</li>
+                        <li>Certificat photo à chaque visite</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-primary" style="text-align:center;">Choisir cette offre</a>
+                <a href="tarifs.html" class="btn-primary" style="text-align:center;">Choisir cette formule</a>
             </div>
 
             <div class="price-card">
@@ -202,37 +675,53 @@
                     <h3>Formule 4 Saisons</h3>
                     <div class="price">260 € <span>/ an (4 passages)</span></div>
                     <ul class="features">
-                        <li>1 passage à chaque changement de saison</li>
-                        <li>Sépulture impeccable toute l'année</li>
-                        <li>Entretien et arrosage régulier</li>
-                        <li>Bilan photo trimestriel</li>
+                        <li>1 passage à chaque saison (trimestriel)</li>
+                        <li>Concession impeccable toute l'année</li>
+                        <li>Entretien des plantes et arrosage</li>
+                        <li>Certificat photo 4 fois par an</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-outline" style="text-align:center;">Choisir cette offre</a>
-            </div>
-        </div>
-
-        <div class="options-box">
-            <span><strong>Options sur demande :</strong></span>
-            <span>🌿 Fleurissement de saison : <strong>+25 €</strong></span>
-            <span>🪨 Recharge gravier blanc : <strong>+40 €</strong></span>
-            <span>✨ Redorage des lettres : <strong>Sur devis</strong></span>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-box">
-            <h2>Confiez-nous votre sépulture</h2>
-            <p>Contactez-nous par téléphone, WhatsApp ou e-mail en précisant la commune (Seebach, Wissembourg, Riedseltz, Hunspach, Soultz-sous-Forêts...). Réponse sous 24h. <br><em>(Wir sprechen auch Deutsch)</em></p>
-            <div class="contact-methods">
-                <a href="tel:0600000000" class="contact-pill">📞 06 XX XX XX XX</a>
-                <a href="mailto:contact@serenite-tombes.fr" class="contact-pill">✉️ contact@serenite-tombes.fr</a>
+                <a href="tarifs.html" class="btn-outline" style="text-align:center;">Détails & Options</a>
             </div>
         </div>
     </section>
 
+    <!-- 4. ACTION : APPEL À L'ACTION FINAL -->
+    <section>
+        <div class="cta-box">
+            <h2>Confiez-nous l'entretien d'une sépulture</h2>
+            <p>Que ce soit pour un nettoyage ponctuel avant la Toussaint ou pour un suivi annuel, contactez-nous pour une prise en charge rapide et bienveillante.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-gold">Demander un devis en ligne</a>
+                <a href="tel:0600000000" class="btn-white">📞 Appeler le 06 XX XX XX XX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE AVEC LIENS MULTI-PAGES -->
     <footer>
-        <p>&copy; 2026 Sérénité Tombes – Service artisanal d'entretien de sépultures en Alsace du Nord (Code APE 9603Z).</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Sérénité Tombes</h4>
+                <p>Service professionnel d'entretien, de nettoyage écologique et de fleurissement de tombes en Alsace du Nord.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Nos Prestations</a></li>
+                    <li><a href="tarifs.html">Tarifs & Formules</a></li>
+                    <li><a href="contact.html">Contact & Devis</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Communes desservies</h4>
+                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, Haguenau et environs.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Sérénité Tombes – Tous droits réservés (Code APE 9603Z).
+        </div>
     </footer>
 
 </body>
