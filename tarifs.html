@@ -1,1 +1,771 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Local Optimisé -->
+    <title>Tarifs & Formules | Sérénité Tombes (Simulateur de Devis en Ligne)</title>
+    <meta name="description" content="Consultez nos tarifs transparents pour l'entretien et le fleurissement de tombes à Seebach, Wissembourg et Outre-Forêt. Calculez votre devis en direct.">
+    <meta name="robots" content="index, follow">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* PALETTE DE COULEURS & VARIABLES */
+        :root {
+            --primary: #2C4A3E;       /* Vert Sauge Profond */
+            --primary-dark: #1E352B;  /* Vert Sombre (Hover) */
+            --accent: #C5A059;        /* Or Doux */
+            --accent-light: #F4EFE6;  /* Fond Doré Clair */
+            --bg: #F7F6F2;            /* Blanc Crème / Pierre */
+            --white: #FFFFFF;
+            --text: #2B2B2B;          /* Gris Anthracite */
+            --muted: #5F6360;         /* Gris Doux */
+            --border: #E2E0D8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* BARRE D'ANNONCE HAUT DE PAGE */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+        .top-bar span {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* NAVIGATION MULTI-PAGES */
+        nav {
+            background: var(--white);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .logo {
+            font-size: 1.45rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        .nav-links a.active {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 4px;
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s !important;
+        }
+        .btn-nav:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* EN-TÊTE DE PAGE */
+        .page-header {
+            background: var(--white);
+            padding: 70px 8% 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .badge-sub {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--primary);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+        }
+        .page-header h1 {
+            font-size: 2.6rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .page-header p {
+            color: var(--muted);
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+        }
+
+        /* SECTIONS GÉNÉRIQUES */
+        section {
+            padding: 70px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        .section-header h2 {
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            color: var(--muted);
+        }
+
+        /* GRILLE DES 3 FORMULES */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            align-items: stretch;
+        }
+        .price-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .price-card:hover {
+            transform: translateY(-4px);
+        }
+        .price-card.featured {
+            border: 2px solid var(--accent);
+            position: relative;
+            box-shadow: 0 12px 35px rgba(44, 74, 62, 0.08);
+        }
+        .pop-tag {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--white);
+            padding: 4px 16px;
+            font-size: 0.76rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .price-card h3 {
+            color: var(--primary);
+            font-size: 1.45rem;
+            margin-bottom: 5px;
+        }
+        .price-sub {
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+        .price {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 18px 0;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+        .price span {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--muted);
+        }
+        .features {
+            list-style: none;
+            margin: 10px 0 30px;
+        }
+        .features li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .features li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            transition: background 0.2s;
+            border: 1px solid var(--primary);
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--primary-dark); }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            border: 1px solid var(--primary);
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .btn-outline:hover { background: rgba(44, 74, 62, 0.06); }
+
+        /* SIMULATEUR DE DEVIS EN DIRECT */
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .calc-step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .calc-step-title span {
+            background: var(--accent-light);
+            color: var(--primary);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .radio-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .radio-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .radio-card.selected {
+            border: 2px solid var(--primary);
+            background: rgba(44, 74, 62, 0.04);
+        }
+        .radio-card input {
+            display: none;
+        }
+        .radio-card strong {
+            display: block;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        .radio-card span {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .option-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .option-item:hover {
+            background: var(--bg);
+        }
+        .option-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .option-left input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+        .option-price {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        /* Boîte Résumé du Devis à droite */
+        .summary-box {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--accent);
+            border-radius: 10px;
+            padding: 30px 25px;
+            position: sticky;
+            top: 100px;
+        }
+        .summary-box h3 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+        }
+        .summary-lines {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            margin-bottom: 20px;
+            font-size: 0.92rem;
+        }
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: var(--muted);
+        }
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+        .summary-total strong {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+        .total-amount {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .summary-note {
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* FAQ SECTION */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+        }
+        .faq-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 25px;
+        }
+        .faq-card h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+        .faq-card p {
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 50px 8% 30px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .footer-col h4 { color: var(--primary); margin-bottom: 12px; font-size: 1rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col a { color: var(--muted); text-decoration: none; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 25px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 850px) {
+            .nav-links { display: none; }
+            .calc-wrapper { grid-template-columns: 1fr; padding: 25px 20px; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre d'information locale -->
+    <div class="top-bar">
+        Intervention dans toute l'Outre-Forêt : <span>Seebach · Wissembourg · Soultz-sous-Forêts · Riedseltz · Hunspach</span> — <em>Wir sprechen Deutsch</em>
+    </div>
+
+    <!-- Navigation Multi-Pages -->
+    <nav>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span> Sérénité Tombes
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Prestations</a></li>
+            <li><a href="tarifs.html" class="active">Tarifs & Formules</a></li>
+            <li><a href="contact.html" class="btn-nav">Demander un passage</a></li>
+        </ul>
+    </nav>
+
+    <!-- EN-TÊTE -->
+    <header class="page-header">
+        <div class="badge-sub">Tarifs clairs · Déplacement inclus</div>
+        <h1>Nos Formules et Simulateur de Devis</h1>
+        <p>Aucun frais caché : le déplacement dans les cimetières de l'Outre-Forêt et l'envoi du Certificat Photo Avant / Après sont systématiquement inclus dans chaque tarif.</p>
+    </header>
+
+    <!-- 1. LES 3 FORMULES PRINCIPALES -->
+    <section>
+        <div class="pricing-grid">
+            
+            <!-- Formule 1 -->
+            <div class="price-card">
+                <div>
+                    <h3>Passage Ponctuel</h3>
+                    <span class="price-sub">Intervention unique à la demande</span>
+                    <div class="price">75 € <span>/ passage</span></div>
+                    <ul class="features">
+                        <li>Idéal avant la Toussaint ou Rameaux</li>
+                        <li>Repérage gratuit de la concession</li>
+                        <li>Brossage manuel au savon noir naturel</li>
+                        <li>Désherbage complet du contour</li>
+                        <li>Nettoyage des plaques et ornements</li>
+                        <li>Certificat photo Avant / Après sur WhatsApp ou Email</li>
+                    </ul>
+                </div>
+                <a href="#simulateur" onclick="selectFormula(75, 'Passage Ponctuel (1 visite)')" class="btn-outline">Personnaliser cette offre</a>
+            </div>
+
+            <!-- Formule 2 (Mise en avant) -->
+            <div class="price-card featured">
+                <div class="pop-tag">Le plus choisi</div>
+                <div>
+                    <h3>Formule Sérénité</h3>
+                    <span class="price-sub">Suivi semestriel (Soit 70 € / passage)</span>
+                    <div class="price">140 € <span>/ an</span></div>
+                    <ul class="features">
+                        <li><strong>2 passages clés par an</strong> (Printemps & Toussaint)</li>
+                        <li>Nettoyage écologique intégral à chaque visite</li>
+                        <li>Désherbage et remise au propre des abords</li>
+                        <li><strong>1 plante de saison incluse</strong> pour la Toussaint</li>
+                        <li>Arrosage et soin des fleurs en place</li>
+                        <li>Certificat photo Avant / Après à chaque passage</li>
+                    </ul>
+                </div>
+                <a href="#simulateur" onclick="selectFormula(140, 'Formule Sérénité (2 passages/an)')" class="btn-primary">Choisir cette formule</a>
+            </div>
+
+            <!-- Formule 3 -->
+            <div class="price-card">
+                <div>
+                    <h3>Formule 4 Saisons</h3>
+                    <span class="price-sub">Suivi trimestriel (Soit 65 € / passage)</span>
+                    <div class="price">260 € <span>/ an</span></div>
+                    <ul class="features">
+                        <li><strong>4 passages par an</strong> (Mars, Juin, Septembre, Novembre)</li>
+                        <li>Sépulture propre et entretenue toute l'année</li>
+                        <li>Nettoyage au savon noir et désherbage régulier</li>
+                        <li>Retrait des fleurs fanées et arrosage</li>
+                        <li>Vérification après les intempéries d'hiver</li>
+                        <li>4 Certificats photo Avant / Après par an</li>
+                    </ul>
+                </div>
+                <a href="#simulateur" onclick="selectFormula(260, 'Formule 4 Saisons (4 passages/an)')" class="btn-outline">Personnaliser cette offre</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. SIMULATEUR DE DEVIS EN DIRECT -->
+    <section id="simulateur" style="padding-top: 10px;">
+        <div class="section-header">
+            <h2>Calculez votre tarif sur-mesure</h2>
+            <p>Sélectionnez une formule et cochez les options souhaitées pour estimer immédiatement votre budget.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <!-- Colonne de gauche : Choix -->
+            <div>
+                <div class="calc-step-title"><span>1</span> Choisissez votre formule de base</div>
+                <div class="radio-group">
+                    <label class="radio-card" id="card-75" onclick="selectFormula(75, 'Passage Ponctuel (1 visite)')">
+                        <input type="radio" name="formula" value="75">
+                        <strong>Passage Ponctuel</strong>
+                        <span>75 € (1 visite)</span>
+                    </label>
+                    <label class="radio-card selected" id="card-140" onclick="selectFormula(140, 'Formule Sérénité (2 passages/an)')">
+                        <input type="radio" name="formula" value="140" checked>
+                        <strong>Formule Sérénité</strong>
+                        <span>140 € / an (2 visites)</span>
+                    </label>
+                    <label class="radio-card" id="card-260" onclick="selectFormula(260, 'Formule 4 Saisons (4 passages/an)')">
+                        <input type="radio" name="formula" value="260">
+                        <strong>Formule 4 Saisons</strong>
+                        <span>260 € / an (4 visites)</span>
+                    </label>
+                </div>
+
+                <div class="calc-step-title"><span>2</span> Ajoutez vos options à la carte (facultatif)</div>
+                <div class="options-list">
+                    <label class="option-item">
+                        <div class="option-left">
+                            <input type="checkbox" class="opt-check" data-name="Fleurissement de saison (1 plante locale)" value="25" onchange="updateTotal()">
+                            <span>🌿 <strong>Fleurissement de saison</strong> (Pose d'une plante locale + terreau)</span>
+                        </div>
+                        <span class="option-price">+ 25 €</span>
+                    </label>
+
+                    <label class="option-item">
+                        <div class="option-left">
+                            <input type="checkbox" class="opt-check" data-name="Duo de plantes de saison" value="45" onchange="updateTotal()">
+                            <span>🌸 <strong>Duo de plantes</strong> (2 compositions florales de saison)</span>
+                        </div>
+                        <span class="option-price">+ 45 €</span>
+                    </label>
+
+                    <label class="option-item">
+                        <div class="option-left">
+                            <input type="checkbox" class="opt-check" data-name="Recharge en gravier blanc" value="40" onchange="updateTotal()">
+                            <span>🪨 <strong>Recharge en gravier blanc</strong> (Apport et égalisation autour de la tombe)</span>
+                        </div>
+                        <span class="option-price">+ 40 €</span>
+                    </label>
+
+                    <label class="option-item">
+                        <div class="option-left">
+                            <input type="checkbox" class="opt-check" data-name="Forfait redorage des lettres" value="45" onchange="updateTotal()">
+                            <span>✨ <strong>Réfection des lettres</strong> (Forfait peinture or/argent/noir d'une inscription)</span>
+                        </div>
+                        <span class="option-price">+ 45 €</span>
+                    </label>
+
+                    <label class="option-item">
+                        <div class="option-left">
+                            <input type="checkbox" class="opt-check" data-name="Médaillon QR Code Souvenir" value="50" onchange="updateTotal()">
+                            <span>📱 <strong>Médaillon QR Code "Mémoire"</strong> (Page hommage en ligne dédiée)</span>
+                        </div>
+                        <span class="option-price">+ 50 €</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Colonne de droite : Résumé en direct -->
+            <div class="summary-box">
+                <h3>Votre estimation</h3>
+                <div class="summary-lines" id="summary-details">
+                    <div class="summary-line">
+                        <span>Formule Sérénité (2 passages/an)</span>
+                        <strong>140 €</strong>
+                    </div>
+                </div>
+                <div class="summary-total">
+                    <strong>Total TTC :</strong>
+                    <span class="total-amount" id="total-price">140 €</span>
+                </div>
+                <a href="contact.html" class="btn-primary" id="btn-order">Réserver cette prestation</a>
+                <p class="summary-note">✓ Déplacement et bilan photo inclus<br>✓ Paiement uniquement après réception des photos (ou à la commande)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FOIRE AUX QUESTIONS (FAQ) -->
+    <section>
+        <div class="section-header">
+            <h2>Questions fréquentes</h2>
+            <p>Tout savoir sur le déroulement et le règlement de nos prestations.</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h4>Y a-t-il des frais de déplacement supplémentaires ?</h4>
+                <p>Non, nos tarifs sont tout compris pour l'ensemble des communes de l'Outre-Forêt (Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, etc.).</p>
+            </div>
+            <div class="faq-card">
+                <h4>Comment retrouver la tombe si je n'ai pas l'emplacement exact ?</h4>
+                <p>Il vous suffit de nous donner le nom et le prénom du défunt ainsi que la commune. Nous effectuons gratuitement le repérage en lien avec le secrétariat de la mairie.</p>
+            </div>
+            <div class="faq-card">
+                <h4>Quels sont les moyens de paiement acceptés ?</h4>
+                <p>Vous pouvez régler par virement bancaire (IBAN français), par carte/PayPal ou par chèque après réception de votre facture et du certificat photo Avant / Après.</p>
+            </div>
+            <div class="faq-card">
+                <h4>Les abonnements annuels sont-ils renouvelés automatiquement ?</h4>
+                <p>Non, il n'y a aucun prélèvement automatique ni reconduction cachée. À la fin de votre année, nous vous proposons simplement de renouveler si vous le souhaitez.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Sérénité Tombes</h4>
+                <p>Service professionnel d'entretien, de nettoyage écologique et de fleurissement de tombes en Alsace du Nord.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Nos Prestations</a></li>
+                    <li><a href="tarifs.html">Tarifs & Formules</a></li>
+                    <li><a href="contact.html">Contact & Devis</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Communes desservies</h4>
+                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, Haguenau et environs.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Sérénité Tombes – Tous droits réservés (Code APE 9603Z).
+        </div>
+    </footer>
+
+    <!-- SCRIPT DU SIMULATEUR -->
+    <script>
+        let currentBasePrice = 140;
+        let currentBaseName = "Formule Sérénité (2 passages/an)";
+
+        function selectFormula(price, name) {
+            currentBasePrice = price;
+            currentBaseName = name;
+
+            // Mise à jour visuelle des cartes radio
+            document.querySelectorAll('.radio-card').forEach(card => card.classList.remove('selected'));
+            const activeCard = document.getElementById('card-' + price);
+            if (activeCard) activeCard.classList.add('selected');
+
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = currentBasePrice;
+            let htmlLines = `
+                <div class="summary-line">
+                    <span>${currentBaseName}</span>
+                    <strong>${currentBasePrice} €</strong>
+                </div>
+            `;
+
+            document.querySelectorAll('.opt-check:checked').forEach(chk => {
+                const optPrice = parseInt(chk.value, 10);
+                const optName = chk.getAttribute('data-name');
+                total += optPrice;
+                htmlLines += `
+                    <div class="summary-line">
+                        <span>+ ${optName}</span>
+                        <strong>${optPrice} €</strong>
+                    </div>
+                `;
+            });
+
+            document.getElementById('summary-details').innerHTML = htmlLines;
+            document.getElementById('total-price').textContent = total + ' €';
+        }
+    </script>
+
+</body>
+</html>
