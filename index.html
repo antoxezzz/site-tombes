@@ -17,28 +17,28 @@
       "@type": "LocalBusiness",
       "name": "Sérénité Tombes",
       "description": "Entretien écologique et fleurissement de sépultures en Alsace du Nord (Outre-Forêt) avec envoi de photos Avant/Après.",
-      "areaServed": ["Seebach", "Wissembourg", "Soultz-sous-Forêts", "Riedseltz", "Hunspach", "Hoffen", "Hatten", "Lauterbourg", "Haguenau"],
-      "priceRange": "65€ - 260€"
+      "areaServed": ["Seebach", "Wissembourg", "Soultz-sous-Forêts", "Riedseltz", "Hunspach", "Hoffen", "Hatten", "Lauterbourg", "Seltz", "Beinheim", "Betschdorf", "Cleebourg"],
+      "priceRange": "75€ - 260€"
     }
     </script>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Police très lisible et rassurante -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
 
     <style>
         /* PALETTE DE COULEURS & VARIABLES */
         :root {
-            --primary: #2C4A3E;       /* Vert Sauge Profond */
-            --primary-dark: #1E352B;  /* Vert Sombre (Hover) */
-            --accent: #C5A059;        /* Or Doux */
+            --primary: #1F3D32;       /* Vert Sauge Profond & Contrasté */
+            --primary-dark: #142921;  /* Vert Sombre (Hover) */
+            --accent: #B8860B;        /* Or Doux et Lisible */
             --accent-light: #F4EFE6;  /* Fond Doré Clair */
-            --bg: #F7F6F2;            /* Blanc Crème / Pierre */
+            --bg: #FAF9F5;            /* Blanc Crème / Pierre Reposant */
             --white: #FFFFFF;
-            --text: #2B2B2B;          /* Gris Anthracite */
-            --muted: #5F6360;         /* Gris Doux */
-            --border: #E2E0D8;
+            --text: #1A1A1A;          /* Noir Doux Ultra-Lisible */
+            --muted: #4A4A4A;         /* Gris Foncé Contrasté */
+            --border: #D5D3C8;
         }
 
         * {
@@ -48,11 +48,14 @@
             scroll-behavior: smooth;
         }
 
+        /* Police plus grande (19px) et plus grasse pour un public senior */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.65;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.7;
         }
 
         h1, h2, h3, .logo {
@@ -64,13 +67,14 @@
             background-color: var(--primary-dark);
             color: var(--white);
             text-align: center;
-            padding: 8px 15px;
-            font-size: 0.85rem;
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            font-weight: 600;
             letter-spacing: 0.3px;
         }
         .top-bar span {
-            color: var(--accent);
-            font-weight: 600;
+            color: #FFD97D;
+            font-weight: 700;
         }
 
         /* NAVIGATION MULTI-PAGES */
@@ -84,12 +88,13 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+            border-bottom: 2px solid var(--border);
         }
 
         .logo {
-            font-size: 1.45rem;
+            font-size: 1.6rem;
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 800;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -97,12 +102,12 @@
         }
         .logo-icon {
             color: var(--accent);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 28px;
             list-style: none;
             align-items: center;
         }
@@ -110,8 +115,8 @@
         .nav-links a {
             text-decoration: none;
             color: var(--text);
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-size: 1.05rem;
+            font-weight: 700;
             transition: color 0.2s;
         }
 
@@ -119,16 +124,17 @@
             color: var(--primary);
         }
         .nav-links a.active {
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 3px solid var(--accent);
             padding-bottom: 4px;
         }
 
         .btn-nav {
             background: var(--primary);
             color: var(--white) !important;
-            padding: 10px 22px;
-            border-radius: 6px;
-            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
             transition: background 0.2s, transform 0.2s !important;
         }
         .btn-nav:hover {
@@ -140,13 +146,14 @@
         .btn-primary {
             background: var(--primary);
             color: var(--white);
-            padding: 15px 30px;
-            border-radius: 6px;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
             display: inline-block;
             transition: background 0.2s, transform 0.2s;
-            border: 1px solid var(--primary);
+            border: 2px solid var(--primary);
         }
         .btn-primary:hover {
             background: var(--primary-dark);
@@ -156,26 +163,27 @@
         .btn-outline {
             background: transparent;
             color: var(--primary);
-            padding: 15px 30px;
-            border-radius: 6px;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
             display: inline-block;
-            border: 1px solid var(--primary);
+            border: 2px solid var(--primary);
             transition: background 0.2s;
         }
         .btn-outline:hover {
-            background: rgba(44, 74, 62, 0.06);
+            background: rgba(31, 61, 50, 0.08);
         }
 
         /* 1. ATTENTION : HERO SECTION */
         .hero {
-            padding: 85px 8% 75px;
+            padding: 75px 8% 65px;
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 50px;
+            gap: 45px;
             align-items: center;
         }
 
@@ -183,25 +191,27 @@
             display: inline-block;
             background: var(--accent-light);
             color: var(--primary);
-            border: 1px solid rgba(197, 160, 89, 0.4);
-            padding: 6px 14px;
+            border: 1px solid rgba(184, 134, 11, 0.4);
+            padding: 8px 16px;
             border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.95rem;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: 2.9rem;
+            font-size: 2.7rem;
             color: var(--primary);
-            line-height: 1.2;
+            font-weight: 800;
+            line-height: 1.25;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--muted);
             margin-bottom: 30px;
+            font-weight: 500;
         }
 
         .hero-btns {
@@ -215,10 +225,11 @@
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
-            font-size: 0.88rem;
+            font-size: 0.95rem;
             color: var(--muted);
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--border);
             padding-top: 20px;
+            font-weight: 600;
         }
         .trust-pills span strong {
             color: var(--primary);
@@ -229,21 +240,23 @@
             background: var(--white);
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(44, 74, 62, 0.08);
-            border-top: 4px solid var(--accent);
+            box-shadow: 0 15px 35px rgba(31, 61, 50, 0.08);
+            border-top: 5px solid var(--accent);
+            border: 2px solid var(--border);
         }
         .hero-card-badge {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--accent);
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 10px;
             display: block;
         }
         .hero-card h3 {
             color: var(--primary);
-            font-size: 1.4rem;
+            font-size: 1.45rem;
+            font-weight: 800;
             margin-bottom: 15px;
         }
         .compare-box {
@@ -256,48 +269,52 @@
             padding: 18px 12px;
             border-radius: 8px;
             text-align: center;
-            font-size: 0.88rem;
+            font-size: 0.95rem;
+            font-weight: 600;
         }
         .compare-before {
             background: #EFECE6;
             color: var(--muted);
         }
         .compare-after {
-            background: rgba(44, 74, 62, 0.08);
+            background: rgba(31, 61, 50, 0.08);
             color: var(--primary);
-            font-weight: 600;
-            border: 1px solid rgba(44, 74, 62, 0.2);
+            font-weight: 700;
+            border: 2px solid rgba(31, 61, 50, 0.2);
         }
         .whatsapp-note {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             background: var(--bg);
-            padding: 12px 15px;
+            padding: 14px 16px;
             border-radius: 8px;
             color: var(--text);
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
+            border: 1px solid var(--border);
         }
 
         /* SECTIONS GÉNÉRIQUES */
         section {
-            padding: 75px 8%;
+            padding: 70px 8%;
             max-width: 1200px;
             margin: 0 auto;
         }
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 50px;
         }
         .section-header h2 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             color: var(--primary);
-            margin-bottom: 12px;
+            font-weight: 800;
+            margin-bottom: 15px;
         }
         .section-header p {
             color: var(--muted);
-            font-size: 1.05rem;
+            font-size: 1.15rem;
         }
 
         /* 2. INTÉRÊT : PARCOURS EN 3 ÉTAPES */
@@ -309,48 +326,97 @@
         .step-card {
             background: var(--white);
             padding: 35px 28px;
-            border-radius: 10px;
-            border-bottom: 3px solid var(--accent);
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            border-bottom: 4px solid var(--accent);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
         }
         .step-num {
-            width: 42px;
-            height: 42px;
+            width: 46px;
+            height: 46px;
             background: var(--accent-light);
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 800;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 18px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            border: 2px solid var(--accent);
         }
         .step-card h3 {
             color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
         .step-card p {
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 1.05rem;
         }
 
-        /* 3. DÉSIR : VALEUR AJOUTÉE & APERÇU TARIFS */
+        /* 3. CARTE DE ZONE D'INTERVENTION OUTRE-FORÊT */
+        .map-section {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            padding: 45px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .map-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 35px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .svg-map-box {
+            background: var(--primary-light);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+        .svg-map-box svg {
+            width: 100%;
+            height: auto;
+            max-height: 430px;
+        }
+        .communes-list-box h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        .communes-group {
+            margin-bottom: 16px;
+            font-size: 1.02rem;
+        }
+        .communes-group strong {
+            color: var(--primary);
+            display: block;
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        /* 4. DÉSIR : VALEUR AJOUTÉE & APERÇU TARIFS */
         .value-banner {
             background: var(--white);
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: 12px;
             padding: 40px;
             margin-bottom: 70px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
         }
         .value-item h4 {
             color: var(--primary);
-            font-size: 1.05rem;
-            margin-bottom: 8px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -359,57 +425,60 @@
             color: var(--accent);
         }
         .value-item p {
-            font-size: 0.92rem;
+            font-size: 1.02rem;
             color: var(--muted);
         }
 
         /* Grille d'aperçu des tarifs */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
             align-items: stretch;
         }
         .price-card {
             background: var(--white);
-            padding: 38px 30px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         .price-card.featured {
-            border: 2px solid var(--accent);
+            border: 3px solid var(--primary);
+            background: var(--primary-light);
             position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(31, 61, 50, 0.08);
         }
         .pop-tag {
             position: absolute;
-            top: -13px;
+            top: -14px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--accent);
             color: var(--white);
-            padding: 4px 14px;
-            font-size: 0.75rem;
+            padding: 6px 16px;
+            font-size: 0.8rem;
             border-radius: 12px;
-            font-weight: 600;
+            font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .price-card h3 {
             color: var(--primary);
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 800;
         }
         .price {
-            font-size: 2.4rem;
-            font-weight: 700;
+            font-size: 2.6rem;
+            font-weight: 800;
             color: var(--text);
-            margin: 15px 0;
+            margin: 18px 0;
         }
         .price span {
-            font-size: 0.95rem;
-            font-weight: 400;
+            font-size: 1.05rem;
+            font-weight: 600;
             color: var(--muted);
         }
         .features {
@@ -417,35 +486,38 @@
             margin: 15px 0 30px;
         }
         .features li {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
             color: var(--muted);
+            font-weight: 600;
         }
         .features li::before {
             content: "✓";
             color: var(--primary);
-            font-weight: bold;
-            margin-right: 8px;
+            font-weight: 800;
+            margin-right: 10px;
+            font-size: 1.1rem;
         }
 
-        /* 4. ACTION : BANDEAU DE CONVERSION */
+        /* 5. ACTION : BANDEAU DE CONVERSION */
         .cta-box {
             background: var(--primary);
             color: var(--white);
-            border-radius: 12px;
-            padding: 55px 35px;
+            border-radius: 14px;
+            padding: 60px 40px;
             text-align: center;
         }
         .cta-box h2 {
             color: var(--white);
-            font-size: 2.1rem;
+            font-size: 2.3rem;
+            font-weight: 800;
             margin-bottom: 15px;
         }
         .cta-box p {
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 650px;
-            margin: 0 auto 30px;
-            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 1.15rem;
         }
         .cta-buttons {
             display: flex;
@@ -456,22 +528,25 @@
         .btn-white {
             background: var(--white);
             color: var(--primary);
-            padding: 14px 28px;
-            border-radius: 6px;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 800;
+            font-size: 1.1rem;
             transition: transform 0.2s;
+            border: 2px solid var(--white);
         }
         .btn-white:hover {
             transform: translateY(-2px);
         }
         .btn-gold {
-            background: var(--accent);
-            color: var(--white);
-            padding: 14px 28px;
-            border-radius: 6px;
+            background: #FFD97D;
+            color: #1A1A1A;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 800;
+            font-size: 1.1rem;
             transition: transform 0.2s;
         }
         .btn-gold:hover {
@@ -481,23 +556,24 @@
         /* FOOTER */
         footer {
             background: var(--white);
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--border);
             padding: 50px 8% 30px;
-            margin-top: 60px;
-            font-size: 0.9rem;
+            margin-top: 70px;
+            font-size: 0.95rem;
             color: var(--muted);
         }
         .footer-grid {
             max-width: 1200px;
             margin: 0 auto 35px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
         }
         .footer-col h4 {
             color: var(--primary);
             margin-bottom: 12px;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: 800;
         }
         .footer-col ul {
             list-style: none;
@@ -508,20 +584,22 @@
         .footer-col a {
             color: var(--muted);
             text-decoration: none;
+            font-weight: 600;
         }
         .footer-col a:hover {
             color: var(--primary);
         }
         .footer-bottom {
             text-align: center;
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--border);
             padding-top: 25px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         /* RESPONSIVE MOBILE */
         @media (max-width: 850px) {
-            .hero {
+            .hero, .map-grid {
                 grid-template-columns: 1fr;
                 padding: 50px 6%;
             }
@@ -538,7 +616,7 @@
 
     <!-- Barre d'information locale -->
     <div class="top-bar">
-        Intervention dans toute l'Outre-Forêt : <span>Seebach · Wissembourg · Soultz-sous-Forêts · Riedseltz · Hunspach</span> — <em>Wir sprechen Deutsch</em>
+        Basé à <span>Seebach</span> — Déplacement gratuit dans toute l'Outre-Forêt — <span>Wir sprechen auch Deutsch</span>
     </div>
 
     <!-- Navigation Multi-Pages -->
@@ -557,12 +635,12 @@
     <!-- 1. ATTENTION : HERO SECTION -->
     <header class="hero">
         <div>
-            <div class="badge-local">Service artisanal de proximité en Alsace du Nord</div>
-            <h1>Honorez la mémoire de vos proches, en toute sérénité.</h1>
-            <p>Vous manquez de temps, habitez loin ou ne pouvez plus vous déplacer ? Nous assurons le nettoyage écologique à la main, le désherbage et le fleurissement de vos sépultures avec un profond respect.</p>
+            <div class="badge-local">📍 Entreprise locale basée à Seebach</div>
+            <h1>Nous prenons soin des tombes de vos proches avec respect.</h1>
+            <p>Se déplacer au cimetière ou se baisser devient difficile ? Vous habitez loin ? Nous nettoyons et fleurissons vos sépultures à la main, et vous envoyons une photo après chaque passage.</p>
             <div class="hero-btns">
-                <a href="tarifs.html" class="btn-primary">Découvrir nos formules</a>
-                <a href="contact.html" class="btn-outline">Obtenir un devis gratuit</a>
+                <a href="tarifs.html" class="btn-primary">Découvrir nos tarifs simples</a>
+                <a href="contact.html" class="btn-outline">📞 Obtenir un devis gratuit</a>
             </div>
             <div class="trust-pills">
                 <span><strong>✓ 100% Écologique</strong> (Savon noir, sans acide)</span>
@@ -575,7 +653,7 @@
         <div class="hero-card">
             <span class="hero-card-badge">Notre Engagement Qualité</span>
             <h3>Le Certificat de Passage Photo</h3>
-            <p style="font-size: 0.92rem; color: var(--muted);">Pour votre tranquillité d'esprit, nous prenons systématiquement la sépulture en photo avant et après notre intervention.</p>
+            <p style="font-size: 0.98rem; color: var(--muted); font-weight: 600;">Pour votre tranquillité d'esprit, nous prenons systématiquement la sépulture en photo avant et après notre intervention.</p>
             <div class="compare-box">
                 <div class="compare-item compare-before">
                     <strong>Avant passage</strong><br>
@@ -597,28 +675,117 @@
     <section id="fonctionnement">
         <div class="section-header">
             <h2>Un fonctionnement simple, en 3 étapes</h2>
-            <p>Nous nous occupons de tout sur place, dans le strict respect du règlement des cimetières communaux.</p>
+            <p>Tout est pensé pour être simple et sans tracas pour vous, dans le respect des cimetières communaux.</p>
         </div>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-num">1</div>
-                <h3>Repérage gratuit</h3>
-                <p>Indiquez-nous la commune (Seebach, Wissembourg, Soultz...) et le nom de la famille. Nous localisons la concession avec la mairie si nécessaire.</p>
+                <h3>Vous nous appelez</h3>
+                <p>Indiquez-nous le village du cimetière et le nom de la famille. Nous allons repérer la concession gratuitement avec la mairie.</p>
             </div>
             <div class="step-card">
                 <div class="step-num">2</div>
-                <h3>Soin manuel & fleurissement</h3>
-                <p>Brossage doux à l'eau et au savon noir (aucun produit corrosif ni haute pression qui abîme la pierre), désherbage complet et pose de plantes locales.</p>
+                <h3>Nous nettoyons la tombe</h3>
+                <p>Brossage doux à l'eau et au savon noir (aucun produit corrosif ni haute pression), désherbage complet et pose de plantes de saison.</p>
             </div>
             <div class="step-card">
                 <div class="step-num">3</div>
-                <h3>Envoi du bilan photo</h3>
-                <p>Vous recevez les photos Avant / Après le jour même sur votre téléphone ou par e-mail, accompagnées de votre facture.</p>
+                <h3>Vous recevez la photo</h3>
+                <p>Dès que la tombe est propre, nous vous envoyons les photos Avant / Après. Vous réglez une fois le travail terminé.</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. DÉSIR : POURQUOI NOUS CHOISIR & APERÇU DES FORMULES -->
+    <!-- 3. CARTE DE LA ZONE D'INTERVENTION (OUTRE-FORÊT) -->
+    <section id="zone">
+        <div class="map-section">
+            <div class="section-header" style="margin-bottom: 20px;">
+                <h2>Notre carte d'intervention autour de Seebach</h2>
+                <p>Nous nous déplaçons <strong>sans aucun frais supplémentaire</strong> dans toute la zone de l'Outre-Forêt :</p>
+            </div>
+
+            <div class="map-grid">
+                <!-- Carte visuelle SVG claire de la zone -->
+                <div class="svg-map-box">
+                    <svg viewBox="0 0 600 430" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Fond de la zone couverte -->
+                        <polygon points="90,120 210,45 430,50 540,95 510,220 460,340 280,380 140,360 70,240" 
+                                 fill="#D4E6DC" stroke="#1F3D32" stroke-width="3" stroke-dasharray="6,4"/>
+                        
+                        <!-- Lignes de liaison depuis Seebach -->
+                        <g stroke="#1F3D32" stroke-width="1.5" opacity="0.35">
+                            <line x1="275" y1="150" x2="210" y2="55"/>
+                            <line x1="275" y1="150" x2="95" y2="125"/>
+                            <line x1="275" y1="150" x2="430" y2="60"/>
+                            <line x1="275" y1="150" x2="530" y2="100"/>
+                            <line x1="275" y1="150" x2="500" y2="215"/>
+                            <line x1="275" y1="150" x2="455" y2="330"/>
+                            <line x1="275" y1="150" x2="280" y2="370"/>
+                            <line x1="275" y1="150" x2="150" y2="350"/>
+                            <line x1="275" y1="150" x2="165" y2="235"/>
+                        </g>
+
+                        <!-- Points des communes périphériques -->
+                        <g fill="#1F3D32" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700">
+                            <!-- Nord -->
+                            <circle cx="210" cy="55" r="6"/><text x="210" y="35" text-anchor="middle">Wissembourg</text>
+                            <circle cx="95" cy="125" r="6"/><text x="95" y="105" text-anchor="middle">Cleebourg</text>
+                            <circle cx="430" cy="60" r="6"/><text x="430" y="40" text-anchor="middle">Scheibenhardt</text>
+                            <circle cx="530" cy="100" r="6"/><text x="520" y="80" text-anchor="middle">Lauterbourg</text>
+
+                            <!-- Est (Rhin) -->
+                            <circle cx="515" cy="165" r="5"/><text x="510" y="150" text-anchor="end">Mothern</text>
+                            <circle cx="500" cy="225" r="6"/><text x="485" y="230" text-anchor="end">Seltz</text>
+                            <circle cx="455" cy="330" r="6"/><text x="455" y="355" text-anchor="middle">Beinheim</text>
+
+                            <!-- Sud & Ouest -->
+                            <circle cx="280" cy="370" r="6"/><text x="280" y="395" text-anchor="middle">Hatten</text>
+                            <circle cx="210" cy="310" r="6"/><text x="210" y="332" text-anchor="middle">Betschdorf</text>
+                            <circle cx="145" cy="350" r="6"/><text x="135" y="375" text-anchor="middle">Surbourg</text>
+                            <circle cx="165" cy="235" r="6"/><text x="155" y="220" text-anchor="end">Soultz-sous-Forêts</text>
+
+                            <!-- Villages proches -->
+                            <circle cx="255" cy="100" r="4" fill="#4A4A4A"/><text x="265" y="104" font-size="12" fill="#333">Riedseltz</text>
+                            <circle cx="205" cy="155" r="4" fill="#4A4A4A"/><text x="195" y="160" font-size="12" text-anchor="end" fill="#333">Hunspach</text>
+                            <circle cx="255" cy="215" r="4" fill="#4A4A4A"/><text x="265" y="220" font-size="12" fill="#333">Hoffen</text>
+                        </g>
+
+                        <!-- CENTRE : SEEBACH -->
+                        <circle cx="275" cy="150" r="14" fill="#B8860B" stroke="#FFFFFF" stroke-width="3"/>
+                        <text x="275" y="182" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="800" fill="#1F3D32">★ SEEBACH</text>
+                    </svg>
+                    <p style="font-size: 0.95rem; color: var(--primary); font-weight: 700; margin-top: 10px;">Départ direct de Seebach : Zéro frais de déplacement</p>
+                </div>
+
+                <!-- Liste écrite bien lisible -->
+                <div class="communes-list-box">
+                    <h3>Communes desservies :</h3>
+                    
+                    <div class="communes-group">
+                        <strong>📍 Autour de Seebach :</strong>
+                        Seebach, Hunspach, Riedseltz, Ingolsheim, Schleithal, Siegen.
+                    </div>
+
+                    <div class="communes-group">
+                        <strong>📍 Vers Wissembourg & Frontière :</strong>
+                        Wissembourg, Cleebourg, Steinseltz, Scheibenhardt, Lauterbourg.
+                    </div>
+
+                    <div class="communes-group">
+                        <strong>📍 Vers Soultz, Betschdorf & Hatten :</strong>
+                        Soultz-sous-Forêts, Hoffen, Hatten, Betschdorf, Surbourg.
+                    </div>
+
+                    <div class="communes-group">
+                        <strong>📍 Vers Seltz & Beinheim :</strong>
+                        Seltz, Mothern, Beinheim et environs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. DÉSIR : VALEUR AJOUTÉE & APERÇU TARIFS -->
     <section>
         <div class="value-banner">
             <div class="value-item">
@@ -656,7 +823,7 @@
             </div>
 
             <div class="price-card featured">
-                <div class="pop-tag">Le plus choisi</div>
+                <div class="pop-tag">La plus demandée</div>
                 <div>
                     <h3>Formule Sérénité</h3>
                     <div class="price">140 € <span>/ an (2 passages)</span></div>
@@ -686,7 +853,7 @@
         </div>
     </section>
 
-    <!-- 4. ACTION : APPEL À L'ACTION FINAL -->
+    <!-- 5. ACTION : APPEL À L'ACTION FINAL -->
     <section>
         <div class="cta-box">
             <h2>Confiez-nous l'entretien d'une sépulture</h2>
@@ -716,7 +883,7 @@
             </div>
             <div class="footer-col">
                 <h4>Communes desservies</h4>
-                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Lauterbourg, Haguenau et environs.</p>
+                <p>Seebach, Wissembourg, Soultz-sous-Forêts, Riedseltz, Hunspach, Hoffen, Hatten, Seltz, Beinheim et environs.</p>
             </div>
         </div>
         <div class="footer-bottom">
